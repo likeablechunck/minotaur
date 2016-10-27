@@ -22,7 +22,7 @@ public class Fading_Light : MonoBehaviour
     {
 
         GameObject Player = GameObject.Find("FPSController");
-        //light must make what is infront of the player
+        //light must mat of the player
         //transform.position = Player.transform.position;      
         
 
@@ -48,7 +48,7 @@ public class Fading_Light : MonoBehaviour
     public void changeState(string stateName)
     {
         state = stateName;
-        //print("current Light state is :" + stateName);
+        
     }
 
     public void lightUp()
