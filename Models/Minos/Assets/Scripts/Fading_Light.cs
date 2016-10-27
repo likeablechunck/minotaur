@@ -8,6 +8,7 @@ public class Fading_Light : MonoBehaviour
     public float fadingSpeed;
     public float maxIntensity;
     public Vector3 offset;
+    //public Transform target;
 
 	// Use this for initialization
 	void Start ()
@@ -19,13 +20,18 @@ public class Fading_Light : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+
         GameObject Player = GameObject.Find("FPSController");
         //light must make what is infron't of the player, lighter
-        transform.position = Player.transform.position;
-        print("Light Intensity is : " + pointLight.intensity);
-        print("State is : " + state);
+        //transform.position = Player.transform.position;      
+        
 
-        if(state == "lightUp")
+        //if (Player != null)
+        //{
+        //    this.transform.LookAt(Player.transform);
+        //}
+
+        if (state == "lightUp")
         {
             lightUp();
             
@@ -34,13 +40,15 @@ public class Fading_Light : MonoBehaviour
         {
             Fading();
         }
-        
+        //check to see where is the light transform position & player's position.
+        print("Light position is at : " + this.transform.position + "Player's position is at : " + Player.transform.position);
+
 
     }
     public void changeState(string stateName)
     {
         state = stateName;
-        print("current Light state is :" + stateName);
+        //print("current Light state is :" + stateName);
     }
 
     public void lightUp()
