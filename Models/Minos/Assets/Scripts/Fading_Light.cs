@@ -22,7 +22,7 @@ public class Fading_Light : MonoBehaviour
     {
 
         GameObject Player = GameObject.Find("FPSController");
-        //light must make what is infron't of the player, lighter
+        //light must make what is infront of the player
         //transform.position = Player.transform.position;      
         
 

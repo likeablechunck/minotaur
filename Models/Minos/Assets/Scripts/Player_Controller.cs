@@ -17,15 +17,21 @@ public class Player_Controller : MonoBehaviour
 	}
     void OnTriggerEnter(Collider col)
     {
+        Vector3 torchPosition = col.transform.position;
         Vector3 playerPosition = this.transform.position;
         if(col.gameObject.tag == "Torch")
         {
             print("Name of the item I collide : " + col.gameObject);
             //Pickup (destroiy the torch and then instantiate the light
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
+
             //Instantiate the light where the player is 
+            //Light light = Instantiate(Resources.Load("point_light", typeof(Light)),
+            //    playerPosition, Quaternion.identity) as Light;
+
+            //Instantiate the light in where the torch is
             Light light = Instantiate(Resources.Load("point_light", typeof(Light)),
-                playerPosition, Quaternion.identity) as Light;
+               torchPosition, Quaternion.identity) as Light;
         }
     }
 }
