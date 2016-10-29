@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: b0b228b4a8f488c4091ebc0c12376bad
-timeCreated: 1477665462
+guid: 1898fb2b9b9ffe24c859e72a63014149
+timeCreated: 1477666546
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: polySurface42
+    100002: pPlane5
     400000: //RootNode
-    400002: polySurface42
-    2300000: polySurface42
-    3300000: polySurface42
-    4300000: polySurface42
+    400002: pPlane5
+    2300000: pPlane5
+    3300000: pPlane5
+    4300000: pPlane5
     9500000: //RootNode
   materials:
     importMaterials: 1

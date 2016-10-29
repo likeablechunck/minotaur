@@ -1,16 +1,14 @@
 fileFormatVersion: 2
 guid: 2b9b66817d8cf6d40bfba9a9b327dc89
-timeCreated: 1477587383
+timeCreated: 1477665429
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: group72
-    100004: pPlane5
+    100002: pPlane5
     400000: //RootNode
-    400002: group72
-    400004: pPlane5
+    400002: pPlane5
     2300000: pPlane5
     3300000: pPlane5
     4300000: pPlane5

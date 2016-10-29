@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5ca40085ce88adc4e8394d83d7516413
-timeCreated: 1477587383
+timeCreated: 1477665461
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -10,7 +10,9 @@ ModelImporter:
     400000: //RootNode
     400002: Minos_Hallway_Wall_Section_pCube287
     2300000: Minos_Hallway_Wall_Section_pCube287
+    2300002: //RootNode
     3300000: Minos_Hallway_Wall_Section_pCube287
+    3300002: //RootNode
     4300000: Minos_Hallway_Wall_Section_pCube287
     9500000: //RootNode
   materials:
