@@ -12,7 +12,9 @@ ModelImporter:
     400002: group72
     400004: pCube241
     2300000: pCube241
+    2300002: //RootNode
     3300000: pCube241
+    3300002: //RootNode
     4300000: pCube241
     9500000: //RootNode
   materials:

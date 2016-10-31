@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 282edb2eef8080641ab22f1d1364f6e0
-timeCreated: 1477858445
+guid: 23fe81b4d87743b429e78e66b1857b30
+timeCreated: 1477951860
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pm_stone_door_damage_part_1
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCube259
+    400002: pm_stone_door_damage_part_1
+    2300000: pm_stone_door_damage_part_1
+    3300000: pm_stone_door_damage_part_1
+    4300000: pm_stone_door_damage_part_1
     9500000: //RootNode
   materials:
     importMaterials: 1

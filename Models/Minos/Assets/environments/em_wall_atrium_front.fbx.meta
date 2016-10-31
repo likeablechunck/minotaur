@@ -10,7 +10,9 @@ ModelImporter:
     400000: //RootNode
     400002: Minos_Atrium_Wall_Section_Front_polySurface2
     2300000: Minos_Atrium_Wall_Section_Front_polySurface2
+    2300002: //RootNode
     3300000: Minos_Atrium_Wall_Section_Front_polySurface2
+    3300002: //RootNode
     4300000: Minos_Atrium_Wall_Section_Front_polySurface2
     9500000: //RootNode
   materials:
