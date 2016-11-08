@@ -7,6 +7,8 @@ TagManager:
   - Torch
   - Fire
   - Brazier
+  - Warrior_Drums
+  - Warrior_Drums2
   layers:
   - Default
   - TransparentFX

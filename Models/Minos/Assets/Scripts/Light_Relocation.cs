@@ -5,6 +5,7 @@ public class Light_Relocation : MonoBehaviour {
 
     public bool canPickUp;
     public bool alreadyHasLight;
+    public bool lightInstantiated;
 
     public GameObject rHandSocket;
 
@@ -14,7 +15,7 @@ public class Light_Relocation : MonoBehaviour {
         rHandSocket = GameObject.Find("RHandSocket");
         canPickUp = false;
         alreadyHasLight = false;
-
+        lightInstantiated = false;
     }
 
     // Update is called once per frame
@@ -22,7 +23,8 @@ public class Light_Relocation : MonoBehaviour {
     {
         if (!alreadyHasLight)
         {
-            if (canPickUp && Input.GetKeyUp(KeyCode.Space))
+            //When you are close AND you press Q AND there is no light instantiated
+            if (canPickUp && Input.GetKeyUp(KeyCode.Q) && !lightInstantiated)
             {
                 CreateAFlame();
             }
@@ -53,6 +55,8 @@ public class Light_Relocation : MonoBehaviour {
         //Vector3 flamePosition = rHandSocket.transform.position;
         GameObject redFlame = Instantiate(Resources.Load("Fire (Complex)")) as GameObject;
         redFlame.transform.position = rHandSocket.transform.position;
+        //Try to instamtiate one light at a time
+        lightInstantiated = true;
         //redFlame.transform.rotation = rHandSocket.transform.rotation;
         //redFlame.transform.parent = rHandSocket.transform;
     }

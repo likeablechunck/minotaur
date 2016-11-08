@@ -458,6 +458,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rHandSocket: {fileID: 0}
+  lightHolder: {fileID: 0}
+  state: 
 --- !u!114 &114000012420692816
 MonoBehaviour:
   m_ObjectHideFlags: 1

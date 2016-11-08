@@ -41,7 +41,7 @@ public class Fading_Light : MonoBehaviour
             Fading();
         }
         //check to see where is the light transform position & player's position.
-        print("Light position is at : " + this.transform.position + "Player's position is at : " + Player.transform.position);
+        //print("Light position is at : " + this.transform.position + "Player's position is at : " + Player.transform.position);
 
 
     }

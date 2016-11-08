@@ -17,11 +17,13 @@ public class Player_Controller : MonoBehaviour
 	}
     void OnTriggerEnter(Collider col)
     {
+        print("Name of the item I collide : " + col.gameObject);
+
         Vector3 torchPosition = col.transform.position;
         Vector3 playerPosition = this.transform.position;
         if(col.gameObject.tag == "Torch")
         {
-            print("Name of the item I collide : " + col.gameObject);
+            
             //Pickup (destroiy the torch and then instantiate the light
             //Destroy(col.gameObject);
 
