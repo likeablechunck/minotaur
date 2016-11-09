@@ -32,4 +32,5 @@ sysinfo.txt
 *.unitypackage
 
 Minos/fmod.log
+Minos/fmod_editor.log
 
