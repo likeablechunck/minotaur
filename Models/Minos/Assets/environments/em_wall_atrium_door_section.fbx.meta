@@ -1,0 +1,148 @@
+fileFormatVersion: 2
+guid: c8dbf3768d1af124cbd516416207d482
+timeCreated: 1478566305
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: em_column_atrium_short3
+    100002: em_column_atrium_short4
+    100004: em_wall_atrium_crossbeam1
+    100006: em_wall_atrium_door_crossbeam1
+    100008: em_wall_atrium_door_crossbeam2
+    100010: //RootNode
+    100012: em_wall_atrium_strut1
+    100014: em_wall_atrium_strut2
+    100016: em_wall_atrium_strut3
+    100018: em_wall_atrium_strut4
+    100020: polySurface166
+    100022: polySurface166 1
+    100024: polySurface167
+    100026: polySurface167 1
+    100028: polySurface168
+    100030: polySurface168 1
+    100032: polySurface178
+    400000: em_column_atrium_short3
+    400002: em_column_atrium_short4
+    400004: em_wall_atrium_crossbeam1
+    400006: em_wall_atrium_door_crossbeam1
+    400008: em_wall_atrium_door_crossbeam2
+    400010: //RootNode
+    400012: em_wall_atrium_strut1
+    400014: em_wall_atrium_strut2
+    400016: em_wall_atrium_strut3
+    400018: em_wall_atrium_strut4
+    400020: polySurface166
+    400022: polySurface166 1
+    400024: polySurface167
+    400026: polySurface167 1
+    400028: polySurface168
+    400030: polySurface168 1
+    400032: polySurface178
+    2300000: em_wall_atrium_crossbeam1
+    2300002: em_wall_atrium_door_crossbeam1
+    2300004: em_wall_atrium_door_crossbeam2
+    2300006: em_wall_atrium_strut1
+    2300008: em_wall_atrium_strut2
+    2300010: em_wall_atrium_strut3
+    2300012: em_wall_atrium_strut4
+    2300014: polySurface166
+    2300016: polySurface166 1
+    2300018: polySurface167
+    2300020: polySurface167 1
+    2300022: polySurface168
+    2300024: polySurface168 1
+    2300026: polySurface178
+    3300000: em_wall_atrium_crossbeam1
+    3300002: em_wall_atrium_door_crossbeam1
+    3300004: em_wall_atrium_door_crossbeam2
+    3300006: em_wall_atrium_strut1
+    3300008: em_wall_atrium_strut2
+    3300010: em_wall_atrium_strut3
+    3300012: em_wall_atrium_strut4
+    3300014: polySurface166
+    3300016: polySurface166 1
+    3300018: polySurface167
+    3300020: polySurface167 1
+    3300022: polySurface168
+    3300024: polySurface168 1
+    3300026: polySurface178
+    4300000: polySurface168
+    4300002: polySurface167
+    4300004: polySurface166
+    4300006: polySurface168
+    4300008: polySurface167
+    4300010: polySurface166
+    4300012: em_wall_atrium_door_crossbeam2
+    4300014: em_wall_atrium_door_crossbeam1
+    4300016: polySurface178
+    4300018: em_wall_atrium_crossbeam1
+    4300020: em_wall_atrium_strut2
+    4300022: em_wall_atrium_strut1
+    4300024: em_wall_atrium_strut3
+    4300026: em_wall_atrium_strut4
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
