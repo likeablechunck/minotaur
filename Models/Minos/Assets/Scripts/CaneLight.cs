@@ -15,7 +15,7 @@ public class CaneLight : MonoBehaviour {
     void Update()
     {
         GameObject player = GameObject.Find("FPSController");
-        if (player.GetComponent<Player_Controller>().turnOnTheCaneLight)
+        if (player.GetComponent<Player_Controller>().shouldIOpenTheFirstHiddenDoor)
         {
             spotLight.enabled = true;
 

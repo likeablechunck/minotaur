@@ -13,6 +13,8 @@ TagManager:
   - Cane
   - Room1-Door
   - Room1-LoadLevel
+  - Cane
+  - Load-Atrium
   layers:
   - Default
   - TransparentFX

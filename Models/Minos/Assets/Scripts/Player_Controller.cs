@@ -7,6 +7,7 @@ public class Player_Controller : MonoBehaviour
     public bool turnOnTheSwordLight;
     public bool turnOnTheCaneLight;
     public bool shouldICloseTheFirstDoor;
+    public bool shouldIOpenTheFirstHiddenDoor;
 
     // Use this for initialization
     void Start ()
@@ -14,6 +15,7 @@ public class Player_Controller : MonoBehaviour
         turnOnTheSwordLight = false;
         turnOnTheCaneLight = false;
         shouldICloseTheFirstDoor = false;
+        shouldIOpenTheFirstHiddenDoor = false;
 
     }
 	
@@ -57,6 +59,15 @@ public class Player_Controller : MonoBehaviour
         if(col.gameObject.tag == "Room1-LoadLevel")
         {
             SceneManager.LoadScene("old_lady");
+        }
+        if(col.gameObject.tag == "Cane")
+        {
+            shouldIOpenTheFirstHiddenDoor = true;
+
+        }
+        if(col.gameObject.tag == "Load-Atrium")
+        {
+            SceneManager.LoadScene("Main");
         }
 
     }
