@@ -21,17 +21,25 @@ public class Light_Relocation : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        GameObject flame = GameObject.Find("Fire (Complex)");
-        if (canPickUp && Input.GetKeyUp(KeyCode.Q))
+        
+        GameObject flame = GameObject.Find("Fire-1");
+        if (flame != null && flame.GetComponent<RedFlame>() != null )
         {
-            flame.GetComponent<RedFlame>().changeState("pickedUp");
-            //PickUp();
-        }
-        if (canPickUp && Input.GetKeyUp(KeyCode.Z))
+            if (canPickUp && Input.GetKeyUp(KeyCode.Q))
+            {
+                flame.GetComponent<RedFlame>().changeState("pickedUp");
+                //PickUp();
+            }
+            if (canPickUp && Input.GetKeyUp(KeyCode.Z))
+            {
+                flame.GetComponent<RedFlame>().changeState("dropOff");
+
+            }
+        } else
         {
-            flame.GetComponent<RedFlame>().changeState("dropOff");
-            
+            print(GameObject.Find("Fire-1"));
         }
+
 
 
         //if (!alreadyHasLight)
