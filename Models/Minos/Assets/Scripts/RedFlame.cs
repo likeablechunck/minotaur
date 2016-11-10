@@ -27,6 +27,10 @@ public class RedFlame : MonoBehaviour
         {
             Drop_Off();
         }
+        if (state == "pickedUp")
+        {
+            pickedUp();
+        }
         //GameObject brazier = GameObject.Find("Lighten_Brazier");
         //brazier.GetComponent<Light_Relocation>().lightInstantiated = false;
         //RedFlameLocation();
@@ -37,8 +41,8 @@ public class RedFlame : MonoBehaviour
         //    Destroy(this.gameObject);
 
         //}
-	
-	}
+
+    }
     public void changeState(string newState)
     {
         state = newState;
@@ -50,6 +54,10 @@ public class RedFlame : MonoBehaviour
         this.transform.parent = rHandSocket.transform;
     }
     public void normal()
+    {
+        
+    }
+    public void pickedUp()
     {
         RedFlameLocation();
     }
