@@ -9,6 +9,8 @@ TagManager:
   - Brazier
   - Warrior_Drums
   - Warrior_Drums2
+  - Sword
+  - Cane
   layers:
   - Default
   - TransparentFX

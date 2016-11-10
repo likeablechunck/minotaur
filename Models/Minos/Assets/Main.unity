@@ -2294,7 +2294,7 @@ GameObject:
   - 114: {fileID: 194561127}
   m_Layer: 0
   m_Name: Sword-Music-Trigger
-  m_TagString: Warrior_Drums2
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3036,6 +3036,82 @@ BoxCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fb458a3d344f08c498e21ab10268fea6, type: 3}
   m_PrefabInternal: {fileID: 103287684}
+--- !u!1 &260632359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 260632360}
+  - 108: {fileID: 260632362}
+  - 114: {fileID: 260632361}
+  m_Layer: 0
+  m_Name: Sword-Spotlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &260632360
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 260632359}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -36.51, y: 4.19, z: 54.14}
+  m_LocalScale: {x: 1.0000011, y: 1.0000019, z: 1.0000029}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1619448456}
+  m_RootOrder: 21
+--- !u!114 &260632361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 260632359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb20e9ca4f8c2d439ea1eee1a2159ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotLight: {fileID: 260632362}
+--- !u!108 &260632362
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 260632359}
+  m_Enabled: 1
+  serializedVersion: 7
+  m_Type: 0
+  m_Color: {r: 1, g: 0.8681541, b: 0.63235295, a: 1}
+  m_Intensity: 3.3
+  m_Range: 3.94
+  m_SpotAngle: 69.7193
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: 3
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!4 &272245757 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013220073046, guid: bf5102c3f5d173e4282bb93c1d7d2cf5,
@@ -15285,7 +15361,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013828062452, guid: 3c5a1bf5a841e6c498374a66bcdad839, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 4000013828062452, guid: 3c5a1bf5a841e6c498374a66bcdad839, type: 2}
       propertyPath: m_LocalScale.x
@@ -15960,7 +16036,7 @@ Transform:
   - {fileID: 2145044081}
   - {fileID: 1163034498}
   m_Father: {fileID: 1619448456}
-  m_RootOrder: 22
+  m_RootOrder: 23
 --- !u!4 &1423166013 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7879cd481bb428c44baf304ced32d08a, type: 3}
@@ -17628,7 +17704,7 @@ GameObject:
   - 4: {fileID: 1571544179}
   - 108: {fileID: 1571544180}
   m_Layer: 0
-  m_Name: Spotlight (21)
+  m_Name: Cane-Spotlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18656,6 +18732,7 @@ Transform:
   - {fileID: 2061976535}
   - {fileID: 1154608682}
   - {fileID: 1571544179}
+  - {fileID: 260632360}
   - {fileID: 664928955}
   - {fileID: 1422943593}
   m_Father: {fileID: 0}
@@ -22652,19 +22729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isClicked: 0
---- !u!136 &2062361851
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2062361848}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 1.5933913
-  m_Height: 0.99042124
-  m_Direction: 1
-  m_Center: {x: 0.0000000123200845, y: 0.2982132, z: 0.00000001071021}
 --- !u!54 &2062361852
 Rigidbody:
   m_ObjectHideFlags: 0

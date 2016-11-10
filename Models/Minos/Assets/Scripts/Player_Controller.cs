@@ -3,12 +3,16 @@ using System.Collections;
 
 public class Player_Controller : MonoBehaviour
 {
+    public bool turnOnTheSwordLight;
+    public bool turnOnTheCaneLight;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
-	
-	}
+        turnOnTheSwordLight = false;
+        turnOnTheCaneLight = false;
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -34,6 +38,14 @@ public class Player_Controller : MonoBehaviour
             //Instantiate the light in where the torch is
             Light light = Instantiate(Resources.Load("point_light", typeof(Light)),
                torchPosition, Quaternion.identity) as Light;
+        }
+        if(col.gameObject.tag == "Sword")
+        {
+            turnOnTheSwordLight = true;
+        }
+        if(col.gameObject.tag == "Cane")
+        {
+            turnOnTheCaneLight = true;
         }
 
     }
