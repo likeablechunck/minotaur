@@ -74,6 +74,8 @@ GameObject:
   - 23: {fileID: 23000011141920992}
   - 114: {fileID: 114000012255563254}
   - 82: {fileID: 82000011528466958}
+  - 135: {fileID: 135000011690284048}
+  - 114: {fileID: 114000012578177650}
   m_Layer: 0
   m_Name: Fire (Complex)
   m_TagString: Fire
@@ -108,7 +110,6 @@ GameObject:
   - 4: {fileID: 4000010075960304}
   - 33: {fileID: 33000012870297672}
   - 23: {fileID: 23000012252856004}
-  - 135: {fileID: 135000012841853732}
   - 114: {fileID: 114000014231453534}
   m_Layer: 0
   m_Name: Lighten_Brazier
@@ -192,7 +193,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012340657808}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.6642895, y: -1.4965274, z: -1.4187012}
+  m_LocalPosition: {x: -9.89, y: 0.083, z: 5.188}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -526,12 +527,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723274b822865ed4d9ed2a504c0ca79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000014231453534
+--- !u!114 &114000012578177650
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012340657808}
+  m_GameObject: {fileID: 1000012133280500}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5708cd62468d3464c91d62c2311beb83, type: 3}
@@ -541,18 +542,33 @@ MonoBehaviour:
   alreadyHasLight: 0
   lightInstantiated: 0
   rHandSocket: {fileID: 0}
---- !u!135 &135000012841853732
-SphereCollider:
+--- !u!114 &114000014231453534
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012340657808}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5708cd62468d3464c91d62c2311beb83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canPickUp: 0
+  alreadyHasLight: 0
+  lightInstantiated: 0
+  rHandSocket: {fileID: 0}
+--- !u!135 &135000011690284048
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012133280500}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.44
-  m_Center: {x: 0, y: 0.5644661, z: -0.000000834465}
+  m_Radius: 0.9870753
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198000010016339780
 ParticleSystem:
   m_ObjectHideFlags: 1

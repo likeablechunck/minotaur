@@ -17,7 +17,7 @@ public class Empty_Brazier : MonoBehaviour
     {
         if(canDropOff && Input.GetKeyUp(KeyCode.Z))
         {
-            GameObject.Find("Fire (Complex)(Clone)").GetComponent<RedFlame>().changeState("dropOff");
+            GameObject.Find("Fire (Complex)").GetComponent<RedFlame>().changeState("dropOff");
         }
 	
 	}

@@ -22,7 +22,6 @@ GameObject:
   - 33: {fileID: 33000013179956802}
   - 23: {fileID: 23000011095820612}
   - 135: {fileID: 135000012948693090}
-  - 114: {fileID: 114000010228041364}
   - 114: {fileID: 114000010705101160}
   m_Layer: 0
   m_Name: Empty_Brazier
@@ -109,17 +108,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010968388408}
   m_Mesh: {fileID: 4300000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
---- !u!114 &114000010228041364
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010968388408}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000010705101160
 MonoBehaviour:
   m_ObjectHideFlags: 1

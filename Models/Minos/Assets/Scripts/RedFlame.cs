@@ -27,16 +27,16 @@ public class RedFlame : MonoBehaviour
         {
             Drop_Off();
         }
-        GameObject brazier = GameObject.Find("Lighten_Brazier");
+        //GameObject brazier = GameObject.Find("Lighten_Brazier");
         //brazier.GetComponent<Light_Relocation>().lightInstantiated = false;
         //RedFlameLocation();
 
-        if(Input.GetKeyUp(KeyCode.E))
-        {
-            brazier.GetComponent<Light_Relocation>().lightInstantiated = false;
-            Destroy(this.gameObject);
+        //if(Input.GetKeyUp(KeyCode.E))
+        //{
+        //    brazier.GetComponent<Light_Relocation>().lightInstantiated = false;
+        //    Destroy(this.gameObject);
 
-        }
+        //}
 	
 	}
     public void changeState(string newState)

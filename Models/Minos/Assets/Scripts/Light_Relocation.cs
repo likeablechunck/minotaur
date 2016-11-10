@@ -26,7 +26,7 @@ public class Light_Relocation : MonoBehaviour {
             //When you are close AND you press Q AND there is no light instantiated
             if (canPickUp && Input.GetKeyUp(KeyCode.Q) && !lightInstantiated)
             {
-                CreateAFlame();
+                PickUp();
             }
         }
 
@@ -48,16 +48,22 @@ public class Light_Relocation : MonoBehaviour {
 
         }
     }
-    void CreateAFlame()
+    void PickUp()
     {
-        //when it picks up, it should get stuck to RHandSocket
-        //Therefore, this transform position changes to RHandSocket's position
-        //Vector3 flamePosition = rHandSocket.transform.position;
-        GameObject redFlame = Instantiate(Resources.Load("Fire (Complex)")) as GameObject;
-        redFlame.transform.position = rHandSocket.transform.position;
-        //Try to instamtiate one light at a time
-        lightInstantiated = true;
-        //redFlame.transform.rotation = rHandSocket.transform.rotation;
-        //redFlame.transform.parent = rHandSocket.transform;
+        this.transform.position = rHandSocket.transform.position;
+        this.transform.rotation = rHandSocket.transform.rotation;
+        this.transform.parent = rHandSocket.transform;
+
+
+
+        ////when it picks up, it should get stuck to RHandSocket
+        ////Therefore, this transform position changes to RHandSocket's position
+        ////Vector3 flamePosition = rHandSocket.transform.position;
+        //GameObject redFlame = Instantiate(Resources.Load("Fire (Complex)")) as GameObject;
+        //redFlame.transform.position = rHandSocket.transform.position;
+        ////Try to instamtiate one light at a time
+        //lightInstantiated = true;
+        ////redFlame.transform.rotation = rHandSocket.transform.rotation;
+        ////redFlame.transform.parent = rHandSocket.transform;
     }
 }

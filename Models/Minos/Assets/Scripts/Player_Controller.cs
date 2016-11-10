@@ -35,5 +35,6 @@ public class Player_Controller : MonoBehaviour
             Light light = Instantiate(Resources.Load("point_light", typeof(Light)),
                torchPosition, Quaternion.identity) as Light;
         }
+
     }
 }
