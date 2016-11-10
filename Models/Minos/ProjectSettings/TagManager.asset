@@ -11,6 +11,8 @@ TagManager:
   - Warrior_Drums2
   - Sword
   - Cane
+  - Room1-Door
+  - Room1-LoadLevel
   layers:
   - Default
   - TransparentFX

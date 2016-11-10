@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour
 {
     public bool turnOnTheSwordLight;
     public bool turnOnTheCaneLight;
+    public bool shouldICloseTheFirstDoor;
 
     // Use this for initialization
     void Start ()
     {
         turnOnTheSwordLight = false;
         turnOnTheCaneLight = false;
+        shouldICloseTheFirstDoor = false;
 
     }
 	
@@ -46,6 +49,14 @@ public class Player_Controller : MonoBehaviour
         if(col.gameObject.tag == "Cane")
         {
             turnOnTheCaneLight = true;
+        }
+        if(col.gameObject.tag == "Room1-Door")
+        {
+            shouldICloseTheFirstDoor = true;
+        }
+        if(col.gameObject.tag == "Room1-LoadLevel")
+        {
+            SceneManager.LoadScene("old_lady");
         }
 
     }
