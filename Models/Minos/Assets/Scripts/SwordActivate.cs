@@ -25,15 +25,10 @@ public class SwordActivate : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         print("I collided into sword XD");
-        if(col.gameObject.tag == "Player")
-        {
-            //turnOnTheLight = true;
-            Destroy(this.gameObject);
-        }
-        
-        //swordEvent = this.GetComponent<FMODUnity.StudioParameterTrigger>();
-        //swordMusicEmitter.SetParameter("Intensity", 1f);
-
-
+        //if(col.gameObject.tag == "Player")
+        //{
+        //    //turnOnTheLight = true;
+        //    Destroy(this.gameObject);
+        //}
     }
 }

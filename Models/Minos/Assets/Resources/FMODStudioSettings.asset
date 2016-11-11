@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  SourceProjectPath: C:\Users\Faranak\Desktop\Minos FMOD\Minos FMOD.fspro
-  SourceBankPath: C:\Users\Faranak\Desktop\Minos FMOD\Build
+  SourceProjectPath: Assets\Minos FMOD\Minos FMOD.fspro
+  SourceBankPath: Assets\Minos FMOD\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0

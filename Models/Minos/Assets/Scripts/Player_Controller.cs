@@ -47,6 +47,7 @@ public class Player_Controller : MonoBehaviour
         if(col.gameObject.tag == "Sword")
         {
             turnOnTheSwordLight = true;
+            Destroy(col.gameObject, 1);
         }
         if(col.gameObject.tag == "Cane")
         {
