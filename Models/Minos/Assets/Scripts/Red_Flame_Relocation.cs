@@ -29,10 +29,7 @@ public class Red_Flame_Relocation : MonoBehaviour
         {
             redFlame.GetComponent<RedFlame>().changeState("pickedUp");
         }
-        if(canDropOffRedFlame && Input.GetKeyUp(KeyCode.Z))
-        {
-            redFlame.GetComponent<RedFlame>().changeState("dropOff");
-        }
+        //I Don't need to tell the empty brazier what to do. Let it handle the instantiation
 
         //if (redFlame != null && redFlame.GetComponent<RedFlame>() != null)
         //{
@@ -53,6 +50,17 @@ public class Red_Flame_Relocation : MonoBehaviour
         if (col.gameObject.tag == "Empty_Red_Brazier")
         {
             canDropOffRedFlame = true;
+            if(Input.GetKeyUp(KeyCode.Z))
+            {
+
+                redFlame.GetComponent<RedFlame>().changeState("dropOff");
+                GameObject redFlameInBrazier = Instantiate(Resources.Load("fire_octagonal")) as GameObject;
+                GameObject currentLightHolder = col.transform.FindChild("Light_Holder").gameObject;
+                redFlameInBrazier.transform.position = currentLightHolder.transform.position;
+                redFlameInBrazier.transform.rotation = currentLightHolder.transform.rotation;
+                redFlameInBrazier.transform.parent = currentLightHolder.transform;
+
+            }
 
         }
 

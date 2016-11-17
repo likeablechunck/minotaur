@@ -4,7 +4,7 @@ using System.Collections;
 public class RedFlame : MonoBehaviour
 {
     public GameObject rHandSocket;
-    public GameObject lightHolder;
+    //public GameObject lightHolder;
     public string state;
 
     // Use this for initialization
@@ -57,22 +57,25 @@ public class RedFlame : MonoBehaviour
     public void normal()
     {
         //turn off the renderer of small red flame
+        this.GetComponent<Renderer>().enabled = false;
         
     }
     public void pickedUp()
     {
         //turn on the renderer of small red flame
+        this.GetComponent<Renderer>().enabled = true;
         RedFlameLocation();
     }
     public void Drop_Off()
     {
         //turn off the renderer of small red flame
+        this.GetComponent<Renderer>().enabled = false;
         print("I am about to drop it off");
         //GameObject player = GameObject.Find("FPSController");
 
         //GameObject child_light = player.transform.FindChild("Fire (Complex)(Clone)").gameObject;
-        this.transform.position = lightHolder.transform.position;
-        this.transform.parent = lightHolder.transform;
+        //this.transform.position = lightHolder.transform.position;
+        //this.transform.parent = lightHolder.transform;
 
     }
 }

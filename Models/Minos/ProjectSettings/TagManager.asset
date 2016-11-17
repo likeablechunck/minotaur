@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Torch
   - Fire
-  - Brazier
+  - Empty_Red_Brazier
   - Warrior_Drums
   - Warrior_Drums2
   - Sword
@@ -15,6 +15,7 @@ TagManager:
   - Room1-LoadLevel
   - Cane
   - Load-Atrium
+  - Red_Flame_Brazier
   layers:
   - Default
   - TransparentFX
