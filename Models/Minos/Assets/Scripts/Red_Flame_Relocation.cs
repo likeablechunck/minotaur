@@ -7,7 +7,7 @@ public class Red_Flame_Relocation : MonoBehaviour
     public bool canDropOffRedFlame;
     public bool alreadyHasRedFlame;
     public bool lightInstantiated;
-    public GameObject redFlame;
+    //public GameObject redFlame;
     public GameObject rHandSocket;
 
     // Use this for initialization
@@ -25,10 +25,40 @@ public class Red_Flame_Relocation : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (canPickUpRedFlame && Input.GetKeyUp(KeyCode.Q))
-        {
-            redFlame.GetComponent<RedFlame>().changeState("pickedUp");
+        GameObject redFlameInBrazier = GameObject.Find("fire_octagonal1");
+        GameObject smallRedFlame = GameObject.Find("fire_octagonal_hand");
+        if (canPickUpRedFlame)
+        {       
+            if (Input.GetKeyUp(KeyCode.Q))
+            {
+                print("I pressed Q");
+                smallRedFlame.GetComponent<ParticleSystem>().enableEmission = true;
+                Destroy(redFlameInBrazier);
+
+                smallRedFlame.GetComponent<RedFlame>().changeState("pickedUp");
+            }
+            if(canDropOffRedFlame)
+            {
+                 if(Input.GetKeyUp(KeyCode.Z))
+                {
+                    print("I pressed Z");
+
+                    smallRedFlame.GetComponent<RedFlame>().changeState("dropOff");
+                    GameObject redFlameInBrazier = Instantiate(Resources.Load("fire_octagonal")) as GameObject;
+                    GameObject currentLightHolder = GameObject.Find("Light-Holder1").gameObject;
+                    redFlameInBrazier.transform.position = currentLightHolder.transform.position;
+                    redFlameInBrazier.transform.rotation = currentLightHolder.transform.rotation;
+                    redFlameInBrazier.transform.parent = currentLightHolder.transform;
+                }
+          
+
+            }
+
         }
+        //if (canPickUpRedFlame && Input.GetKeyUp(KeyCode.Q))
+        //{
+        //    redFlame.GetComponent<RedFlame>().changeState("pickedUp");
+        //}
         //I Don't need to tell the empty brazier what to do. Let it handle the instantiation
 
         //if (redFlame != null && redFlame.GetComponent<RedFlame>() != null)
@@ -44,23 +74,39 @@ public class Red_Flame_Relocation : MonoBehaviour
     {
         if(col.gameObject.tag == "Red_Flame_Brazier")
         {
+
             canPickUpRedFlame = true;
+            ////GameObject redFlameInBrazier = col.transform.FindChild("fire_octagonal").gameObject;
+            //GameObject redFlameInBrazier = GameObject.Find("fire_octagonal");
+            ////GameObject player = GameObject.Find("FPSController");
+            ////GameObject smallRedFlame = player.transform.FindChild("fire_octagonal_hand").gameObject;
+            //GameObject smallRedFlame = GameObject.Find("fire_octagonal_hand");
+            //if (Input.GetKeyUp(KeyCode.Q))
+            //{
+            //    print("I pressed Q");
+            //    smallRedFlame.GetComponent<ParticleSystem>().enableEmission = true;
+            //    Destroy(redFlameInBrazier);
+
+            //    smallRedFlame.GetComponent<RedFlame>().changeState("pickedUp");
+            //}
+
 
         }
         if (col.gameObject.tag == "Empty_Red_Brazier")
         {
             canDropOffRedFlame = true;
-            if(Input.GetKeyUp(KeyCode.Z))
-            {
+            //if(Input.GetKeyUp(KeyCode.Z))
+            //{
+            //    print("I pressed Z");
+            //    GameObject smallRedFlame = GameObject.Find("fire_octagonal_hand");
+            //    smallRedFlame.GetComponent<RedFlame>().changeState("dropOff");
+            //    GameObject redFlameInBrazier = Instantiate(Resources.Load("fire_octagonal")) as GameObject;
+            //    GameObject currentLightHolder = col.transform.FindChild("Light_Holder").gameObject;
+            //    redFlameInBrazier.transform.position = currentLightHolder.transform.position;
+            //    redFlameInBrazier.transform.rotation = currentLightHolder.transform.rotation;
+            //    redFlameInBrazier.transform.parent = currentLightHolder.transform;
 
-                redFlame.GetComponent<RedFlame>().changeState("dropOff");
-                GameObject redFlameInBrazier = Instantiate(Resources.Load("fire_octagonal")) as GameObject;
-                GameObject currentLightHolder = col.transform.FindChild("Light_Holder").gameObject;
-                redFlameInBrazier.transform.position = currentLightHolder.transform.position;
-                redFlameInBrazier.transform.rotation = currentLightHolder.transform.rotation;
-                redFlameInBrazier.transform.parent = currentLightHolder.transform;
-
-            }
+            //}
 
         }
 

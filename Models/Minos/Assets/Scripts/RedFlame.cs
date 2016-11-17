@@ -57,19 +57,19 @@ public class RedFlame : MonoBehaviour
     public void normal()
     {
         //turn off the renderer of small red flame
-        this.GetComponent<Renderer>().enabled = false;
-        
+        this.GetComponent<ParticleSystem>().enableEmission = false;
+
     }
     public void pickedUp()
     {
         //turn on the renderer of small red flame
-        this.GetComponent<Renderer>().enabled = true;
-        RedFlameLocation();
+        this.GetComponent<ParticleSystem>().enableEmission = true;
+        //RedFlameLocation();
     }
     public void Drop_Off()
     {
         //turn off the renderer of small red flame
-        this.GetComponent<Renderer>().enabled = false;
+        this.GetComponent<ParticleSystem>().enableEmission = false;
         print("I am about to drop it off");
         //GameObject player = GameObject.Find("FPSController");
 
