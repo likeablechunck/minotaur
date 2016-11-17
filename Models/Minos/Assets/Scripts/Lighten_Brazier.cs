@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Light_Relocation : MonoBehaviour {
+public class Lighten_Brazier : MonoBehaviour {
 
     public bool canPickUp;
-    public bool canDropOff;
     public bool alreadyHasLight;
     public bool lightInstantiated;
     public GameObject flame;
@@ -15,7 +14,6 @@ public class Light_Relocation : MonoBehaviour {
     {
         rHandSocket = GameObject.Find("RHandSocket");
         canPickUp = false;
-        canDropOff = false;
         alreadyHasLight = false;
         lightInstantiated = false;
     }
@@ -23,23 +21,20 @@ public class Light_Relocation : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+
         //GameObject flame = GameObject.Find("Fire-1");
-        if (flame != null && flame.GetComponent<RedFlame>() != null )
+        if (flame != null && flame.GetComponent<RedFlame>() != null)
         {
             if (canPickUp && Input.GetKeyUp(KeyCode.Q))
             {
                 flame.GetComponent<RedFlame>().changeState("pickedUp");
                 //PickUp();
             }
-            if (canPickUp && Input.GetKeyUp(KeyCode.Z))
-            {
-                flame.GetComponent<RedFlame>().changeState("dropOff");
-
-            }
-        } else
+            
+        }
+        else
         {
-            print(GameObject.Find("Fire-1"));
+            //print(GameObject.Find("Fire-1"));
         }
 
 
@@ -70,23 +65,5 @@ public class Light_Relocation : MonoBehaviour {
             canPickUp = false;
 
         }
-    }
-    void PickUp()
-    {
-        this.transform.position = rHandSocket.transform.position;
-        this.transform.rotation = rHandSocket.transform.rotation;
-        this.transform.parent = rHandSocket.transform;
-
-
-
-        ////when it picks up, it should get stuck to RHandSocket
-        ////Therefore, this transform position changes to RHandSocket's position
-        ////Vector3 flamePosition = rHandSocket.transform.position;
-        //GameObject redFlame = Instantiate(Resources.Load("Fire (Complex)")) as GameObject;
-        //redFlame.transform.position = rHandSocket.transform.position;
-        ////Try to instamtiate one light at a time
-        //lightInstantiated = true;
-        ////redFlame.transform.rotation = rHandSocket.transform.rotation;
-        ////redFlame.transform.parent = rHandSocket.transform;
     }
 }

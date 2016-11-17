@@ -12,7 +12,7 @@ public class RedFlame : MonoBehaviour
     {
         state = "normal";
         rHandSocket = GameObject.Find("RHandSocket");
-        lightHolder = GameObject.Find("Light_Holder");
+        //lightHolder = GameObject.Find("Light_Holder");
 
     }
 	
@@ -49,20 +49,24 @@ public class RedFlame : MonoBehaviour
     }
     void RedFlameLocation()
     {
+        //GameObject smallRedFlame = Instantiate(Resources.Load("fire_octagonal_hand")) as GameObject;
         this.transform.position = rHandSocket.transform.position;
         this.transform.rotation = rHandSocket.transform.rotation;
         this.transform.parent = rHandSocket.transform;
     }
     public void normal()
     {
+        //turn off the renderer of small red flame
         
     }
     public void pickedUp()
     {
+        //turn on the renderer of small red flame
         RedFlameLocation();
     }
     public void Drop_Off()
     {
+        //turn off the renderer of small red flame
         print("I am about to drop it off");
         //GameObject player = GameObject.Find("FPSController");
 
