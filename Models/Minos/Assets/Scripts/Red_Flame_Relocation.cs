@@ -7,6 +7,7 @@ public class Red_Flame_Relocation : MonoBehaviour
     public bool canDropOffRedFlame;
     public bool alreadyHasRedFlame;
     public bool lightInstantiated;
+    public bool canIOpenTheDoor;
     //public GameObject redFlame;
     public GameObject rHandSocket;
 
@@ -15,7 +16,7 @@ public class Red_Flame_Relocation : MonoBehaviour
     {
         //In Inspector, assign the red flame associated with this brazier
         rHandSocket = GameObject.Find("RHandSocket");
-
+        canIOpenTheDoor = false;
         canDropOffRedFlame = false;
         canPickUpRedFlame = false;
         alreadyHasRedFlame = false;
@@ -37,22 +38,22 @@ public class Red_Flame_Relocation : MonoBehaviour
 
                 smallRedFlame.GetComponent<RedFlame>().changeState("pickedUp");
             }
-            if(canDropOffRedFlame)
+        }
+        if (canDropOffRedFlame)
+        {
+            if (Input.GetKeyUp(KeyCode.Z))
             {
-                 if(Input.GetKeyUp(KeyCode.Z))
-                {
-                    print("I pressed Z");
+                print("I pressed Z");
 
-                    smallRedFlame.GetComponent<RedFlame>().changeState("dropOff");
-                    GameObject redFlameInBrazier = Instantiate(Resources.Load("fire_octagonal")) as GameObject;
-                    GameObject currentLightHolder = GameObject.Find("Light-Holder1").gameObject;
-                    redFlameInBrazier.transform.position = currentLightHolder.transform.position;
-                    redFlameInBrazier.transform.rotation = currentLightHolder.transform.rotation;
-                    redFlameInBrazier.transform.parent = currentLightHolder.transform;
-                }
-          
-
+                smallRedFlame.GetComponent<RedFlame>().changeState("dropOff");
+                GameObject redFlameInEmptyBrazier = Instantiate(Resources.Load("fire_octagonal")) as GameObject;
+                GameObject currentLightHolder = GameObject.Find("Light_Holder1").gameObject;
+                redFlameInEmptyBrazier.transform.position = currentLightHolder.transform.position;
+                redFlameInEmptyBrazier.transform.rotation = currentLightHolder.transform.rotation;
+                redFlameInEmptyBrazier.transform.parent = currentLightHolder.transform;
+                canIOpenTheDoor = true;
             }
+
 
         }
         //if (canPickUpRedFlame && Input.GetKeyUp(KeyCode.Q))
