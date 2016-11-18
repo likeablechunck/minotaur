@@ -1,0 +1,129 @@
+fileFormatVersion: 2
+guid: aeacee5e11e880345a6a15d4d0e9e07c
+timeCreated: 1478992611
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: em_column_atrium_medium1
+    100002: em_column_atrium_medium2
+    100004: em_column_atrium_short1
+    100006: em_column_atrium_short2
+    100008: em_wall_atrium_crossbeam1
+    100010: em_wall_atrium_crossbeam2
+    100012: //RootNode
+    100014: em_wall_atrium_strut1
+    100016: em_wall_atrium_strut5
+    100018: em_wall_atrium_strut6
+    100020: em_wall_atrium_strut7
+    100022: group225_polySurface487
+    400000: em_column_atrium_medium1
+    400002: em_column_atrium_medium2
+    400004: em_column_atrium_short1
+    400006: em_column_atrium_short2
+    400008: em_wall_atrium_crossbeam1
+    400010: em_wall_atrium_crossbeam2
+    400012: //RootNode
+    400014: em_wall_atrium_strut1
+    400016: em_wall_atrium_strut5
+    400018: em_wall_atrium_strut6
+    400020: em_wall_atrium_strut7
+    400022: group225_polySurface487
+    2300000: em_column_atrium_medium1
+    2300002: em_column_atrium_medium2
+    2300004: em_column_atrium_short1
+    2300006: em_column_atrium_short2
+    2300008: em_wall_atrium_crossbeam1
+    2300010: em_wall_atrium_crossbeam2
+    2300012: em_wall_atrium_strut1
+    2300014: em_wall_atrium_strut5
+    2300016: em_wall_atrium_strut6
+    2300018: em_wall_atrium_strut7
+    2300020: group225_polySurface487
+    3300000: em_column_atrium_medium1
+    3300002: em_column_atrium_medium2
+    3300004: em_column_atrium_short1
+    3300006: em_column_atrium_short2
+    3300008: em_wall_atrium_crossbeam1
+    3300010: em_wall_atrium_crossbeam2
+    3300012: em_wall_atrium_strut1
+    3300014: em_wall_atrium_strut5
+    3300016: em_wall_atrium_strut6
+    3300018: em_wall_atrium_strut7
+    3300020: group225_polySurface487
+    4300000: em_column_atrium_medium1
+    4300002: em_column_atrium_medium2
+    4300004: em_column_atrium_short1
+    4300006: em_column_atrium_short2
+    4300008: em_wall_atrium_crossbeam1
+    4300010: em_wall_atrium_crossbeam2
+    4300012: em_wall_atrium_strut1
+    4300014: em_wall_atrium_strut5
+    4300016: em_wall_atrium_strut6
+    4300018: em_wall_atrium_strut7
+    4300020: group225_polySurface487
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

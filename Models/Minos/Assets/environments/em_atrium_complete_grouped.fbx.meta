@@ -1,0 +1,763 @@
+fileFormatVersion: 2
+guid: cab40893f460ca446acbd8510c27759d
+timeCreated: 1478990177
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ceiling_Support
+    100002: Ceiling_Tile_Group_A
+    100004: Ceiling_Tile_Group_A1
+    100006: Ceiling_Tile_Group_A2
+    100008: Ceiling_Tile_Group_A3
+    100010: Ceiling_Tile_Group_B
+    100012: Ceiling_Tile_Group_B1
+    100014: Ceiling_Tile_Group_B2
+    100016: Ceiling_Tile_Group_B3
+    100018: Ceiling_Tiles
+    100020: //RootNode
+    100022: em_ceiling_atrium_capital
+    100024: em_ceiling_atrium_capital1
+    100026: em_ceiling_atrium_capital2
+    100028: em_ceiling_atrium_capital3
+    100030: em_ceiling_atrium_crossbeam_1
+    100032: em_ceiling_atrium_crossbeam_10
+    100034: em_ceiling_atrium_crossbeam_11
+    100036: em_ceiling_atrium_crossbeam_12
+    100038: em_ceiling_atrium_crossbeam_2
+    100040: em_ceiling_atrium_crossbeam_3
+    100042: em_ceiling_atrium_crossbeam_4
+    100044: em_ceiling_atrium_crossbeam_5
+    100046: em_ceiling_atrium_crossbeam_6
+    100048: em_ceiling_atrium_crossbeam_7
+    100050: em_ceiling_atrium_crossbeam_8
+    100052: em_ceiling_atrium_crossbeam_9
+    100054: em_ceiling_atrium_square
+    100056: em_ceiling_atrium_square 1
+    100058: em_ceiling_atrium_square 2
+    100060: em_ceiling_atrium_square 3
+    100062: em_ceiling_atrium_square1
+    100064: em_ceiling_atrium_square1 1
+    100066: em_ceiling_atrium_square1 2
+    100068: em_ceiling_atrium_square1 3
+    100070: em_ceiling_atrium_square10
+    100072: em_ceiling_atrium_square10 1
+    100074: em_ceiling_atrium_square10 2
+    100076: em_ceiling_atrium_square10 3
+    100078: em_ceiling_atrium_square11
+    100080: em_ceiling_atrium_square11 1
+    100082: em_ceiling_atrium_square11 2
+    100084: em_ceiling_atrium_square11 3
+    100086: em_ceiling_atrium_square12
+    100088: em_ceiling_atrium_square12 1
+    100090: em_ceiling_atrium_square12 2
+    100092: em_ceiling_atrium_square12 3
+    100094: em_ceiling_atrium_square13
+    100096: em_ceiling_atrium_square13 1
+    100098: em_ceiling_atrium_square13 2
+    100100: em_ceiling_atrium_square13 3
+    100102: em_ceiling_atrium_square14
+    100104: em_ceiling_atrium_square14 1
+    100106: em_ceiling_atrium_square14 2
+    100108: em_ceiling_atrium_square14 3
+    100110: em_ceiling_atrium_square15
+    100112: em_ceiling_atrium_square15 1
+    100114: em_ceiling_atrium_square15 2
+    100116: em_ceiling_atrium_square15 3
+    100118: em_ceiling_atrium_square2
+    100120: em_ceiling_atrium_square2 1
+    100122: em_ceiling_atrium_square2 2
+    100124: em_ceiling_atrium_square2 3
+    100126: em_ceiling_atrium_square21
+    100128: em_ceiling_atrium_square21 1
+    100130: em_ceiling_atrium_square21 2
+    100132: em_ceiling_atrium_square21 3
+    100134: em_ceiling_atrium_square22
+    100136: em_ceiling_atrium_square22 1
+    100138: em_ceiling_atrium_square22 2
+    100140: em_ceiling_atrium_square22 3
+    100142: em_ceiling_atrium_square23
+    100144: em_ceiling_atrium_square23 1
+    100146: em_ceiling_atrium_square23 2
+    100148: em_ceiling_atrium_square23 3
+    100150: em_ceiling_atrium_square24
+    100152: em_ceiling_atrium_square24 1
+    100154: em_ceiling_atrium_square24 2
+    100156: em_ceiling_atrium_square24 3
+    100158: em_ceiling_atrium_square25
+    100160: em_ceiling_atrium_square25 1
+    100162: em_ceiling_atrium_square25 2
+    100164: em_ceiling_atrium_square25 3
+    100166: em_ceiling_atrium_square26
+    100168: em_ceiling_atrium_square26 1
+    100170: em_ceiling_atrium_square26 2
+    100172: em_ceiling_atrium_square26 3
+    100174: em_ceiling_atrium_square3
+    100176: em_ceiling_atrium_square3 1
+    100178: em_ceiling_atrium_square3 2
+    100180: em_ceiling_atrium_square3 3
+    100182: em_ceiling_atrium_square4
+    100184: em_ceiling_atrium_square4 1
+    100186: em_ceiling_atrium_square4 2
+    100188: em_ceiling_atrium_square4 3
+    100190: em_ceiling_atrium_square5
+    100192: em_ceiling_atrium_square5 1
+    100194: em_ceiling_atrium_square5 2
+    100196: em_ceiling_atrium_square5 3
+    100198: em_ceiling_atrium_square6
+    100200: em_ceiling_atrium_square6 1
+    100202: em_ceiling_atrium_square6 2
+    100204: em_ceiling_atrium_square6 3
+    100206: em_ceiling_atrium_square7
+    100208: em_ceiling_atrium_square7 1
+    100210: em_ceiling_atrium_square7 2
+    100212: em_ceiling_atrium_square7 3
+    100214: em_ceiling_atrium_square8
+    100216: em_ceiling_atrium_square8 1
+    100218: em_ceiling_atrium_square8 2
+    100220: em_ceiling_atrium_square8 3
+    100222: em_ceiling_atrium_square9
+    100224: em_ceiling_atrium_square9 1
+    100226: em_ceiling_atrium_square9 2
+    100228: em_ceiling_atrium_square9 3
+    100230: em_ceiling_atrium_triangle
+    100232: em_ceiling_atrium_triangle 1
+    100234: em_ceiling_atrium_triangle 2
+    100236: em_ceiling_atrium_triangle 3
+    100238: em_ceiling_atrium_triangle1
+    100240: em_ceiling_atrium_triangle1 1
+    100242: em_ceiling_atrium_triangle1 2
+    100244: em_ceiling_atrium_triangle1 3
+    100246: em_ceiling_atrium_triangle2
+    100248: em_ceiling_atrium_triangle2 1
+    100250: em_ceiling_atrium_triangle2 2
+    100252: em_ceiling_atrium_triangle2 3
+    100254: em_ceiling_atrium_triangle3
+    100256: em_ceiling_atrium_triangle3 1
+    100258: em_ceiling_atrium_triangle3 2
+    100260: em_ceiling_atrium_triangle3 3
+    100262: em_column_atrium_tall
+    100264: em_column_atrium_tall1
+    100266: em_column_atrium_tall2
+    100268: em_column_atrium_tall3
+    100270: em_floor_atrium
+    100272: em_wall_atrium_door_section1
+    100274: em_wall_atrium_section
+    100276: em_wall_atrium_section1
+    100278: em_wall_atrium_section2
+    100280: em_wall_atrium_section3
+    100282: em_wall_atrium_section4
+    100284: em_wall_atrium_section5
+    100286: em_wall_atrium_section6
+    100288: Floor
+    100290: Walls
+    400000: Ceiling_Support
+    400002: Ceiling_Tile_Group_A
+    400004: Ceiling_Tile_Group_A1
+    400006: Ceiling_Tile_Group_A2
+    400008: Ceiling_Tile_Group_A3
+    400010: Ceiling_Tile_Group_B
+    400012: Ceiling_Tile_Group_B1
+    400014: Ceiling_Tile_Group_B2
+    400016: Ceiling_Tile_Group_B3
+    400018: Ceiling_Tiles
+    400020: //RootNode
+    400022: em_ceiling_atrium_capital
+    400024: em_ceiling_atrium_capital1
+    400026: em_ceiling_atrium_capital2
+    400028: em_ceiling_atrium_capital3
+    400030: em_ceiling_atrium_crossbeam_1
+    400032: em_ceiling_atrium_crossbeam_10
+    400034: em_ceiling_atrium_crossbeam_11
+    400036: em_ceiling_atrium_crossbeam_12
+    400038: em_ceiling_atrium_crossbeam_2
+    400040: em_ceiling_atrium_crossbeam_3
+    400042: em_ceiling_atrium_crossbeam_4
+    400044: em_ceiling_atrium_crossbeam_5
+    400046: em_ceiling_atrium_crossbeam_6
+    400048: em_ceiling_atrium_crossbeam_7
+    400050: em_ceiling_atrium_crossbeam_8
+    400052: em_ceiling_atrium_crossbeam_9
+    400054: em_ceiling_atrium_square
+    400056: em_ceiling_atrium_square 1
+    400058: em_ceiling_atrium_square 2
+    400060: em_ceiling_atrium_square 3
+    400062: em_ceiling_atrium_square1
+    400064: em_ceiling_atrium_square1 1
+    400066: em_ceiling_atrium_square1 2
+    400068: em_ceiling_atrium_square1 3
+    400070: em_ceiling_atrium_square10
+    400072: em_ceiling_atrium_square10 1
+    400074: em_ceiling_atrium_square10 2
+    400076: em_ceiling_atrium_square10 3
+    400078: em_ceiling_atrium_square11
+    400080: em_ceiling_atrium_square11 1
+    400082: em_ceiling_atrium_square11 2
+    400084: em_ceiling_atrium_square11 3
+    400086: em_ceiling_atrium_square12
+    400088: em_ceiling_atrium_square12 1
+    400090: em_ceiling_atrium_square12 2
+    400092: em_ceiling_atrium_square12 3
+    400094: em_ceiling_atrium_square13
+    400096: em_ceiling_atrium_square13 1
+    400098: em_ceiling_atrium_square13 2
+    400100: em_ceiling_atrium_square13 3
+    400102: em_ceiling_atrium_square14
+    400104: em_ceiling_atrium_square14 1
+    400106: em_ceiling_atrium_square14 2
+    400108: em_ceiling_atrium_square14 3
+    400110: em_ceiling_atrium_square15
+    400112: em_ceiling_atrium_square15 1
+    400114: em_ceiling_atrium_square15 2
+    400116: em_ceiling_atrium_square15 3
+    400118: em_ceiling_atrium_square2
+    400120: em_ceiling_atrium_square2 1
+    400122: em_ceiling_atrium_square2 2
+    400124: em_ceiling_atrium_square2 3
+    400126: em_ceiling_atrium_square21
+    400128: em_ceiling_atrium_square21 1
+    400130: em_ceiling_atrium_square21 2
+    400132: em_ceiling_atrium_square21 3
+    400134: em_ceiling_atrium_square22
+    400136: em_ceiling_atrium_square22 1
+    400138: em_ceiling_atrium_square22 2
+    400140: em_ceiling_atrium_square22 3
+    400142: em_ceiling_atrium_square23
+    400144: em_ceiling_atrium_square23 1
+    400146: em_ceiling_atrium_square23 2
+    400148: em_ceiling_atrium_square23 3
+    400150: em_ceiling_atrium_square24
+    400152: em_ceiling_atrium_square24 1
+    400154: em_ceiling_atrium_square24 2
+    400156: em_ceiling_atrium_square24 3
+    400158: em_ceiling_atrium_square25
+    400160: em_ceiling_atrium_square25 1
+    400162: em_ceiling_atrium_square25 2
+    400164: em_ceiling_atrium_square25 3
+    400166: em_ceiling_atrium_square26
+    400168: em_ceiling_atrium_square26 1
+    400170: em_ceiling_atrium_square26 2
+    400172: em_ceiling_atrium_square26 3
+    400174: em_ceiling_atrium_square3
+    400176: em_ceiling_atrium_square3 1
+    400178: em_ceiling_atrium_square3 2
+    400180: em_ceiling_atrium_square3 3
+    400182: em_ceiling_atrium_square4
+    400184: em_ceiling_atrium_square4 1
+    400186: em_ceiling_atrium_square4 2
+    400188: em_ceiling_atrium_square4 3
+    400190: em_ceiling_atrium_square5
+    400192: em_ceiling_atrium_square5 1
+    400194: em_ceiling_atrium_square5 2
+    400196: em_ceiling_atrium_square5 3
+    400198: em_ceiling_atrium_square6
+    400200: em_ceiling_atrium_square6 1
+    400202: em_ceiling_atrium_square6 2
+    400204: em_ceiling_atrium_square6 3
+    400206: em_ceiling_atrium_square7
+    400208: em_ceiling_atrium_square7 1
+    400210: em_ceiling_atrium_square7 2
+    400212: em_ceiling_atrium_square7 3
+    400214: em_ceiling_atrium_square8
+    400216: em_ceiling_atrium_square8 1
+    400218: em_ceiling_atrium_square8 2
+    400220: em_ceiling_atrium_square8 3
+    400222: em_ceiling_atrium_square9
+    400224: em_ceiling_atrium_square9 1
+    400226: em_ceiling_atrium_square9 2
+    400228: em_ceiling_atrium_square9 3
+    400230: em_ceiling_atrium_triangle
+    400232: em_ceiling_atrium_triangle 1
+    400234: em_ceiling_atrium_triangle 2
+    400236: em_ceiling_atrium_triangle 3
+    400238: em_ceiling_atrium_triangle1
+    400240: em_ceiling_atrium_triangle1 1
+    400242: em_ceiling_atrium_triangle1 2
+    400244: em_ceiling_atrium_triangle1 3
+    400246: em_ceiling_atrium_triangle2
+    400248: em_ceiling_atrium_triangle2 1
+    400250: em_ceiling_atrium_triangle2 2
+    400252: em_ceiling_atrium_triangle2 3
+    400254: em_ceiling_atrium_triangle3
+    400256: em_ceiling_atrium_triangle3 1
+    400258: em_ceiling_atrium_triangle3 2
+    400260: em_ceiling_atrium_triangle3 3
+    400262: em_column_atrium_tall
+    400264: em_column_atrium_tall1
+    400266: em_column_atrium_tall2
+    400268: em_column_atrium_tall3
+    400270: em_floor_atrium
+    400272: em_wall_atrium_door_section1
+    400274: em_wall_atrium_section
+    400276: em_wall_atrium_section1
+    400278: em_wall_atrium_section2
+    400280: em_wall_atrium_section3
+    400282: em_wall_atrium_section4
+    400284: em_wall_atrium_section5
+    400286: em_wall_atrium_section6
+    400288: Floor
+    400290: Walls
+    2300000: em_ceiling_atrium_capital
+    2300002: em_ceiling_atrium_capital1
+    2300004: em_ceiling_atrium_capital2
+    2300006: em_ceiling_atrium_capital3
+    2300008: em_ceiling_atrium_crossbeam_1
+    2300010: em_ceiling_atrium_crossbeam_10
+    2300012: em_ceiling_atrium_crossbeam_11
+    2300014: em_ceiling_atrium_crossbeam_12
+    2300016: em_ceiling_atrium_crossbeam_2
+    2300018: em_ceiling_atrium_crossbeam_3
+    2300020: em_ceiling_atrium_crossbeam_4
+    2300022: em_ceiling_atrium_crossbeam_5
+    2300024: em_ceiling_atrium_crossbeam_6
+    2300026: em_ceiling_atrium_crossbeam_7
+    2300028: em_ceiling_atrium_crossbeam_8
+    2300030: em_ceiling_atrium_crossbeam_9
+    2300032: em_ceiling_atrium_square
+    2300034: em_ceiling_atrium_square 1
+    2300036: em_ceiling_atrium_square 2
+    2300038: em_ceiling_atrium_square 3
+    2300040: em_ceiling_atrium_square1
+    2300042: em_ceiling_atrium_square1 1
+    2300044: em_ceiling_atrium_square1 2
+    2300046: em_ceiling_atrium_square1 3
+    2300048: em_ceiling_atrium_square10
+    2300050: em_ceiling_atrium_square10 1
+    2300052: em_ceiling_atrium_square10 2
+    2300054: em_ceiling_atrium_square10 3
+    2300056: em_ceiling_atrium_square11
+    2300058: em_ceiling_atrium_square11 1
+    2300060: em_ceiling_atrium_square11 2
+    2300062: em_ceiling_atrium_square11 3
+    2300064: em_ceiling_atrium_square12
+    2300066: em_ceiling_atrium_square12 1
+    2300068: em_ceiling_atrium_square12 2
+    2300070: em_ceiling_atrium_square12 3
+    2300072: em_ceiling_atrium_square13
+    2300074: em_ceiling_atrium_square13 1
+    2300076: em_ceiling_atrium_square13 2
+    2300078: em_ceiling_atrium_square13 3
+    2300080: em_ceiling_atrium_square14
+    2300082: em_ceiling_atrium_square14 1
+    2300084: em_ceiling_atrium_square14 2
+    2300086: em_ceiling_atrium_square14 3
+    2300088: em_ceiling_atrium_square15
+    2300090: em_ceiling_atrium_square15 1
+    2300092: em_ceiling_atrium_square15 2
+    2300094: em_ceiling_atrium_square15 3
+    2300096: em_ceiling_atrium_square2
+    2300098: em_ceiling_atrium_square2 1
+    2300100: em_ceiling_atrium_square2 2
+    2300102: em_ceiling_atrium_square2 3
+    2300104: em_ceiling_atrium_square21
+    2300106: em_ceiling_atrium_square21 1
+    2300108: em_ceiling_atrium_square21 2
+    2300110: em_ceiling_atrium_square21 3
+    2300112: em_ceiling_atrium_square22
+    2300114: em_ceiling_atrium_square22 1
+    2300116: em_ceiling_atrium_square22 2
+    2300118: em_ceiling_atrium_square22 3
+    2300120: em_ceiling_atrium_square23
+    2300122: em_ceiling_atrium_square23 1
+    2300124: em_ceiling_atrium_square23 2
+    2300126: em_ceiling_atrium_square23 3
+    2300128: em_ceiling_atrium_square24
+    2300130: em_ceiling_atrium_square24 1
+    2300132: em_ceiling_atrium_square24 2
+    2300134: em_ceiling_atrium_square24 3
+    2300136: em_ceiling_atrium_square25
+    2300138: em_ceiling_atrium_square25 1
+    2300140: em_ceiling_atrium_square25 2
+    2300142: em_ceiling_atrium_square25 3
+    2300144: em_ceiling_atrium_square26
+    2300146: em_ceiling_atrium_square26 1
+    2300148: em_ceiling_atrium_square26 2
+    2300150: em_ceiling_atrium_square26 3
+    2300152: em_ceiling_atrium_square3
+    2300154: em_ceiling_atrium_square3 1
+    2300156: em_ceiling_atrium_square3 2
+    2300158: em_ceiling_atrium_square3 3
+    2300160: em_ceiling_atrium_square4
+    2300162: em_ceiling_atrium_square4 1
+    2300164: em_ceiling_atrium_square4 2
+    2300166: em_ceiling_atrium_square4 3
+    2300168: em_ceiling_atrium_square5
+    2300170: em_ceiling_atrium_square5 1
+    2300172: em_ceiling_atrium_square5 2
+    2300174: em_ceiling_atrium_square5 3
+    2300176: em_ceiling_atrium_square6
+    2300178: em_ceiling_atrium_square6 1
+    2300180: em_ceiling_atrium_square6 2
+    2300182: em_ceiling_atrium_square6 3
+    2300184: em_ceiling_atrium_square7
+    2300186: em_ceiling_atrium_square7 1
+    2300188: em_ceiling_atrium_square7 2
+    2300190: em_ceiling_atrium_square7 3
+    2300192: em_ceiling_atrium_square8
+    2300194: em_ceiling_atrium_square8 1
+    2300196: em_ceiling_atrium_square8 2
+    2300198: em_ceiling_atrium_square8 3
+    2300200: em_ceiling_atrium_square9
+    2300202: em_ceiling_atrium_square9 1
+    2300204: em_ceiling_atrium_square9 2
+    2300206: em_ceiling_atrium_square9 3
+    2300208: em_ceiling_atrium_triangle
+    2300210: em_ceiling_atrium_triangle 1
+    2300212: em_ceiling_atrium_triangle 2
+    2300214: em_ceiling_atrium_triangle 3
+    2300216: em_ceiling_atrium_triangle1
+    2300218: em_ceiling_atrium_triangle1 1
+    2300220: em_ceiling_atrium_triangle1 2
+    2300222: em_ceiling_atrium_triangle1 3
+    2300224: em_ceiling_atrium_triangle2
+    2300226: em_ceiling_atrium_triangle2 1
+    2300228: em_ceiling_atrium_triangle2 2
+    2300230: em_ceiling_atrium_triangle2 3
+    2300232: em_ceiling_atrium_triangle3
+    2300234: em_ceiling_atrium_triangle3 1
+    2300236: em_ceiling_atrium_triangle3 2
+    2300238: em_ceiling_atrium_triangle3 3
+    2300240: em_column_atrium_tall
+    2300242: em_column_atrium_tall1
+    2300244: em_column_atrium_tall2
+    2300246: em_column_atrium_tall3
+    2300248: em_floor_atrium
+    2300250: em_wall_atrium_door_section1
+    2300252: em_wall_atrium_section
+    2300254: em_wall_atrium_section1
+    2300256: em_wall_atrium_section2
+    2300258: em_wall_atrium_section3
+    2300260: em_wall_atrium_section4
+    2300262: em_wall_atrium_section5
+    2300264: em_wall_atrium_section6
+    3300000: em_ceiling_atrium_capital
+    3300002: em_ceiling_atrium_capital1
+    3300004: em_ceiling_atrium_capital2
+    3300006: em_ceiling_atrium_capital3
+    3300008: em_ceiling_atrium_crossbeam_1
+    3300010: em_ceiling_atrium_crossbeam_10
+    3300012: em_ceiling_atrium_crossbeam_11
+    3300014: em_ceiling_atrium_crossbeam_12
+    3300016: em_ceiling_atrium_crossbeam_2
+    3300018: em_ceiling_atrium_crossbeam_3
+    3300020: em_ceiling_atrium_crossbeam_4
+    3300022: em_ceiling_atrium_crossbeam_5
+    3300024: em_ceiling_atrium_crossbeam_6
+    3300026: em_ceiling_atrium_crossbeam_7
+    3300028: em_ceiling_atrium_crossbeam_8
+    3300030: em_ceiling_atrium_crossbeam_9
+    3300032: em_ceiling_atrium_square
+    3300034: em_ceiling_atrium_square 1
+    3300036: em_ceiling_atrium_square 2
+    3300038: em_ceiling_atrium_square 3
+    3300040: em_ceiling_atrium_square1
+    3300042: em_ceiling_atrium_square1 1
+    3300044: em_ceiling_atrium_square1 2
+    3300046: em_ceiling_atrium_square1 3
+    3300048: em_ceiling_atrium_square10
+    3300050: em_ceiling_atrium_square10 1
+    3300052: em_ceiling_atrium_square10 2
+    3300054: em_ceiling_atrium_square10 3
+    3300056: em_ceiling_atrium_square11
+    3300058: em_ceiling_atrium_square11 1
+    3300060: em_ceiling_atrium_square11 2
+    3300062: em_ceiling_atrium_square11 3
+    3300064: em_ceiling_atrium_square12
+    3300066: em_ceiling_atrium_square12 1
+    3300068: em_ceiling_atrium_square12 2
+    3300070: em_ceiling_atrium_square12 3
+    3300072: em_ceiling_atrium_square13
+    3300074: em_ceiling_atrium_square13 1
+    3300076: em_ceiling_atrium_square13 2
+    3300078: em_ceiling_atrium_square13 3
+    3300080: em_ceiling_atrium_square14
+    3300082: em_ceiling_atrium_square14 1
+    3300084: em_ceiling_atrium_square14 2
+    3300086: em_ceiling_atrium_square14 3
+    3300088: em_ceiling_atrium_square15
+    3300090: em_ceiling_atrium_square15 1
+    3300092: em_ceiling_atrium_square15 2
+    3300094: em_ceiling_atrium_square15 3
+    3300096: em_ceiling_atrium_square2
+    3300098: em_ceiling_atrium_square2 1
+    3300100: em_ceiling_atrium_square2 2
+    3300102: em_ceiling_atrium_square2 3
+    3300104: em_ceiling_atrium_square21
+    3300106: em_ceiling_atrium_square21 1
+    3300108: em_ceiling_atrium_square21 2
+    3300110: em_ceiling_atrium_square21 3
+    3300112: em_ceiling_atrium_square22
+    3300114: em_ceiling_atrium_square22 1
+    3300116: em_ceiling_atrium_square22 2
+    3300118: em_ceiling_atrium_square22 3
+    3300120: em_ceiling_atrium_square23
+    3300122: em_ceiling_atrium_square23 1
+    3300124: em_ceiling_atrium_square23 2
+    3300126: em_ceiling_atrium_square23 3
+    3300128: em_ceiling_atrium_square24
+    3300130: em_ceiling_atrium_square24 1
+    3300132: em_ceiling_atrium_square24 2
+    3300134: em_ceiling_atrium_square24 3
+    3300136: em_ceiling_atrium_square25
+    3300138: em_ceiling_atrium_square25 1
+    3300140: em_ceiling_atrium_square25 2
+    3300142: em_ceiling_atrium_square25 3
+    3300144: em_ceiling_atrium_square26
+    3300146: em_ceiling_atrium_square26 1
+    3300148: em_ceiling_atrium_square26 2
+    3300150: em_ceiling_atrium_square26 3
+    3300152: em_ceiling_atrium_square3
+    3300154: em_ceiling_atrium_square3 1
+    3300156: em_ceiling_atrium_square3 2
+    3300158: em_ceiling_atrium_square3 3
+    3300160: em_ceiling_atrium_square4
+    3300162: em_ceiling_atrium_square4 1
+    3300164: em_ceiling_atrium_square4 2
+    3300166: em_ceiling_atrium_square4 3
+    3300168: em_ceiling_atrium_square5
+    3300170: em_ceiling_atrium_square5 1
+    3300172: em_ceiling_atrium_square5 2
+    3300174: em_ceiling_atrium_square5 3
+    3300176: em_ceiling_atrium_square6
+    3300178: em_ceiling_atrium_square6 1
+    3300180: em_ceiling_atrium_square6 2
+    3300182: em_ceiling_atrium_square6 3
+    3300184: em_ceiling_atrium_square7
+    3300186: em_ceiling_atrium_square7 1
+    3300188: em_ceiling_atrium_square7 2
+    3300190: em_ceiling_atrium_square7 3
+    3300192: em_ceiling_atrium_square8
+    3300194: em_ceiling_atrium_square8 1
+    3300196: em_ceiling_atrium_square8 2
+    3300198: em_ceiling_atrium_square8 3
+    3300200: em_ceiling_atrium_square9
+    3300202: em_ceiling_atrium_square9 1
+    3300204: em_ceiling_atrium_square9 2
+    3300206: em_ceiling_atrium_square9 3
+    3300208: em_ceiling_atrium_triangle
+    3300210: em_ceiling_atrium_triangle 1
+    3300212: em_ceiling_atrium_triangle 2
+    3300214: em_ceiling_atrium_triangle 3
+    3300216: em_ceiling_atrium_triangle1
+    3300218: em_ceiling_atrium_triangle1 1
+    3300220: em_ceiling_atrium_triangle1 2
+    3300222: em_ceiling_atrium_triangle1 3
+    3300224: em_ceiling_atrium_triangle2
+    3300226: em_ceiling_atrium_triangle2 1
+    3300228: em_ceiling_atrium_triangle2 2
+    3300230: em_ceiling_atrium_triangle2 3
+    3300232: em_ceiling_atrium_triangle3
+    3300234: em_ceiling_atrium_triangle3 1
+    3300236: em_ceiling_atrium_triangle3 2
+    3300238: em_ceiling_atrium_triangle3 3
+    3300240: em_column_atrium_tall
+    3300242: em_column_atrium_tall1
+    3300244: em_column_atrium_tall2
+    3300246: em_column_atrium_tall3
+    3300248: em_floor_atrium
+    3300250: em_wall_atrium_door_section1
+    3300252: em_wall_atrium_section
+    3300254: em_wall_atrium_section1
+    3300256: em_wall_atrium_section2
+    3300258: em_wall_atrium_section3
+    3300260: em_wall_atrium_section4
+    3300262: em_wall_atrium_section5
+    3300264: em_wall_atrium_section6
+    4300000: em_floor_atrium
+    4300002: em_wall_atrium_section6
+    4300004: em_wall_atrium_section5
+    4300006: em_wall_atrium_section4
+    4300008: em_wall_atrium_section3
+    4300010: em_wall_atrium_section2
+    4300012: em_wall_atrium_section1
+    4300014: em_wall_atrium_section
+    4300016: em_wall_atrium_door_section1
+    4300018: em_ceiling_atrium_crossbeam_12
+    4300020: em_ceiling_atrium_crossbeam_11
+    4300022: em_ceiling_atrium_crossbeam_10
+    4300024: em_ceiling_atrium_crossbeam_9
+    4300026: em_ceiling_atrium_crossbeam_8
+    4300028: em_ceiling_atrium_crossbeam_7
+    4300030: em_ceiling_atrium_crossbeam_6
+    4300032: em_ceiling_atrium_crossbeam_5
+    4300034: em_ceiling_atrium_crossbeam_4
+    4300036: em_ceiling_atrium_crossbeam_3
+    4300038: em_ceiling_atrium_crossbeam_2
+    4300040: em_ceiling_atrium_crossbeam_1
+    4300042: em_ceiling_atrium_capital3
+    4300044: em_ceiling_atrium_capital2
+    4300046: em_ceiling_atrium_capital1
+    4300048: em_ceiling_atrium_capital
+    4300050: em_column_atrium_tall3
+    4300052: em_column_atrium_tall2
+    4300054: em_column_atrium_tall1
+    4300056: em_column_atrium_tall
+    4300058: em_ceiling_atrium_square
+    4300060: em_ceiling_atrium_square1
+    4300062: em_ceiling_atrium_square2
+    4300064: em_ceiling_atrium_square3
+    4300066: em_ceiling_atrium_square4
+    4300068: em_ceiling_atrium_square5
+    4300070: em_ceiling_atrium_square6
+    4300072: em_ceiling_atrium_square7
+    4300074: em_ceiling_atrium_square8
+    4300076: em_ceiling_atrium_square9
+    4300078: em_ceiling_atrium_square10
+    4300080: em_ceiling_atrium_square11
+    4300082: em_ceiling_atrium_square12
+    4300084: em_ceiling_atrium_square13
+    4300086: em_ceiling_atrium_square14
+    4300088: em_ceiling_atrium_square15
+    4300090: em_ceiling_atrium_square
+    4300092: em_ceiling_atrium_square1
+    4300094: em_ceiling_atrium_square2
+    4300096: em_ceiling_atrium_square3
+    4300098: em_ceiling_atrium_square4
+    4300100: em_ceiling_atrium_square5
+    4300102: em_ceiling_atrium_square6
+    4300104: em_ceiling_atrium_square7
+    4300106: em_ceiling_atrium_square8
+    4300108: em_ceiling_atrium_square9
+    4300110: em_ceiling_atrium_square10
+    4300112: em_ceiling_atrium_square11
+    4300114: em_ceiling_atrium_square12
+    4300116: em_ceiling_atrium_square13
+    4300118: em_ceiling_atrium_square14
+    4300120: em_ceiling_atrium_square15
+    4300122: em_ceiling_atrium_square
+    4300124: em_ceiling_atrium_square1
+    4300126: em_ceiling_atrium_square2
+    4300128: em_ceiling_atrium_square3
+    4300130: em_ceiling_atrium_square4
+    4300132: em_ceiling_atrium_square5
+    4300134: em_ceiling_atrium_square6
+    4300136: em_ceiling_atrium_square7
+    4300138: em_ceiling_atrium_square8
+    4300140: em_ceiling_atrium_square9
+    4300142: em_ceiling_atrium_square10
+    4300144: em_ceiling_atrium_square11
+    4300146: em_ceiling_atrium_square12
+    4300148: em_ceiling_atrium_square13
+    4300150: em_ceiling_atrium_square14
+    4300152: em_ceiling_atrium_square15
+    4300154: em_ceiling_atrium_square
+    4300156: em_ceiling_atrium_square1
+    4300158: em_ceiling_atrium_square2
+    4300160: em_ceiling_atrium_square3
+    4300162: em_ceiling_atrium_square4
+    4300164: em_ceiling_atrium_square5
+    4300166: em_ceiling_atrium_square6
+    4300168: em_ceiling_atrium_square7
+    4300170: em_ceiling_atrium_square8
+    4300172: em_ceiling_atrium_square9
+    4300174: em_ceiling_atrium_square10
+    4300176: em_ceiling_atrium_square11
+    4300178: em_ceiling_atrium_square12
+    4300180: em_ceiling_atrium_square13
+    4300182: em_ceiling_atrium_square14
+    4300184: em_ceiling_atrium_square15
+    4300186: em_ceiling_atrium_triangle
+    4300188: em_ceiling_atrium_square21
+    4300190: em_ceiling_atrium_square22
+    4300192: em_ceiling_atrium_square23
+    4300194: em_ceiling_atrium_square24
+    4300196: em_ceiling_atrium_square25
+    4300198: em_ceiling_atrium_square26
+    4300200: em_ceiling_atrium_triangle1
+    4300202: em_ceiling_atrium_triangle2
+    4300204: em_ceiling_atrium_triangle3
+    4300206: em_ceiling_atrium_triangle
+    4300208: em_ceiling_atrium_square21
+    4300210: em_ceiling_atrium_square22
+    4300212: em_ceiling_atrium_square23
+    4300214: em_ceiling_atrium_square24
+    4300216: em_ceiling_atrium_square25
+    4300218: em_ceiling_atrium_square26
+    4300220: em_ceiling_atrium_triangle1
+    4300222: em_ceiling_atrium_triangle2
+    4300224: em_ceiling_atrium_triangle3
+    4300226: em_ceiling_atrium_triangle
+    4300228: em_ceiling_atrium_square21
+    4300230: em_ceiling_atrium_square22
+    4300232: em_ceiling_atrium_square23
+    4300234: em_ceiling_atrium_square24
+    4300236: em_ceiling_atrium_square25
+    4300238: em_ceiling_atrium_square26
+    4300240: em_ceiling_atrium_triangle1
+    4300242: em_ceiling_atrium_triangle2
+    4300244: em_ceiling_atrium_triangle3
+    4300246: em_ceiling_atrium_triangle
+    4300248: em_ceiling_atrium_square21
+    4300250: em_ceiling_atrium_square22
+    4300252: em_ceiling_atrium_square23
+    4300254: em_ceiling_atrium_square24
+    4300256: em_ceiling_atrium_square25
+    4300258: em_ceiling_atrium_square26
+    4300260: em_ceiling_atrium_triangle1
+    4300262: em_ceiling_atrium_triangle2
+    4300264: em_ceiling_atrium_triangle3
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

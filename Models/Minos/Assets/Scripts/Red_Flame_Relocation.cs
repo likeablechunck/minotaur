@@ -49,7 +49,7 @@ public class Red_Flame_Relocation : MonoBehaviour
                 GameObject redFlameInEmptyBrazier = Instantiate(Resources.Load("fire_octagonal")) as GameObject;
                 GameObject currentLightHolder = GameObject.Find("Light_Holder1").gameObject;
                 redFlameInEmptyBrazier.transform.position = currentLightHolder.transform.position;
-                redFlameInEmptyBrazier.transform.rotation = currentLightHolder.transform.rotation;
+                //redFlameInEmptyBrazier.transform.rotation = currentLightHolder.transform.rotation;
                 redFlameInEmptyBrazier.transform.parent = currentLightHolder.transform;
                 canIOpenTheDoor = true;
             }

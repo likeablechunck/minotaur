@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c8dbf3768d1af124cbd516416207d482
-timeCreated: 1478566305
+guid: 6a7fb829591cee04abb17a57c27c52ca
+timeCreated: 1478994781
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -11,34 +11,36 @@ ModelImporter:
     100006: em_wall_atrium_door_crossbeam1
     100008: em_wall_atrium_door_crossbeam2
     100010: //RootNode
-    100012: em_wall_atrium_strut1
-    100014: em_wall_atrium_strut2
-    100016: em_wall_atrium_strut3
-    100018: em_wall_atrium_strut4
-    100020: polySurface166
-    100022: polySurface166 1
-    100024: polySurface167
-    100026: polySurface167 1
-    100028: polySurface168
-    100030: polySurface168 1
-    100032: polySurface178
+    100012: em_wall_atrium_door_section 1
+    100014: em_wall_atrium_strut1
+    100016: em_wall_atrium_strut2
+    100018: em_wall_atrium_strut3
+    100020: em_wall_atrium_strut4
+    100022: polySurface166
+    100024: polySurface166 1
+    100026: polySurface167
+    100028: polySurface167 1
+    100030: polySurface168
+    100032: polySurface168 1
+    100034: polySurface178
     400000: em_column_atrium_short3
     400002: em_column_atrium_short4
     400004: em_wall_atrium_crossbeam1
     400006: em_wall_atrium_door_crossbeam1
     400008: em_wall_atrium_door_crossbeam2
     400010: //RootNode
-    400012: em_wall_atrium_strut1
-    400014: em_wall_atrium_strut2
-    400016: em_wall_atrium_strut3
-    400018: em_wall_atrium_strut4
-    400020: polySurface166
-    400022: polySurface166 1
-    400024: polySurface167
-    400026: polySurface167 1
-    400028: polySurface168
-    400030: polySurface168 1
-    400032: polySurface178
+    400012: em_wall_atrium_door_section 1
+    400014: em_wall_atrium_strut1
+    400016: em_wall_atrium_strut2
+    400018: em_wall_atrium_strut3
+    400020: em_wall_atrium_strut4
+    400022: polySurface166
+    400024: polySurface166 1
+    400026: polySurface167
+    400028: polySurface167 1
+    400030: polySurface168
+    400032: polySurface168 1
+    400034: polySurface178
     2300000: em_wall_atrium_crossbeam1
     2300002: em_wall_atrium_door_crossbeam1
     2300004: em_wall_atrium_door_crossbeam2

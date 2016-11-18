@@ -18,12 +18,15 @@ ModelImporter:
     2300000: polySurface163
     2300002: polySurface164
     2300004: polySurface165
+    2300006: //RootNode
     3300000: polySurface163
     3300002: polySurface164
     3300004: polySurface165
+    3300006: //RootNode
     4300000: polySurface164
     4300002: polySurface163
     4300004: polySurface165
+    4300006: em_column_atrium_tall
     9500000: //RootNode
   materials:
     importMaterials: 1
