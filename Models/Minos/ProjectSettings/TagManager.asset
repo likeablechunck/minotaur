@@ -16,6 +16,8 @@ TagManager:
   - Cane
   - Load-Atrium
   - Red_Flame_Brazier
+  - Brazier
+  - Timer_End
   layers:
   - Default
   - TransparentFX

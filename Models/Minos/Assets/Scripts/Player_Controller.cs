@@ -8,6 +8,8 @@ public class Player_Controller : MonoBehaviour
     public bool turnOnTheCaneLight;
     public bool shouldICloseTheFirstDoor;
     public bool shouldIOpenTheFirstHiddenDoor;
+    bool shouldIStopTheTimer;
+    public float timer;
 
     // Use this for initialization
     void Start ()
@@ -16,12 +18,24 @@ public class Player_Controller : MonoBehaviour
         turnOnTheCaneLight = false;
         shouldICloseTheFirstDoor = false;
         shouldIOpenTheFirstHiddenDoor = false;
+        shouldIStopTheTimer = false;
+        timer = 0;
 
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if(!shouldIStopTheTimer)
+        {
+            timer += Time.deltaTime;
+        }
+        else
+        {
+            print("timer is :" + timer);
+            timer = timer + 0;
+        }
+        
 	
 	}
     void OnTriggerEnter(Collider col)
@@ -30,6 +44,10 @@ public class Player_Controller : MonoBehaviour
 
         Vector3 torchPosition = col.transform.position;
         Vector3 playerPosition = this.transform.position;
+        if(col.gameObject.tag == "Timer_End")
+        {
+            shouldIStopTheTimer = true;
+        }
         if(col.gameObject.tag == "Torch")
         {
             
