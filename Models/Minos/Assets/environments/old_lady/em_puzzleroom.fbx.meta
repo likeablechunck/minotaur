@@ -1,0 +1,459 @@
+fileFormatVersion: 2
+guid: 290d0a63657980f4d95355cc1ef2338c
+timeCreated: 1480203831
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ceiling_puzzleroom_em_puzzleroom_ceiling
+    100002: //RootNode
+    100004: floor_puzzleroom_em_puzzleroom_floor
+    100006: group264
+    100008: group265
+    100010: group267
+    100012: group268
+    100014: group269
+    100016: group270
+    100018: group271
+    100020: group272
+    100022: group273
+    100024: group296
+    100026: polySurface19
+    100028: polySurface19 1
+    100030: polySurface19 2
+    100032: polySurface19 3
+    100034: polySurface19 4
+    100036: polySurface19 5
+    100038: polySurface19 6
+    100040: polySurface19 7
+    100042: polySurface19 8
+    100044: polySurface19 9
+    100046: polySurface20
+    100048: polySurface20 1
+    100050: polySurface20 2
+    100052: polySurface20 3
+    100054: polySurface20 4
+    100056: polySurface20 5
+    100058: polySurface20 6
+    100060: polySurface20 7
+    100062: polySurface20 8
+    100064: polySurface20 9
+    100066: polySurface21
+    100068: polySurface21 1
+    100070: polySurface21 2
+    100072: polySurface21 3
+    100074: polySurface21 4
+    100076: polySurface21 5
+    100078: polySurface21 6
+    100080: polySurface21 7
+    100082: polySurface21 8
+    100084: polySurface21 9
+    100086: polySurface22
+    100088: polySurface22 1
+    100090: polySurface22 2
+    100092: polySurface22 3
+    100094: polySurface22 4
+    100096: polySurface22 5
+    100098: polySurface22 6
+    100100: polySurface22 7
+    100102: polySurface22 8
+    100104: polySurface22 9
+    100106: polySurface23
+    100108: polySurface23 1
+    100110: polySurface23 2
+    100112: polySurface23 3
+    100114: polySurface23 4
+    100116: polySurface23 5
+    100118: polySurface23 6
+    100120: polySurface23 7
+    100122: polySurface23 8
+    100124: polySurface23 9
+    100126: polySurface24
+    100128: polySurface25
+    100130: polySurface26
+    100132: ramps_puzzleroom_em_puzzleroom_platform
+    100134: ramps_puzzleroom_em_puzzleroom_ramp
+    100136: ramps_puzzleroom_em_puzzleroom_ramp2
+    100138: wall_puzzleroom_mural_em_puzzleroom_wall_mural11
+    100140: wall_puzzleroom_mural_em_puzzleroom_wall_mural18
+    100142: wall_puzzleroom_mural_em_puzzleroom_wall_mural19
+    100144: wall_puzzleroom_mural_em_puzzleroom_wall_mural3
+    100146: wall_puzzleroom_mural_em_puzzleroom_wall_mural4
+    100148: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    100150: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 1
+    100152: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 2
+    100154: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 3
+    100156: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 4
+    100158: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 5
+    100160: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 6
+    100162: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 7
+    100164: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 8
+    100166: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 9
+    400000: ceiling_puzzleroom_em_puzzleroom_ceiling
+    400002: //RootNode
+    400004: floor_puzzleroom_em_puzzleroom_floor
+    400006: group264
+    400008: group265
+    400010: group267
+    400012: group268
+    400014: group269
+    400016: group270
+    400018: group271
+    400020: group272
+    400022: group273
+    400024: group296
+    400026: polySurface19
+    400028: polySurface19 1
+    400030: polySurface19 2
+    400032: polySurface19 3
+    400034: polySurface19 4
+    400036: polySurface19 5
+    400038: polySurface19 6
+    400040: polySurface19 7
+    400042: polySurface19 8
+    400044: polySurface19 9
+    400046: polySurface20
+    400048: polySurface20 1
+    400050: polySurface20 2
+    400052: polySurface20 3
+    400054: polySurface20 4
+    400056: polySurface20 5
+    400058: polySurface20 6
+    400060: polySurface20 7
+    400062: polySurface20 8
+    400064: polySurface20 9
+    400066: polySurface21
+    400068: polySurface21 1
+    400070: polySurface21 2
+    400072: polySurface21 3
+    400074: polySurface21 4
+    400076: polySurface21 5
+    400078: polySurface21 6
+    400080: polySurface21 7
+    400082: polySurface21 8
+    400084: polySurface21 9
+    400086: polySurface22
+    400088: polySurface22 1
+    400090: polySurface22 2
+    400092: polySurface22 3
+    400094: polySurface22 4
+    400096: polySurface22 5
+    400098: polySurface22 6
+    400100: polySurface22 7
+    400102: polySurface22 8
+    400104: polySurface22 9
+    400106: polySurface23
+    400108: polySurface23 1
+    400110: polySurface23 2
+    400112: polySurface23 3
+    400114: polySurface23 4
+    400116: polySurface23 5
+    400118: polySurface23 6
+    400120: polySurface23 7
+    400122: polySurface23 8
+    400124: polySurface23 9
+    400126: polySurface24
+    400128: polySurface25
+    400130: polySurface26
+    400132: ramps_puzzleroom_em_puzzleroom_platform
+    400134: ramps_puzzleroom_em_puzzleroom_ramp
+    400136: ramps_puzzleroom_em_puzzleroom_ramp2
+    400138: wall_puzzleroom_mural_em_puzzleroom_wall_mural11
+    400140: wall_puzzleroom_mural_em_puzzleroom_wall_mural18
+    400142: wall_puzzleroom_mural_em_puzzleroom_wall_mural19
+    400144: wall_puzzleroom_mural_em_puzzleroom_wall_mural3
+    400146: wall_puzzleroom_mural_em_puzzleroom_wall_mural4
+    400148: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    400150: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 1
+    400152: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 2
+    400154: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 3
+    400156: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 4
+    400158: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 5
+    400160: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 6
+    400162: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 7
+    400164: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 8
+    400166: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 9
+    2300000: ceiling_puzzleroom_em_puzzleroom_ceiling
+    2300002: floor_puzzleroom_em_puzzleroom_floor
+    2300004: polySurface19
+    2300006: polySurface19 1
+    2300008: polySurface19 2
+    2300010: polySurface19 3
+    2300012: polySurface19 4
+    2300014: polySurface19 5
+    2300016: polySurface19 6
+    2300018: polySurface19 7
+    2300020: polySurface19 8
+    2300022: polySurface19 9
+    2300024: polySurface20
+    2300026: polySurface20 1
+    2300028: polySurface20 2
+    2300030: polySurface20 3
+    2300032: polySurface20 4
+    2300034: polySurface20 5
+    2300036: polySurface20 6
+    2300038: polySurface20 7
+    2300040: polySurface20 8
+    2300042: polySurface20 9
+    2300044: polySurface21
+    2300046: polySurface21 1
+    2300048: polySurface21 2
+    2300050: polySurface21 3
+    2300052: polySurface21 4
+    2300054: polySurface21 5
+    2300056: polySurface21 6
+    2300058: polySurface21 7
+    2300060: polySurface21 8
+    2300062: polySurface21 9
+    2300064: polySurface22
+    2300066: polySurface22 1
+    2300068: polySurface22 2
+    2300070: polySurface22 3
+    2300072: polySurface22 4
+    2300074: polySurface22 5
+    2300076: polySurface22 6
+    2300078: polySurface22 7
+    2300080: polySurface22 8
+    2300082: polySurface22 9
+    2300084: polySurface23
+    2300086: polySurface23 1
+    2300088: polySurface23 2
+    2300090: polySurface23 3
+    2300092: polySurface23 4
+    2300094: polySurface23 5
+    2300096: polySurface23 6
+    2300098: polySurface23 7
+    2300100: polySurface23 8
+    2300102: polySurface23 9
+    2300104: polySurface24
+    2300106: polySurface25
+    2300108: polySurface26
+    2300110: ramps_puzzleroom_em_puzzleroom_platform
+    2300112: ramps_puzzleroom_em_puzzleroom_ramp
+    2300114: ramps_puzzleroom_em_puzzleroom_ramp2
+    2300116: wall_puzzleroom_mural_em_puzzleroom_wall_mural11
+    2300118: wall_puzzleroom_mural_em_puzzleroom_wall_mural18
+    2300120: wall_puzzleroom_mural_em_puzzleroom_wall_mural19
+    2300122: wall_puzzleroom_mural_em_puzzleroom_wall_mural3
+    2300124: wall_puzzleroom_mural_em_puzzleroom_wall_mural4
+    2300126: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    2300128: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 1
+    2300130: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 2
+    2300132: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 3
+    2300134: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 4
+    2300136: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 5
+    2300138: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 6
+    2300140: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 7
+    2300142: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 8
+    2300144: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 9
+    3300000: ceiling_puzzleroom_em_puzzleroom_ceiling
+    3300002: floor_puzzleroom_em_puzzleroom_floor
+    3300004: polySurface19
+    3300006: polySurface19 1
+    3300008: polySurface19 2
+    3300010: polySurface19 3
+    3300012: polySurface19 4
+    3300014: polySurface19 5
+    3300016: polySurface19 6
+    3300018: polySurface19 7
+    3300020: polySurface19 8
+    3300022: polySurface19 9
+    3300024: polySurface20
+    3300026: polySurface20 1
+    3300028: polySurface20 2
+    3300030: polySurface20 3
+    3300032: polySurface20 4
+    3300034: polySurface20 5
+    3300036: polySurface20 6
+    3300038: polySurface20 7
+    3300040: polySurface20 8
+    3300042: polySurface20 9
+    3300044: polySurface21
+    3300046: polySurface21 1
+    3300048: polySurface21 2
+    3300050: polySurface21 3
+    3300052: polySurface21 4
+    3300054: polySurface21 5
+    3300056: polySurface21 6
+    3300058: polySurface21 7
+    3300060: polySurface21 8
+    3300062: polySurface21 9
+    3300064: polySurface22
+    3300066: polySurface22 1
+    3300068: polySurface22 2
+    3300070: polySurface22 3
+    3300072: polySurface22 4
+    3300074: polySurface22 5
+    3300076: polySurface22 6
+    3300078: polySurface22 7
+    3300080: polySurface22 8
+    3300082: polySurface22 9
+    3300084: polySurface23
+    3300086: polySurface23 1
+    3300088: polySurface23 2
+    3300090: polySurface23 3
+    3300092: polySurface23 4
+    3300094: polySurface23 5
+    3300096: polySurface23 6
+    3300098: polySurface23 7
+    3300100: polySurface23 8
+    3300102: polySurface23 9
+    3300104: polySurface24
+    3300106: polySurface25
+    3300108: polySurface26
+    3300110: ramps_puzzleroom_em_puzzleroom_platform
+    3300112: ramps_puzzleroom_em_puzzleroom_ramp
+    3300114: ramps_puzzleroom_em_puzzleroom_ramp2
+    3300116: wall_puzzleroom_mural_em_puzzleroom_wall_mural11
+    3300118: wall_puzzleroom_mural_em_puzzleroom_wall_mural18
+    3300120: wall_puzzleroom_mural_em_puzzleroom_wall_mural19
+    3300122: wall_puzzleroom_mural_em_puzzleroom_wall_mural3
+    3300124: wall_puzzleroom_mural_em_puzzleroom_wall_mural4
+    3300126: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    3300128: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 1
+    3300130: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 2
+    3300132: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 3
+    3300134: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 4
+    3300136: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 5
+    3300138: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 6
+    3300140: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 7
+    3300142: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 8
+    3300144: wall_puzzleroom_mural_em_puzzleroom_wall_mural9 9
+    4300000: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300002: polySurface19
+    4300004: polySurface20
+    4300006: polySurface23
+    4300008: polySurface21
+    4300010: polySurface22
+    4300012: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300014: polySurface19
+    4300016: polySurface20
+    4300018: polySurface23
+    4300020: polySurface21
+    4300022: polySurface22
+    4300024: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300026: polySurface19
+    4300028: polySurface20
+    4300030: polySurface23
+    4300032: polySurface21
+    4300034: polySurface22
+    4300036: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300038: polySurface19
+    4300040: polySurface20
+    4300042: polySurface23
+    4300044: polySurface21
+    4300046: polySurface22
+    4300048: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300050: polySurface19
+    4300052: polySurface20
+    4300054: polySurface23
+    4300056: polySurface21
+    4300058: polySurface22
+    4300060: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300062: polySurface19
+    4300064: polySurface20
+    4300066: polySurface23
+    4300068: polySurface21
+    4300070: polySurface22
+    4300072: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300074: polySurface19
+    4300076: polySurface20
+    4300078: polySurface23
+    4300080: polySurface21
+    4300082: polySurface22
+    4300084: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300086: polySurface19
+    4300088: polySurface20
+    4300090: polySurface23
+    4300092: polySurface21
+    4300094: polySurface22
+    4300096: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300098: polySurface19
+    4300100: polySurface20
+    4300102: polySurface23
+    4300104: polySurface21
+    4300106: polySurface22
+    4300108: wall_puzzleroom_mural_em_puzzleroom_wall_mural9
+    4300110: polySurface19
+    4300112: polySurface20
+    4300114: polySurface23
+    4300116: polySurface21
+    4300118: polySurface22
+    4300120: wall_puzzleroom_mural_em_puzzleroom_wall_mural3
+    4300122: wall_puzzleroom_mural_em_puzzleroom_wall_mural18
+    4300124: wall_puzzleroom_mural_em_puzzleroom_wall_mural4
+    4300126: wall_puzzleroom_mural_em_puzzleroom_wall_mural19
+    4300128: ceiling_puzzleroom_em_puzzleroom_ceiling
+    4300130: polySurface24
+    4300132: polySurface25
+    4300134: polySurface26
+    4300136: floor_puzzleroom_em_puzzleroom_floor
+    4300138: ramps_puzzleroom_em_puzzleroom_ramp2
+    4300140: ramps_puzzleroom_em_puzzleroom_ramp
+    4300142: ramps_puzzleroom_em_puzzleroom_platform
+    4300144: wall_puzzleroom_mural_em_puzzleroom_wall_mural11
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
