@@ -8,7 +8,7 @@ public class Player_Controller : MonoBehaviour
     public bool turnOnTheCaneLight;
     public bool shouldICloseTheFirstDoor;
     public bool shouldIOpenTheFirstHiddenDoor;
-    bool shouldIStopTheTimer;
+    public bool shouldIStopTheTimer;
     public float timer;
 
     // Use this for initialization
@@ -26,15 +26,15 @@ public class Player_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if(!shouldIStopTheTimer)
-        {
-            timer += Time.deltaTime;
-        }
-        else
-        {
-            print("timer is :" + timer);
-            timer = timer + 0;
-        }
+        //if(!shouldIStopTheTimer)
+        //{
+        //    timer += Time.deltaTime;
+        //}
+        //else
+        //{
+        //    print("timer is :" + timer);
+        //    timer = timer + 0;
+        //}
         
 	
 	}
@@ -44,6 +44,7 @@ public class Player_Controller : MonoBehaviour
 
         Vector3 torchPosition = col.transform.position;
         Vector3 playerPosition = this.transform.position;
+        //When player gets to the end of the Old Lady's room, timer should stop
         if(col.gameObject.tag == "Timer_End")
         {
             shouldIStopTheTimer = true;
