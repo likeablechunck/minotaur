@@ -5,23 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class Old_Lady_Controller : MonoBehaviour
 {
-    private FMOD.Studio.EventInstance musicEvent;
-    private FMOD.Studio.ParameterInstance minotaurBreath;
+    //private FMOD.Studio.EventInstance musicEvent;
+    //private FMOD.Studio.ParameterInstance minotaurBreath;
+    private FMODUnity.StudioEventEmitter emitter;
+    public float emitterInitialValue;
+    public float emitterValueOverTime;
     public float gameTimer;
+    public float initialGameTimer;
+    public float timeInterval;
     //public float cameraVignetteIntensity;
 
 	// Use this for initialization
 	void Start ()
     {
-        
         //Make sure to set the Game Timer in the inspector
-
+        emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
+        emitterInitialValue = 0.5f;
+        emitter.SetParameter("Intensity", emitterInitialValue);
+        emitterValueOverTime = emitterInitialValue;
+        initialGameTimer = gameTimer;
+        timeInterval = gameTimer / 4;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        //float cameraVignetteIntensity = this.GetComponent<VignetteAndChromaticAberration>().intensity;
+        //emitter.SetParameter("Intensity", emitterInitialValue);
         print("Vignetting intensity : " + this.GetComponent<VignetteAndChromaticAberration>().intensity);
         GameObject player = GameObject.Find("FPSController");
         print("Game time is at : " + gameTimer);
@@ -30,17 +39,28 @@ public class Old_Lady_Controller : MonoBehaviour
             if (player.GetComponent<Player_Controller>().shouldIStopTheTimer == false)
             {
                 gameTimer -= Time.deltaTime;
-                if(gameTimer <=12 && gameTimer > 9 )
+                if(initialGameTimer - gameTimer >= timeInterval)
                 {
-                    
+                    print("Difference is now set");
+                    if(emitterValueOverTime <=4)
+                    {
+                        print("I am about to increase the parameter value");
+                        emitterValueOverTime = increaseFMODParameter(emitterValueOverTime);
+                        emitter.SetParameter("Intensity", emitterValueOverTime);
+                        print("I added and now parameter val is : " + emitterValueOverTime);
+                    }
+                    else
+                    {
+                        emitterValueOverTime = 3.9f;
+                    }
+                    initialGameTimer -= timeInterval;
+                    print("Initial Game Time is : " + initialGameTimer);
                 }
-
             }
             else
             {
                 gameTimer -= 0;
             }
-
         }
         else
         {
@@ -56,6 +76,11 @@ public class Old_Lady_Controller : MonoBehaviour
             }             
         }      	
 	}
+    //Increase the parameter value by one
+    public float increaseFMODParameter(float currentParameterValue)
+    {
+        return currentParameterValue + 1;
+    }
     public void LoadScene()
     {
         SceneManager.LoadScene("Old_Lady");
@@ -65,4 +90,7 @@ public class Old_Lady_Controller : MonoBehaviour
     //to access the parameter of FMOD you can do this:
     //musiscEvent.setParameter("ParamName", float value);
     //musiscEvent.setParameter("minotaurBreath", float value);
+
+    //If you wish to trigger parameter changes from code set the option to None.Then in a script attached to the same Game Object add the line
+    //GetComponent<FMODUnity.StudioParameterTrigger>().TriggerParameters();
 }
