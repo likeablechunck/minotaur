@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Old_Lady_Controller : MonoBehaviour
 {
+    private FMOD.Studio.EventInstance musicEvent;
+    private FMOD.Studio.ParameterInstance minotaurBreath;
     public float gameTimer;
     //public float cameraVignetteIntensity;
 
 	// Use this for initialization
 	void Start ()
     {
+        
         //Make sure to set the Game Timer in the inspector
 
     }
@@ -27,6 +30,10 @@ public class Old_Lady_Controller : MonoBehaviour
             if (player.GetComponent<Player_Controller>().shouldIStopTheTimer == false)
             {
                 gameTimer -= Time.deltaTime;
+                if(gameTimer <=12 && gameTimer > 9 )
+                {
+                    
+                }
 
             }
             else
@@ -53,4 +60,9 @@ public class Old_Lady_Controller : MonoBehaviour
     {
         SceneManager.LoadScene("Old_Lady");
     }
+    //private FMOD.Studio.EventInstance musicEvent;
+    //The parameter in FMOD is called "Intensity"
+    //to access the parameter of FMOD you can do this:
+    //musiscEvent.setParameter("ParamName", float value);
+    //musiscEvent.setParameter("minotaurBreath", float value);
 }

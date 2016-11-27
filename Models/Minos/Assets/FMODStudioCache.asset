@@ -12,14 +12,26 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114000012321138194}
-  - {fileID: 114000010607597306}
+  - {fileID: 114000010899953610}
+  - {fileID: 114000013468037416}
   EditorEvents:
-  - {fileID: 114000012511124716}
-  - {fileID: 114000012881732950}
-  MasterBankRef: {fileID: 114000010607597306}
-  StringsBankRef: {fileID: 114000012321138194}
-  stringsBankWriteTime: 636138880343659726
+  - {fileID: 114000014117180132}
+  - {fileID: 114000012779272384}
+  - {fileID: 114000010679537012}
+  - {fileID: 114000012489965456}
+  - {fileID: 114000013112525632}
+  - {fileID: 114000013170214038}
+  - {fileID: 114000013720978356}
+  - {fileID: 114000011131731962}
+  - {fileID: 114000011377862552}
+  - {fileID: 114000013920044298}
+  - {fileID: 114000013662106170}
+  - {fileID: 114000013684503268}
+  - {fileID: 114000013815188546}
+  - {fileID: 114000012801364264}
+  MasterBankRef: {fileID: 114000013468037416}
+  StringsBankRef: {fileID: 114000010899953610}
+  stringsBankWriteTime: 636157998305128520
   cacheVersion: 2
 --- !u!114 &114000010176995580
 MonoBehaviour:
@@ -42,6 +54,21 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114000010225557900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Voiceover
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114000010607597306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +88,67 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1600128
   Exists: 1
+--- !u!114 &114000010679537012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/HeartBeat
+  guid: 1d218ddbf9c63d498679b333f0a9f110
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114000013739167896}
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114000010899953610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  Path: Assets\Minos Fmod Nov22\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636157998305128520
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1316
+  Exists: 1
+--- !u!114 &114000011131731962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Door Close
+  guid: 70a764ad7a9346418ed0bee264439396
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &114000011371310242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +171,27 @@ MonoBehaviour:
   - {fileID: 114000013670101098}
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114000011377862552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Icon Revealed
+  guid: 715d085a0b17d348b88cf561700ca97e
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &114000011423432560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +206,21 @@ MonoBehaviour:
   Name: Intensity
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114000011518044366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 4
   Default: 0
 --- !u!114 &114000012309788724
 MonoBehaviour:
@@ -167,6 +291,27 @@ MonoBehaviour:
   - Name: Desktop
     Value: 756
   Exists: 1
+--- !u!114 &114000012489965456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Sword Break
+  guid: 2b73fc0505f543458e10588ae9aa29df
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &114000012511124716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +363,48 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114000012779272384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fire Loop
+  guid: 143e40694ef8e94ab86bc402e0850c9a
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &114000012801364264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Door Open
+  guid: f46696fdb7724e4db6bc81a743a4ae77
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &114000012824931704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +457,42 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114000012915841674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114000013112525632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Sword Soundscape
+  guid: 334cf7db865de141aa5808372cb2baef
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &114000013121093690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +511,68 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1600128
   Exists: 1
+--- !u!114 &114000013170214038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fire Place
+  guid: 45dbb856fe286f43af5c96bbbaaf1f8f
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114000013468037416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Faranak\Desktop\Minos\Models\Minos\Assets\Minos Fmod Nov22\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636157998305033467
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2385696
+  Exists: 1
+--- !u!114 &114000013662106170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/VO/King Voice Over
+  guid: cc12dbe55010b54db1f320448bbb2929
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114000010225557900}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &114000013670101098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +588,128 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114000013684503268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Torch or fire inhand
+  guid: d14cebad63dcbd4a9c45e622b0a39290
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114000013720978356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Warrior War Drums
+  guid: 64ee102616dc1f4b959384a8a3a9b5b6
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114000012915841674}
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114000013739167896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Heart Beat
+  Min: 0
+  Max: 3
+  Default: 0
+--- !u!114 &114000013815188546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Fire Pickup
+  guid: f05e8c341d8eb3469aec8e94997a580f
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114000013920044298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Minotaur Breaths
+  guid: b701d05e9aff9948a1e8ae2102d68fcd
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114000011518044366}
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &114000014117180132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Footsteps
+  guid: 05f596fc10a8d941b8599516962cddbe
+  Banks:
+  - {fileID: 114000013468037416}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &114000014181718802
 MonoBehaviour:
   m_ObjectHideFlags: 0

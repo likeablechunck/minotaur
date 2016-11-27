@@ -1,0 +1,17 @@
+{2610ee64-dc16-4b1f-9593-84a8a3a9b5b6} event:/Music/Warrior War Drums
+{ad64a770-937a-4146-8ed0-bee264439396} event:/SFX/Door Close
+{fd9666f4-72b7-4d4e-b6bc-81a743a4ae77} event:/SFX/Door Open
+{69403e14-f84e-4ae9-b86b-c402e0850c9a} event:/SFX/Fire Loop
+{348c5ef0-8e1d-46b3-9aec-8e94997a580f} event:/SFX/Fire Pickup
+{56b8db45-28fe-436f-af5c-96bbbaaf1f8f} event:/SFX/Fire Place
+{fc96f505-a810-41d9-b859-9516962cddbe} event:/SFX/Footsteps
+{db8d211d-c6f9-493d-8679-b333f0a9f110} event:/SFX/HeartBeat
+{5a085d71-170b-48d3-b88c-f561700ca97e} event:/SFX/Icon Revealed
+{5ed001b7-ff9a-4899-a1e8-ae2102d68fcd} event:/SFX/Minotaur Breaths
+{05fc732b-f505-4543-8e10-588ae9aa29df} event:/SFX/Sword Break
+{dbf74c33-5d86-41e1-aa58-08372cb2baef} event:/SFX/Sword Soundscape
+{adeb4cd1-dc63-4abd-9c45-e622b0a39290} event:/SFX/Torch or fire inhand
+{e5db12cc-1050-4db5-b1f3-20448bbb2929} event:/VO/King Voice Over
+{1734d659-e3c1-4942-aeec-b64186fb12e7} bus:/
+{c862b4f8-5214-4e89-a561-391495670b3b} bus:/Reverb
+{ec5fa594-9f3f-4d24-88b6-cc5b6fead665} bank:/Master Bank
