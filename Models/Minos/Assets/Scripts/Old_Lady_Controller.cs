@@ -7,7 +7,7 @@ public class Old_Lady_Controller : MonoBehaviour
 {
     //private FMOD.Studio.EventInstance musicEvent;
     //private FMOD.Studio.ParameterInstance minotaurBreath;
-    private FMODUnity.StudioEventEmitter emitter;
+    private FMODUnity.StudioEventEmitter heartBeat_emitter;
     public float emitterInitialValue;
     public float emitterValueOverTime;
     public float gameTimer;
@@ -19,12 +19,12 @@ public class Old_Lady_Controller : MonoBehaviour
 	void Start ()
     {
         //Make sure to set the Game Timer in the inspector
-        emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
+        heartBeat_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
         emitterInitialValue = 0.5f;
-        emitter.SetParameter("Intensity", emitterInitialValue);
+        heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
         emitterValueOverTime = emitterInitialValue;
         initialGameTimer = gameTimer;
-        timeInterval = gameTimer / 4;
+        timeInterval = gameTimer / 3;
     }
 	
 	// Update is called once per frame
@@ -42,16 +42,16 @@ public class Old_Lady_Controller : MonoBehaviour
                 if(initialGameTimer - gameTimer >= timeInterval)
                 {
                     print("Difference is now set");
-                    if(emitterValueOverTime <=4)
+                    if(emitterValueOverTime <=3)
                     {
                         print("I am about to increase the parameter value");
                         emitterValueOverTime = increaseFMODParameter(emitterValueOverTime);
-                        emitter.SetParameter("Intensity", emitterValueOverTime);
+                        heartBeat_emitter.SetParameter("Heart Beat", emitterValueOverTime);
                         print("I added and now parameter val is : " + emitterValueOverTime);
                     }
                     else
                     {
-                        emitterValueOverTime = 3.9f;
+                        emitterValueOverTime = 2.9f;
                     }
                     initialGameTimer -= timeInterval;
                     print("Initial Game Time is : " + initialGameTimer);
