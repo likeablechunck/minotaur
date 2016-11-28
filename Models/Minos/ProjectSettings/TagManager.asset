@@ -18,6 +18,7 @@ TagManager:
   - Red_Flame_Brazier
   - Brazier
   - Timer_End
+  - VO_trigger
   layers:
   - Default
   - TransparentFX

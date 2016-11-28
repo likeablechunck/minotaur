@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{d52b92ee-3b87-46c9-b33b-60a2024c6e6c}">
+        <property name="assetPath">
+            <value>VO_Hallway_1.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>9.6213333333333342</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{455efdda-2e20-426d-aa52-02d3b9cfcb28}</destination>
+        </relationship>
+    </object>
+</objects>

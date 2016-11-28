@@ -5047,6 +5047,129 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7, y: 10.999998, z: 1.000001}
   m_Center: {x: -0.0035721064, y: -0.00000071525574, z: -0.010386407}
+--- !u!1 &275241963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 275241964}
+  - 33: {fileID: 275241969}
+  - 65: {fileID: 275241968}
+  - 23: {fileID: 275241967}
+  - 114: {fileID: 275241965}
+  - 114: {fileID: 275241966}
+  m_Layer: 0
+  m_Name: VO_Trigger2
+  m_TagString: VO_trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &275241964
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275241963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.6, y: -9.103057, z: 62.1}
+  m_LocalScale: {x: 10.000006, y: 10, z: 1.0000007}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1217530723}
+  m_RootOrder: 9
+--- !u!114 &275241965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275241963}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/VO/King Voice Over
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Voiceover
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &275241966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275241963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Emitters:
+  - Target: {fileID: 1296777324}
+    Params:
+    - Name: Voiceover
+      Value: 0.5
+  TriggerEvent: 3
+  CollisionTag: Player
+--- !u!23 &275241967
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275241963}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &275241968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275241963}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &275241969
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275241963}
+  m_Mesh: {fileID: 0}
 --- !u!1 &276759058 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5ca40085ce88adc4e8394d83d7516413, type: 3}
@@ -7098,7 +7221,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014113861036, guid: 2da25f12e93e9b542b53061360098d2b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.035
+      value: 0.0234
       objectReference: {fileID: 0}
     - target: {fileID: 4000014113861036, guid: 2da25f12e93e9b542b53061360098d2b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7127,7 +7250,7 @@ Prefab:
     - target: {fileID: 114000011948102330, guid: 2da25f12e93e9b542b53061360098d2b,
         type: 2}
       propertyPath: speed
-      value: 0.05
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2da25f12e93e9b542b53061360098d2b, type: 2}
@@ -11843,6 +11966,8 @@ GameObject:
   - 65: {fileID: 626348674}
   - 23: {fileID: 626348673}
   - 114: {fileID: 626348672}
+  - 114: {fileID: 626348677}
+  - 114: {fileID: 626348676}
   m_Layer: 0
   m_Name: Passage_Door
   m_TagString: Untagged
@@ -11924,6 +12049,40 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 626348670}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &626348676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 626348670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Door Open
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &626348677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 626348670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &635010857
 GameObject:
   m_ObjectHideFlags: 0
@@ -21699,6 +21858,104 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1041947845}
   m_Mesh: {fileID: 4300162, guid: cab40893f460ca446acbd8510c27759d, type: 3}
+--- !u!1 &1044994121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1044994122}
+  - 33: {fileID: 1044994126}
+  - 65: {fileID: 1044994125}
+  - 23: {fileID: 1044994124}
+  - 114: {fileID: 1044994123}
+  m_Layer: 0
+  m_Name: VO_Trigger3
+  m_TagString: VO_trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044994122
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044994121}
+  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 18.96, y: -6.26, z: -9.16}
+  m_LocalScale: {x: 40.18381, y: 10, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1217530723}
+  m_RootOrder: 10
+--- !u!114 &1044994123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044994121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Emitters:
+  - Target: {fileID: 275241965}
+    Params:
+    - Name: Voiceover
+      Value: 2.5
+  TriggerEvent: 3
+  CollisionTag: Player
+--- !u!23 &1044994124
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044994121}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &1044994125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044994121}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1044994126
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044994121}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1049421686 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013164764492, guid: dc7a3d395c0ff454bb8c27674cf4492a,
@@ -24103,6 +24360,9 @@ Transform:
   - {fileID: 1536968851}
   - {fileID: 194561125}
   - {fileID: 114026700}
+  - {fileID: 1296777328}
+  - {fileID: 275241964}
+  - {fileID: 1044994122}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &1217777423
@@ -26297,6 +26557,133 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf5102c3f5d173e4282bb93c1d7d2cf5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1296777323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1296777328}
+  - 33: {fileID: 1296777327}
+  - 65: {fileID: 1296777326}
+  - 23: {fileID: 1296777325}
+  - 114: {fileID: 1296777329}
+  - 114: {fileID: 1296777324}
+  m_Layer: 0
+  m_Name: VO_Trigger_Start
+  m_TagString: VO_trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1296777324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296777323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/VO/King Voice Over
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Voiceover
+    Value: 1.5
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!23 &1296777325
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296777323}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &1296777326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296777323}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1296777327
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296777323}
+  m_Mesh: {fileID: 0}
+--- !u!4 &1296777328
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296777323}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -11.3, y: -11.913057, z: 54.973404}
+  m_LocalScale: {x: 10.000006, y: 10, z: 1.0000007}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1217530723}
+  m_RootOrder: 8
+--- !u!114 &1296777329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296777323}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Emitters:
+  - Target: {fileID: 0}
+    Params:
+    - Name: Voiceover
+      Value: 1.5
+  - Target: {fileID: 275241965}
+    Params:
+    - Name: Voiceover
+      Value: 1.5
+  TriggerEvent: 3
+  CollisionTag: Player
 --- !u!1001 &1297774438
 Prefab:
   m_ObjectHideFlags: 0
@@ -31001,27 +31388,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.0999999
+      value: -1.508
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 85.27
+      value: 80.25
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.99982023
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.01896185
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_RootOrder
@@ -31076,6 +31463,32 @@ Prefab:
       propertyPath: m_FootstepSounds.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 80621d0244747ce4996bdbcaa71f80cf, type: 3}
+    - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_JumpSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LandSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011186251972, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: OverrideMinDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011186251972, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: OverrideMaxDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Volume
+      value: 0.276
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000012946570950, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
     - {fileID: 114000010432753946, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -37181,14 +37594,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011080407910, guid: 2f1c1ff9ccfc50240829dd1af4f6f3ee, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011080407910, guid: 2f1c1ff9ccfc50240829dd1af4f6f3ee, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f1c1ff9ccfc50240829dd1af4f6f3ee, type: 2}
   m_IsPrefabParent: 0
@@ -40795,6 +41200,30 @@ CapsuleCollider:
   m_Height: 1.8484544
   m_Direction: 1
   m_Center: {x: 0, y: 0.5644661, z: -0.000000834465}
+--- !u!114 &2029486363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029486359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Fire Brazier
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Fire
+    Value: 0.514
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 20
 --- !u!1 &2029797716
 GameObject:
   m_ObjectHideFlags: 0
@@ -42824,6 +43253,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000012140621852, guid: b15c456df2ccd2d4bae43e2bdec95799,
+        type: 2}
+      propertyPath: Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012774213244, guid: b15c456df2ccd2d4bae43e2bdec95799, type: 2}
       propertyPath: m_LocalPosition.x
       value: -23.87
@@ -42859,6 +43293,26 @@ Prefab:
     - target: {fileID: 1000011671865728, guid: b15c456df2ccd2d4bae43e2bdec95799, type: 2}
       propertyPath: m_Name
       value: torch_safe (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012140621852, guid: b15c456df2ccd2d4bae43e2bdec95799,
+        type: 2}
+      propertyPath: Event
+      value: event:/SFX/Torch
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012140621852, guid: b15c456df2ccd2d4bae43e2bdec95799,
+        type: 2}
+      propertyPath: Params.Array.data[0].Value
+      value: 0.327
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012140621852, guid: b15c456df2ccd2d4bae43e2bdec95799,
+        type: 2}
+      propertyPath: Params.Array.data[0].Name
+      value: Distance
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012140621852, guid: b15c456df2ccd2d4bae43e2bdec95799,
+        type: 2}
+      propertyPath: OverrideMaxDistance
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b15c456df2ccd2d4bae43e2bdec95799, type: 2}

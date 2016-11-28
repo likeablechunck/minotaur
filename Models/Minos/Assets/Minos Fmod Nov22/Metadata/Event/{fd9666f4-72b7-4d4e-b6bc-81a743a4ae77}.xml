@@ -28,6 +28,9 @@
         <relationship name="timeline">
             <destination>{d6825950-48d4-4c32-b788-94395be5eb44}</destination>
         </relationship>
+        <relationship name="parameters">
+            <destination>{1d5fe309-f1de-4f6a-8383-d009a928a017}</destination>
+        </relationship>
         <relationship name="banks">
             <destination>{ec5fa594-9f3f-4d24-88b6-cc5b6fead665}</destination>
         </relationship>
@@ -61,6 +64,7 @@
     <object class="GroupTrack" id="{fd0c3b72-5078-4a42-90d2-70705a219853}">
         <relationship name="modules">
             <destination>{28fce924-49e2-417c-bc7e-3e83229bd28e}</destination>
+            <destination>{c663b509-7c4c-48e3-835d-7f48cf6677cb}</destination>
         </relationship>
         <relationship name="mixerGroup">
             <destination>{53a28c80-29e1-4e86-82cc-737a40972be5}</destination>
@@ -69,6 +73,14 @@
     <object class="Timeline" id="{d6825950-48d4-4c32-b788-94395be5eb44}">
         <relationship name="modules">
             <destination>{28fce924-49e2-417c-bc7e-3e83229bd28e}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{1d5fe309-f1de-4f6a-8383-d009a928a017}">
+        <property name="name">
+            <value>Play</value>
+        </property>
+        <relationship name="modules">
+            <destination>{c663b509-7c4c-48e3-835d-7f48cf6677cb}</destination>
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{4452621c-1721-4307-87fc-cdb6355ea202}">
@@ -94,6 +106,17 @@
         </property>
         <property name="length">
             <value>1.5209070294784581</value>
+        </property>
+        <relationship name="audioFile">
+            <destination>{aba2c8b9-4196-47fe-b91c-e08b7c6b283c}</destination>
+        </relationship>
+    </object>
+    <object class="SingleSound" id="{c663b509-7c4c-48e3-835d-7f48cf6677cb}">
+        <property name="start">
+            <value>0</value>
+        </property>
+        <property name="length">
+            <value>1</value>
         </property>
         <relationship name="audioFile">
             <destination>{aba2c8b9-4196-47fe-b91c-e08b7c6b283c}</destination>
