@@ -16,7 +16,7 @@ public class Minotaur_Breathing_Instantiation : MonoBehaviour
     {
         //make sure to set up the time interval inside the inspector
         initialGameTimer = player.GetComponent<Old_Lady_Controller>().gameTimer;
-        minotaurBreathing_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();	
+        minotaurBreathing_emitter = this.gameObject.GetComponent<FMODUnity.StudioEventEmitter>();	
 	}
 	
 	// Update is called once per frame
@@ -30,12 +30,17 @@ public class Minotaur_Breathing_Instantiation : MonoBehaviour
             {
                 bufferAmount = Random.Range(0, 10);
                 print("buffer amount is : " + bufferAmount);
-                //randomParameter = Random.Range(1, 5);
+                randomParameter = Random.Range(0, 4);
                 print("FMOD random parameter is : " + randomParameter);
-                this.transform.position =new Vector3(player.transform.position.x ,(player.transform.position.y) + bufferAmount, player.transform.position.z);
+                this.transform.position = new Vector3(player.transform.position.x ,(player.transform.position.y) + bufferAmount, player.transform.position.z);
                 print("empty GO location is at : " + this.transform.position);
-                //wht emitter doesn't work?
-                minotaurBreathing_emitter.SetParameter("Intensity", 1);
+                //why emitter doesn't work?
+                //this.gameObject.GetComponent<FMODUnity.StudioParameterTrigger>().TriggerParameters();
+                minotaurBreathing_emitter.SetParameter("Intensity", randomParameter);
+                //if(!minotaurBreathing_emitter.IsPlaying())
+                //{
+                //    minotaurBreathing_emitter.Play();
+                //}
                 print("I did the emitter thingie");
                 initialGameTimer -= timeInterval;
             }

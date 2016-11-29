@@ -13,18 +13,21 @@ public class Old_Lady_Controller : MonoBehaviour
     public float gameTimer;
     public float initialGameTimer;
     public float timeInterval;
+    public bool emitterIsResetToInitial;
     //public float cameraVignetteIntensity;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         //Make sure to set the Game Timer in the inspector
         heartBeat_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
+
         emitterInitialValue = 0.5f;
         heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
         emitterValueOverTime = emitterInitialValue;
         initialGameTimer = gameTimer;
         timeInterval = gameTimer / 3;
+        emitterIsResetToInitial = false;
     }
 	
 	// Update is called once per frame
@@ -34,38 +37,14 @@ public class Old_Lady_Controller : MonoBehaviour
         print("Vignetting intensity : " + this.GetComponent<VignetteAndChromaticAberration>().intensity);
         GameObject player = GameObject.Find("FPSController");
         print("Game time is at : " + gameTimer);
-        if(gameTimer >0)
-        {
-            if (player.GetComponent<Player_Controller>().shouldIStopTheTimer == false)
-            {
-                gameTimer -= Time.deltaTime;
-                if(initialGameTimer - gameTimer >= timeInterval)
-                {
-                    print("Difference is now set");
-                    if(emitterValueOverTime <=3)
-                    {
-                        print("I am about to increase the parameter value");
-                        emitterValueOverTime = increaseFMODParameter(emitterValueOverTime);
-                        heartBeat_emitter.SetParameter("Heart Beat", emitterValueOverTime);
-                        print("I added and now parameter val is : " + emitterValueOverTime);
-                    }
-                    else
-                    {
-                        emitterValueOverTime = 2.9f;
-                    }
-                    initialGameTimer -= timeInterval;
-                    print("Initial Game Time is : " + initialGameTimer);
-                }
-            }
-            else
-            {
-                gameTimer -= 0;
-            }
-        }
-        else
+        if (gameTimer < 0)
         {
             //1)Music should stop
             player.GetComponent<AudioSource>().Stop();
+            if (heartBeat_emitter.IsPlaying())
+            {
+                heartBeat_emitter.Stop();
+            }
             //2)Vignette effect
             this.GetComponent<VignetteAndChromaticAberration>().intensity += Time.deltaTime;
             //when camera completely faded
@@ -73,8 +52,37 @@ public class Old_Lady_Controller : MonoBehaviour
             if (this.GetComponent<VignetteAndChromaticAberration>().intensity >= 1)
             {
                 LoadScene();
-            }             
-        }      	
+            }
+
+        }
+        else
+        {
+            if (emitterValueOverTime <= 2 && !player.GetComponent<Player_Controller>().shouldIStopTheTimer)
+            {
+                print("!player.GetComponent<Player_Controller>().shouldIStopTheTimer " + !player.GetComponent<Player_Controller>().shouldIStopTheTimer);
+                gameTimer -= Time.deltaTime;
+                // for every 5 seconds we should increment emiiterValuOverTime
+                // and decrement initialGameTimer by timeInterval
+                if (initialGameTimer - gameTimer >= timeInterval)
+                {
+                    // increment the emiiterValuOverTime
+                    // decrement initialGameTimer by timeIn terval
+                    emitterValueOverTime++;
+                    heartBeat_emitter.SetParameter("Heart Beat", emitterValueOverTime);
+                    initialGameTimer -= timeInterval;
+                }
+            }
+            if (player.GetComponent<Player_Controller>().shouldIStopTheTimer)
+            {
+                //  reset the emitterValueOverTime back to initial value only once
+                // so we need a variable
+                if (!emitterIsResetToInitial)
+                {
+                    heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
+                    emitterIsResetToInitial = true;
+                }
+            }
+        }     	
 	}
     //Increase the parameter value by one
     public float increaseFMODParameter(float currentParameterValue)

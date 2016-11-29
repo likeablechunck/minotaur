@@ -30,7 +30,7 @@ public class Red_Flame_Relocation : MonoBehaviour
         GameObject smallRedFlame = GameObject.Find("fire_octagonal_hand");
         if (canPickUpRedFlame)
         {       
-            if (Input.GetKeyUp(KeyCode.Q))
+            if (Input.GetKeyUp(KeyCode.E))
             {
                 print("I pressed Q");
                 smallRedFlame.GetComponent<ParticleSystem>().enableEmission = true;
@@ -41,7 +41,7 @@ public class Red_Flame_Relocation : MonoBehaviour
         }
         if (canDropOffRedFlame)
         {
-            if (Input.GetKeyUp(KeyCode.Z))
+            if (Input.GetKeyUp(KeyCode.Q))
             {
                 print("I pressed Z");
 

@@ -6546,10 +6546,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000012774213244, guid: b15c456df2ccd2d4bae43e2bdec95799, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
-      objectReference: {fileID: 0}
     - target: {fileID: 1000011671865728, guid: b15c456df2ccd2d4bae43e2bdec95799, type: 2}
       propertyPath: m_Name
       value: torch_safe (1)
@@ -14830,8 +14826,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1264613107}
-  - 114: {fileID: 1264613106}
   - 114: {fileID: 1264613105}
+  - 114: {fileID: 1264613106}
   - 114: {fileID: 1264613108}
   m_Layer: 0
   m_Name: Minotaur_Breath_controller
@@ -14865,16 +14861,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/SFX/Minotaur Breaths
-  PlayEvent: 1
+  PlayEvent: 0
   StopEvent: 0
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params:
-  - Name: Intensity
-    Value: 0
-  OverrideAttenuation: 0
+  Params: []
+  OverrideAttenuation: 1
   OverrideMinDistance: 0
   OverrideMaxDistance: 20
 --- !u!4 &1264613107
@@ -14896,12 +14890,16 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1264613104}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListenerNumber: 3
+  Emitters:
+  - Target: {fileID: 1264613106}
+    Params: []
+  TriggerEvent: 0
+  CollisionTag: 
 --- !u!1 &1272848365 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 98f27763eba09b94bbebf74878993a2b, type: 3}
@@ -20169,7 +20167,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: fc59e97c7e515e643ad3080a071a56df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.4
+      value: 58.63
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc59e97c7e515e643ad3080a071a56df, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20177,7 +20175,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc59e97c7e515e643ad3080a071a56df, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -105
+      value: -103.77
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc59e97c7e515e643ad3080a071a56df, type: 3}
       propertyPath: m_LocalRotation.x
@@ -22301,7 +22299,7 @@ Prefab:
     - target: {fileID: 114000011173642542, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000011173642542, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
@@ -22321,7 +22319,7 @@ Prefab:
     - target: {fileID: 114000011569421564, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
       propertyPath: gameTimer
-      value: 18
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_FootstepSounds.Array.data[0]
@@ -22331,6 +22329,32 @@ Prefab:
       propertyPath: m_FootstepSounds.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 80621d0244747ce4996bdbcaa71f80cf, type: 3}
+    - target: {fileID: 8100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_LandSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_JumpSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013689418082, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013689418082, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: OverrideMinDistance
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000010432753946, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}

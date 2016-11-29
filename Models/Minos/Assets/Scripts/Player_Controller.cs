@@ -26,15 +26,6 @@ public class Player_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        //if(!shouldIStopTheTimer)
-        //{
-        //    timer += Time.deltaTime;
-        //}
-        //else
-        //{
-        //    print("timer is :" + timer);
-        //    timer = timer + 0;
-        //}
         
 	
 	}
