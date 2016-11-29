@@ -4,48 +4,85 @@ using System.Collections;
 public class Minotaur_Breathing_Instantiation : MonoBehaviour
 {
     private FMODUnity.StudioEventEmitter minotaurBreathing_emitter;
-    public float timeInterval;
-    public GameObject player;
+    private float timeInterval;
+    private GameObject player;
     int randomParameter;
     int bufferAmount;
     float initialGameTimer;
+    float emitterValueOverTime;
+
 
 
     // Use this for initialization
     void Start ()
     {
-        //make sure to set up the time interval inside the inspector
+        GameObject player = GameObject.Find("FirstPersonCharacter");
         initialGameTimer = player.GetComponent<Old_Lady_Controller>().gameTimer;
-        minotaurBreathing_emitter = this.gameObject.GetComponent<FMODUnity.StudioEventEmitter>();	
+        minotaurBreathing_emitter = this.gameObject.GetComponent<FMODUnity.StudioEventEmitter>();
+        emitterValueOverTime = 0.5f;
+        timeInterval = player.GetComponent<Old_Lady_Controller>().gameTimer / 4;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if(player.GetComponent<Old_Lady_Controller>().gameTimer >=0)
+        GameObject fpc = GameObject.Find("FPSController");
+        GameObject player = GameObject.Find("FirstPersonCharacter");
+
+        if (player.GetComponent<Old_Lady_Controller>().gameTimer < 0)
         {
-            print("Player's timer is at : " + player.GetComponent<Old_Lady_Controller>().gameTimer);
-            print("Minotaur's timer is at : " + initialGameTimer);
-            if (initialGameTimer - player.GetComponent<Old_Lady_Controller>().gameTimer >= timeInterval)
+            if (minotaurBreathing_emitter.IsPlaying())
             {
-                bufferAmount = Random.Range(0, 10);
-                print("buffer amount is : " + bufferAmount);
-                randomParameter = Random.Range(0, 4);
-                print("FMOD random parameter is : " + randomParameter);
-                this.transform.position = new Vector3(player.transform.position.x ,(player.transform.position.y) + bufferAmount, player.transform.position.z);
-                print("empty GO location is at : " + this.transform.position);
-                //why emitter doesn't work?
-                //this.gameObject.GetComponent<FMODUnity.StudioParameterTrigger>().TriggerParameters();
-                minotaurBreathing_emitter.SetParameter("Intensity", randomParameter);
-                minotaurBreathing_emitter.Play();
-                //if(!minotaurBreathing_emitter.IsPlaying())
-                //{
-                //    minotaurBreathing_emitter.Play();
-                //}
-                print("I did the emitter thingie");
-                initialGameTimer -= timeInterval;
+                minotaurBreathing_emitter.Stop();
             }
-            
-        }	
-	}
+        }
+        else
+        {
+            if (emitterValueOverTime <= 3 && !fpc.GetComponent<Player_Controller>().shouldIStopTheTimer)
+            {
+                if (player.GetComponent<Old_Lady_Controller>().initialGameTimer - player.GetComponent<Old_Lady_Controller>().gameTimer >= timeInterval)
+                {
+                    // increment the emiiterValuOverTime
+                    // decrement initialGameTimer by timeIn terval
+                    //change the location of the emitter and place it on top of the player
+                    bufferAmount = Random.Range(0, 10);
+                    this.transform.position = new Vector3(player.transform.position.x, (player.transform.position.y) + bufferAmount, player.transform.position.z);
+                    emitterValueOverTime++;
+                    minotaurBreathing_emitter.SetParameter("Intensity", emitterValueOverTime);
+                    initialGameTimer -= timeInterval;
+                }
+
+            }
+            if (fpc.GetComponent<Player_Controller>().shouldIStopTheTimer)
+            {
+                if (minotaurBreathing_emitter.IsPlaying())
+                {
+                    minotaurBreathing_emitter.Stop();
+                }
+            }
+        }
+    }
+    //OLD CODE ASSUMING MINOTAUR'S BREATHING INTENSITY SHOULD BE RANDOM
+    //if(player.GetComponent<Old_Lady_Controller>().gameTimer >=0)
+    //{
+    //    print("Player's timer is at : " + player.GetComponent<Old_Lady_Controller>().gameTimer);
+    //    print("Minotaur's timer is at : " + initialGameTimer);
+    //    if (initialGameTimer - player.GetComponent<Old_Lady_Controller>().gameTimer >= timeInterval)
+    //    {
+    //        bufferAmount = Random.Range(0, 10);
+    //        print("buffer amount is : " + bufferAmount);
+    //        this.transform.position = new Vector3(player.transform.position.x ,(player.transform.position.y) + bufferAmount, player.transform.position.z);
+    //        print("empty GO location is at : " + this.transform.position);
+    //        //why emitter doesn't work?
+    //        //this.gameObject.GetComponent<FMODUnity.StudioParameterTrigger>().TriggerParameters();
+    //        minotaurBreathing_emitter.SetParameter("Intensity", randomParameter);
+    //        minotaurBreathing_emitter.Play();
+    //        //randomParameter = Random.Range(0, 4);
+    //        //print("FMOD random parameter is : " + randomParameter);
+
+    //        print("I did the emitter thingie");
+    //        initialGameTimer -= timeInterval;
+    //    }
+
+    //}	
 }

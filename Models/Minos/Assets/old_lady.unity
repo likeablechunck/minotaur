@@ -14826,8 +14826,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1264613107}
-  - 114: {fileID: 1264613105}
   - 114: {fileID: 1264613106}
+  - 114: {fileID: 1264613105}
   - 114: {fileID: 1264613108}
   m_Layer: 0
   m_Name: Minotaur_Breath_controller
@@ -14847,8 +14847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cbcb71661041e64d9f786fe08a53cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInterval: 3
-  player: {fileID: 1795562532}
 --- !u!114 &1264613106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14861,7 +14859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/SFX/Minotaur Breaths
-  PlayEvent: 0
+  PlayEvent: 1
   StopEvent: 0
   CollisionTag: 
   AllowFadeout: 1
@@ -14892,14 +14890,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1264613104}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Emitters:
-  - Target: {fileID: 1264613106}
-    Params: []
-  TriggerEvent: 0
-  CollisionTag: 
+  ListenerNumber: 0
 --- !u!1 &1272848365 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 98f27763eba09b94bbebf74878993a2b, type: 3}
@@ -22319,7 +22313,7 @@ Prefab:
     - target: {fileID: 114000011569421564, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
       propertyPath: gameTimer
-      value: 75
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_FootstepSounds.Array.data[0]
@@ -22359,10 +22353,6 @@ Prefab:
     - {fileID: 114000010432753946, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1795562532 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
-  m_PrefabInternal: {fileID: 1795562531}
 --- !u!4 &1799459614 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012089363494, guid: d5f8eee4e9da8af49a837bab67fc108a,
