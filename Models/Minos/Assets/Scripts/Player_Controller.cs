@@ -4,11 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour
 {
+    public GameObject brokenSword;
     public bool turnOnTheSwordLight;
     public bool turnOnTheCaneLight;
     public bool shouldICloseTheFirstDoor;
     public bool shouldIOpenTheFirstHiddenDoor;
     public bool shouldIStopTheTimer;
+    public bool shouldITurnOnTheBrokenSword;
     public float timer;
 
     // Use this for initialization
@@ -19,6 +21,7 @@ public class Player_Controller : MonoBehaviour
         shouldICloseTheFirstDoor = false;
         shouldIOpenTheFirstHiddenDoor = false;
         shouldIStopTheTimer = false;
+        shouldITurnOnTheBrokenSword = false;
         timer = 0;
 
     }
@@ -26,6 +29,10 @@ public class Player_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if(shouldITurnOnTheBrokenSword)
+        {
+           brokenSword.SetActive(true);
+        }
         
 	
 	}
@@ -56,8 +63,11 @@ public class Player_Controller : MonoBehaviour
         }
         if(col.gameObject.tag == "Sword")
         {
+            //it needs to destroy the normal sword
+            //Then turn on the broken sword
             turnOnTheSwordLight = true;
-            Destroy(col.gameObject, 1);
+            Destroy(col.gameObject, 0.5f);
+            shouldITurnOnTheBrokenSword = true;
         }
         if(col.gameObject.tag == "Cane")
         {

@@ -37,6 +37,7 @@ public class Minotaur_Breathing_Instantiation : MonoBehaviour
                 //why emitter doesn't work?
                 //this.gameObject.GetComponent<FMODUnity.StudioParameterTrigger>().TriggerParameters();
                 minotaurBreathing_emitter.SetParameter("Intensity", randomParameter);
+                minotaurBreathing_emitter.Play();
                 //if(!minotaurBreathing_emitter.IsPlaying())
                 //{
                 //    minotaurBreathing_emitter.Play();
