@@ -26707,6 +26707,13 @@ MonoBehaviour:
   lightInstantiated: 0
   canIOpenTheDoor: 0
   rHandSocket: {fileID: 644042452}
+--- !u!81 &1232572661
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232572658}
+  m_Enabled: 1
 --- !u!1 &1232850807
 GameObject:
   m_ObjectHideFlags: 0
@@ -33590,15 +33597,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.2
+      value: -27.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.2
+      value: -2.54
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 15.8
+      value: 84.6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -33704,6 +33711,15 @@ Prefab:
       propertyPath: brokenSword
       value: 
       objectReference: {fileID: 539008019}
+    - target: {fileID: 114000011173642542, guid: 5e9e851c0e142814dac026a256ba2ac0,
+        type: 2}
+      propertyPath: ListenerNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000012946570950, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
     - {fileID: 114000010432753946, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}

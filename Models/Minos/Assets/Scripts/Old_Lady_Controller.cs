@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Old_Lady_Controller : MonoBehaviour
 {
-    //private FMOD.Studio.EventInstance musicEvent;
-    //private FMOD.Studio.ParameterInstance minotaurBreath;
     private FMODUnity.StudioEventEmitter heartBeat_emitter;
     public float emitterInitialValue;
     public float emitterValueOverTime;
@@ -57,10 +55,12 @@ public class Old_Lady_Controller : MonoBehaviour
         }
         else
         {
+            gameTimer -= Time.deltaTime;
             if (emitterValueOverTime <= 2 && !player.GetComponent<Player_Controller>().shouldIStopTheTimer)
             {
+                print("emittervalu is : " + emitterValueOverTime);
                 print("!player.GetComponent<Player_Controller>().shouldIStopTheTimer " + !player.GetComponent<Player_Controller>().shouldIStopTheTimer);
-                gameTimer -= Time.deltaTime;
+                //gameTimer -= Time.deltaTime;
                 // for every 5 seconds we should increment emiiterValuOverTime
                 // and decrement initialGameTimer by timeInterval
                 if (initialGameTimer - gameTimer >= timeInterval)
@@ -68,6 +68,7 @@ public class Old_Lady_Controller : MonoBehaviour
                     // increment the emiiterValuOverTime
                     // decrement initialGameTimer by timeIn terval
                     emitterValueOverTime++;
+                    
                     heartBeat_emitter.SetParameter("Heart Beat", emitterValueOverTime);
                     initialGameTimer -= timeInterval;
                 }

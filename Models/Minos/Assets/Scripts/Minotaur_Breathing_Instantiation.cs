@@ -5,11 +5,11 @@ public class Minotaur_Breathing_Instantiation : MonoBehaviour
 {
     private FMODUnity.StudioEventEmitter minotaurBreathing_emitter;
     private float timeInterval;
-    private GameObject player;
-    int randomParameter;
+    //private GameObject player;
+    //int randomParameter;
     int bufferAmount;
     float initialGameTimer;
-    float emitterValueOverTime;
+    int minotaurEmitterValueOverTime;
 
 
 
@@ -19,7 +19,7 @@ public class Minotaur_Breathing_Instantiation : MonoBehaviour
         GameObject player = GameObject.Find("FirstPersonCharacter");
         initialGameTimer = player.GetComponent<Old_Lady_Controller>().gameTimer;
         minotaurBreathing_emitter = this.gameObject.GetComponent<FMODUnity.StudioEventEmitter>();
-        emitterValueOverTime = 0.5f;
+        minotaurEmitterValueOverTime = 1;
         timeInterval = player.GetComponent<Old_Lady_Controller>().gameTimer / 4;
 	}
 	
@@ -38,25 +38,52 @@ public class Minotaur_Breathing_Instantiation : MonoBehaviour
         }
         else
         {
-            if (emitterValueOverTime <= 3 && !fpc.GetComponent<Player_Controller>().shouldIStopTheTimer)
+            if (minotaurEmitterValueOverTime <= 3 && !fpc.GetComponent<Player_Controller>().shouldIStopTheTimer)
             {
-                if (player.GetComponent<Old_Lady_Controller>().initialGameTimer - player.GetComponent<Old_Lady_Controller>().gameTimer >= timeInterval)
+
+                if (initialGameTimer - player.GetComponent<Old_Lady_Controller>().gameTimer >= timeInterval)
                 {
                     // increment the emiiterValuOverTime
                     // decrement initialGameTimer by timeIn terval
                     //change the location of the emitter and place it on top of the player
                     bufferAmount = Random.Range(0, 10);
                     this.transform.position = new Vector3(player.transform.position.x, (player.transform.position.y) + bufferAmount, player.transform.position.z);
-                    emitterValueOverTime++;
-                    minotaurBreathing_emitter.SetParameter("Intensity", emitterValueOverTime);
+                    if(minotaurEmitterValueOverTime ==1)
+                    {
+                        player.GetComponent<GameMusic>().changeState("minotaur1");
+
+                    }
+                    if(minotaurEmitterValueOverTime ==2)
+                    {
+                        player.GetComponent<GameMusic>().changeState("minotaur2");
+                    }
+                    if(minotaurEmitterValueOverTime == 3)
+                    {
+                        player.GetComponent<GameMusic>().changeState("minotaur3");
+
+                    }
+                    if(minotaurEmitterValueOverTime == 4)
+                    {
+                        player.GetComponent<GameMusic>().changeState("minotaur4");
+
+                    }
+                    minotaurEmitterValueOverTime++;
+                    //minotaurBreathing_emitter.SetParameter("Intensity", minotaurEmitterValueOverTime);
+                    //print("I passed this stupid parameter" + minotaurEmitterValueOverTime);
+                    //if(!minotaurBreathing_emitter.IsPlaying())
+                    //{
+                    //    minotaurBreathing_emitter.Play();
+                    //    print("parameter val that now I am using is : " + minotaurEmitterValueOverTime);
+                    //}
+                    //minotaurBreathing_emitter.Play();
                     initialGameTimer -= timeInterval;
                 }
-
             }
             if (fpc.GetComponent<Player_Controller>().shouldIStopTheTimer)
             {
                 if (minotaurBreathing_emitter.IsPlaying())
                 {
+                    print("I am stopping minotaur breath");
                     minotaurBreathing_emitter.Stop();
                 }
             }

@@ -32,9 +32,7 @@ public class Player_Controller : MonoBehaviour
         if(shouldITurnOnTheBrokenSword)
         {
            brokenSword.SetActive(true);
-        }
-        
-	
+        }       
 	}
     void OnTriggerEnter(Collider col)
     {
