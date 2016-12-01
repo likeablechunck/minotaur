@@ -19,6 +19,9 @@ public class Player_Controller : MonoBehaviour
     public bool shouldIDisplayQText;
     public bool shouldIOpenTheAtriumDoor;
     public bool shouldIStartTheTimer;
+    public bool ShouldICloseTheDoorToTheSafeRoom;
+    public bool shouldIOpenTheDoorToSafePassage;
+    public bool shouldIOpenTheMinotaurDoor;
     public float timer;
 
     // Use this for initialization
@@ -36,6 +39,9 @@ public class Player_Controller : MonoBehaviour
         shouldIDisplayQText = false;
         shouldIOpenTheAtriumDoor = false;
         shouldIStartTheTimer = false;
+        ShouldICloseTheDoorToTheSafeRoom = false;
+        shouldIOpenTheDoorToSafePassage = false;
+        shouldIOpenTheMinotaurDoor = false;
         timer = 0;
 
     }
@@ -90,6 +96,10 @@ public class Player_Controller : MonoBehaviour
         {
             shouldIOpenTheAtriumDoor = true;
         }
+        if(col.gameObject.tag == "Enterance_To_Saferoom")
+        {
+            ShouldICloseTheDoorToTheSafeRoom = true;
+        }
 
         if (col.gameObject.tag == "Torch")
         {
@@ -117,6 +127,8 @@ public class Player_Controller : MonoBehaviour
         if(col.gameObject.tag == "Cane")
         {
             turnOnTheCaneLight = true;
+            shouldIOpenTheDoorToSafePassage = true;
+            shouldIOpenTheMinotaurDoor = true;
         }
         if(col.gameObject.tag == "Room1-Door")
         {

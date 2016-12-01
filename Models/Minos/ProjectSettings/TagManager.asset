@@ -20,6 +20,7 @@ TagManager:
   - Timer_End
   - VO_trigger
   - Open_Atrium_Door
+  - Enterance_To_Saferoom
   layers:
   - Default
   - TransparentFX
