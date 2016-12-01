@@ -63,7 +63,6 @@ public class Old_Lady_Controller : MonoBehaviour
             }
             else
             {
-                gameTimer -= Time.deltaTime;
                 if (emitterValueOverTime <= 2 && !player.GetComponent<Player_Controller>().shouldIStopTheTimer)
                 {
                     print("emittervalu is : " + emitterValueOverTime);
@@ -76,7 +75,6 @@ public class Old_Lady_Controller : MonoBehaviour
                         // increment the emiiterValuOverTime
                         // decrement initialGameTimer by timeIn terval
                         emitterValueOverTime++;
-
                         heartBeat_emitter.SetParameter("Heart Beat", emitterValueOverTime);
                         initialGameTimer -= timeInterval;
                     }
@@ -85,11 +83,16 @@ public class Old_Lady_Controller : MonoBehaviour
                 {
                     //  reset the emitterValueOverTime back to initial value only once
                     // so we need a variable
+                    
                     if (!emitterIsResetToInitial)
                     {
                         heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
                         emitterIsResetToInitial = true;
                     }
+                }
+                else
+                {
+                    gameTimer -= Time.deltaTime;
                 }
             }
 
@@ -105,6 +108,7 @@ public class Old_Lady_Controller : MonoBehaviour
     {
         //this function should technically do same as what Start() function does
         //it also tells the Player_Controller to reset the door's position and doesn't start the timer
+        this.GetComponent<VignetteAndChromaticAberration>().intensity = 0.036f;
         GameObject player = GameObject.Find("FPSController");
         player.transform.position = playerInitialPositionInOldLadyRoom;
         player.GetComponent<Player_Controller>().shouldIStartTheTimer = false;
