@@ -22,6 +22,7 @@ public class Player_Controller : MonoBehaviour
     public bool ShouldICloseTheDoorToTheSafeRoom;
     public bool shouldIOpenTheDoorToSafePassage;
     public bool shouldIOpenTheMinotaurDoor;
+    public bool shouldICloseTheHiddenWall;
     public float timer;
 
     // Use this for initialization
@@ -42,6 +43,7 @@ public class Player_Controller : MonoBehaviour
         ShouldICloseTheDoorToTheSafeRoom = false;
         shouldIOpenTheDoorToSafePassage = false;
         shouldIOpenTheMinotaurDoor = false;
+        shouldICloseTheHiddenWall = false;
         timer = 0;
 
     }
@@ -129,6 +131,10 @@ public class Player_Controller : MonoBehaviour
             turnOnTheCaneLight = true;
             shouldIOpenTheDoorToSafePassage = true;
             shouldIOpenTheMinotaurDoor = true;
+        }
+        if(col.gameObject.tag == "Hidden_Wall")
+        {
+            shouldICloseTheHiddenWall = true;
         }
         if(col.gameObject.tag == "Room1-Door")
         {
