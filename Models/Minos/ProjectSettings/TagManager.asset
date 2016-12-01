@@ -23,6 +23,7 @@ TagManager:
   - Enterance_To_Saferoom
   - Hidden_Wall
   - Last_Doors_Trigger
+  - Minotaur
   layers:
   - Default
   - TransparentFX

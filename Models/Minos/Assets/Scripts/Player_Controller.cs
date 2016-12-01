@@ -2,11 +2,14 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityStandardAssets.ImageEffects;
 
 public class Player_Controller : MonoBehaviour
 {
     public GameObject brokenSword;
     public GameObject trimerTrigger;
+    public GameObject camera;
+    public Light minotaurLight;
     //public TextMesh pressE;
     public Image pressE;
     public Image pressQ;
@@ -27,11 +30,15 @@ public class Player_Controller : MonoBehaviour
     public bool shouldIOpenTheLastDoor;
     public bool shouldIBlockTheHallway;
     public bool shouldIHideTheTimerTrigger;
+
+    public bool shouldIFadeInTheCamera;
+    public bool shouldIFadeOutTheCamera;
     public float timer;
 
     // Use this for initialization
     void Start ()
     {
+        minotaurLight.enabled = false;
         brokenSword.SetActive(false);
         pressE.enabled = false;
         pressQ.enabled = false;
@@ -52,6 +59,8 @@ public class Player_Controller : MonoBehaviour
         shouldIOpenTheLastDoor = false;
         shouldIBlockTheHallway = false;
         shouldIHideTheTimerTrigger = false;
+        shouldIFadeInTheCamera = false;
+        shouldIFadeOutTheCamera = false;
         timer = 0;
 
     }
@@ -59,6 +68,30 @@ public class Player_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if (shouldIFadeInTheCamera)
+        {
+            if (camera.GetComponent<VignetteAndChromaticAberration>().intensity <= 1)
+            {
+                camera.GetComponent<VignetteAndChromaticAberration>().intensity += Time.deltaTime;
+            } else
+            {
+                shouldIFadeOutTheCamera = true;
+                shouldIFadeInTheCamera = false;
+            }
+
+        }
+        if(shouldIFadeOutTheCamera)
+        {
+            if (camera.GetComponent<VignetteAndChromaticAberration>().intensity >= 0.036f)
+            {
+                camera.GetComponent<VignetteAndChromaticAberration>().intensity -= Time.deltaTime;
+            } else
+            {
+                minotaurLight.enabled = true;
+                shouldIFadeInTheCamera = false;
+                shouldIFadeOutTheCamera = false;
+            }
+        }
         if(shouldIHideTheTimerTrigger)
         {
             trimerTrigger.SetActive(false);
@@ -94,6 +127,10 @@ public class Player_Controller : MonoBehaviour
         Vector3 torchPosition = col.transform.position;
         Vector3 playerPosition = this.transform.position;
         //When player gets to the end of the Old Lady's room, timer should stop
+        if(col.gameObject.tag == "Minotaur")
+        {
+            shouldIFadeInTheCamera = true;
+        }
         if(col.gameObject.tag == "Timer_End")
         {
             shouldIStopTheTimer = true;
