@@ -22,6 +22,7 @@ TagManager:
   - Open_Atrium_Door
   - Enterance_To_Saferoom
   - Hidden_Wall
+  - Last_Doors_Trigger
   layers:
   - Default
   - TransparentFX

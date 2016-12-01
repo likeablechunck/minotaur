@@ -23,6 +23,8 @@ public class Player_Controller : MonoBehaviour
     public bool shouldIOpenTheDoorToSafePassage;
     public bool shouldIOpenTheMinotaurDoor;
     public bool shouldICloseTheHiddenWall;
+    public bool shouldIOpenTheLastDoor;
+    public bool shouldIBlockTheHallway;
     public float timer;
 
     // Use this for initialization
@@ -44,6 +46,8 @@ public class Player_Controller : MonoBehaviour
         shouldIOpenTheDoorToSafePassage = false;
         shouldIOpenTheMinotaurDoor = false;
         shouldICloseTheHiddenWall = false;
+        shouldIOpenTheLastDoor = false;
+        shouldIBlockTheHallway = false;
         timer = 0;
 
     }
@@ -101,6 +105,17 @@ public class Player_Controller : MonoBehaviour
         if(col.gameObject.tag == "Enterance_To_Saferoom")
         {
             ShouldICloseTheDoorToTheSafeRoom = true;
+        }
+        if(col.gameObject.tag == "Last_Doors_Trigger")
+        {
+            //open the last door in safe passage
+            //block the old lady hallway so player doesn't go back to the old lady room
+            //timer should not start
+            //door to atrium should open
+            shouldIOpenTheLastDoor = true;
+            shouldIBlockTheHallway = true;
+            shouldICloseTheFirstDoor = false;
+            shouldIStartTheTimer = false;
         }
 
         if (col.gameObject.tag == "Torch")
