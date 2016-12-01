@@ -85,7 +85,7 @@ GameObject:
   - 4: {fileID: 4000011080407910}
   - 33: {fileID: 33000013633024520}
   - 23: {fileID: 23000013812338700}
-  - 114: {fileID: 114000012182237034}
+  - 114: {fileID: 114000010866313136}
   m_Layer: 0
   m_Name: torch 1
   m_TagString: Untagged
@@ -112,10 +112,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013067252460}
-  m_LocalRotation: {x: 0.0066985595, y: 0.92605376, z: -0.016455352, w: 0.3769732}
-  m_LocalPosition: {x: -16.604, y: -10.06, z: -8.096}
-  m_LocalScale: {x: 1.0000025, y: 1.0000004, z: 1.0000025}
-  m_LocalEulerAnglesHint: {x: 2.036, y: 135.7, z: 0}
+  m_LocalRotation: {x: -0.010623963, y: -0.5373512, z: -0.020491207, w: 0.84304273}
+  m_LocalPosition: {x: -6.81, y: -10.05, z: -17.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -2.265, y: -65.170006, z: -1.2880001}
   m_Children:
   - {fileID: 4000014283330686}
   - {fileID: 4000010254312500}
@@ -266,7 +266,7 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114000012182237034
+--- !u!114 &114000010866313136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -287,7 +287,7 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  OverrideMaxDistance: 4.2000003
 --- !u!198 &198000010707746972
 ParticleSystem:
   m_ObjectHideFlags: 1

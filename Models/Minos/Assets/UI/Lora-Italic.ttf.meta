@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: cd506c6fae7155d4888f973ee215fee1
+timeCreated: 1480490253
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lora
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1bfebf30673b57044bea92860d38cc90, type: 3}
+  - {fileID: 12800000, guid: 70833aa06baa7ad469a08eb995d4c334, type: 3}
+  - {fileID: 12800000, guid: b08837499bbe74644a1c8b0bc57fccb2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

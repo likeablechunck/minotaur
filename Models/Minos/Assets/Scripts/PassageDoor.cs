@@ -3,14 +3,14 @@ using System.Collections;
 
 public class PassageDoor : MonoBehaviour
 {
-    private FMODUnity.StudioEventEmitter door_emitter;
+    //private FMODUnity.StudioEventEmitter door_emitter;
     public float doorLimit;
     public float speed;
 
     // Use this for initialization
     void Start ()
     {
-        door_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
+        //door_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
 
     }
 	
@@ -22,7 +22,7 @@ public class PassageDoor : MonoBehaviour
         {
             if (this.transform.position.y < doorLimit)
             {
-                door_emitter.SetParameter("Play", 1);
+                //door_emitter.SetParameter("Play", 1);
                 transform.Translate(0, speed, 0);
             }
 
