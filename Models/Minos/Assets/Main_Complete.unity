@@ -10240,8 +10240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11890999686bde40bfb2aeaef893f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialLocation: {x: 0, y: 0, z: 0}
-  doorLimit: -5.43
+  initialLocation: {x: 3.6, y: 3, z: -23.51}
+  doorLimit: 7.8
   speed: 0.25
 --- !u!1001 &293928427
 Prefab:
@@ -20631,7 +20631,7 @@ GameObject:
   - 23: {fileID: 585173526}
   - 114: {fileID: 585173525}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Hallway_Blockage_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57122,6 +57122,22 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6fbaa114c3fd2384abaf78a233e673eb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6fbaa114c3fd2384abaf78a233e673eb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6fbaa114c3fd2384abaf78a233e673eb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 6fbaa114c3fd2384abaf78a233e673eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fbaa114c3fd2384abaf78a233e673eb, type: 3}
   m_IsPrefabParent: 0
@@ -62385,15 +62401,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 39.25
+      value: 140.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.76
+      value: -10.9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -27.66
+      value: -31.7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.x

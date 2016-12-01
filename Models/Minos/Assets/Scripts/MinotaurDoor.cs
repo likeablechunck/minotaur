@@ -10,7 +10,7 @@ public class MinotaurDoor : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        this.transform.position = initialLocation;
+        //this.transform.position = initialLocation;
 	
 	}
 	
@@ -18,15 +18,15 @@ public class MinotaurDoor : MonoBehaviour
 	void Update ()
     {
         GameObject player = GameObject.Find("FPSController");
-        if (this.transform.position.x > doorLimit &&
+        if (this.transform.position.x < doorLimit &&
             player.GetComponent<Player_Controller>().shouldIOpenTheMinotaurDoor)
         {
             this.transform.Translate(-speed, 0, 0);
         }
-        if(!player.GetComponent<Player_Controller>().shouldIOpenTheMinotaurDoor)
-        {
-            transform.position = initialLocation;
-        }
+        //if(!player.GetComponent<Player_Controller>().shouldIOpenTheMinotaurDoor)
+        //{
+        //    transform.position = initialLocation;
+        //}
 
     }
 }
