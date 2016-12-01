@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Player_Controller : MonoBehaviour
 {
     public GameObject brokenSword;
+    public GameObject trimerTrigger;
     //public TextMesh pressE;
     public Image pressE;
     public Image pressQ;
@@ -25,11 +26,13 @@ public class Player_Controller : MonoBehaviour
     public bool shouldICloseTheHiddenWall;
     public bool shouldIOpenTheLastDoor;
     public bool shouldIBlockTheHallway;
+    public bool shouldIHideTheTimerTrigger;
     public float timer;
 
     // Use this for initialization
     void Start ()
     {
+        
         pressE.enabled = false;
         pressQ.enabled = false;
         turnOnTheSwordLight = false;
@@ -48,6 +51,7 @@ public class Player_Controller : MonoBehaviour
         shouldICloseTheHiddenWall = false;
         shouldIOpenTheLastDoor = false;
         shouldIBlockTheHallway = false;
+        shouldIHideTheTimerTrigger = false;
         timer = 0;
 
     }
@@ -55,6 +59,10 @@ public class Player_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if(shouldIHideTheTimerTrigger)
+        {
+            trimerTrigger.SetActive(false);
+        }
         if(shouldITurnOnTheBrokenSword)
         {
            brokenSword.SetActive(true);
@@ -116,6 +124,7 @@ public class Player_Controller : MonoBehaviour
             shouldIBlockTheHallway = true;
             shouldICloseTheFirstDoor = false;
             shouldIStartTheTimer = false;
+            shouldIHideTheTimerTrigger = true;
         }
 
         if (col.gameObject.tag == "Torch")
@@ -146,6 +155,7 @@ public class Player_Controller : MonoBehaviour
             turnOnTheCaneLight = true;
             shouldIOpenTheDoorToSafePassage = true;
             shouldIOpenTheMinotaurDoor = true;
+          
         }
         if(col.gameObject.tag == "Hidden_Wall")
         {
