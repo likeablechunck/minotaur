@@ -32,7 +32,7 @@ public class Player_Controller : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        
+        brokenSword.SetActive(false);
         pressE.enabled = false;
         pressQ.enabled = false;
         turnOnTheSwordLight = false;
