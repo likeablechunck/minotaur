@@ -31482,6 +31482,7 @@ GameObject:
   - 222: {fileID: 1725704154}
   - 114: {fileID: 1725704153}
   - 114: {fileID: 1725704152}
+  - 114: {fileID: 1725704155}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -31545,7 +31546,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1725704153}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1725704155}
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1725704153
@@ -31587,6 +31599,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725704150}
+--- !u!114 &1725704155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725704150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9712acd4775f3dd4ead9846240657c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1733443078
 Prefab:
   m_ObjectHideFlags: 0
@@ -32456,6 +32479,7 @@ GameObject:
   - 222: {fileID: 1854318122}
   - 114: {fileID: 1854318121}
   - 114: {fileID: 1854318120}
+  - 114: {fileID: 1854318123}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -32519,7 +32543,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1854318121}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1854318123}
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1854318121
@@ -32561,6 +32596,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1854318118}
+--- !u!114 &1854318123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1854318118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44865c53c42b19845b2ddf6647e252b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1883698109 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5ca40085ce88adc4e8394d83d7516413, type: 3}
@@ -35282,10 +35328,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef81602cbd273a946a31e05501266e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brokenSword: {fileID: 0}
+  pressE: {fileID: 0}
+  pressQ: {fileID: 0}
   turnOnTheSwordLight: 0
   turnOnTheCaneLight: 0
   shouldICloseTheFirstDoor: 0
   shouldIOpenTheFirstHiddenDoor: 0
+  shouldIStopTheTimer: 0
+  shouldITurnOnTheBrokenSword: 0
+  shouldIDisplayEText: 0
+  shouldIDisplayQText: 0
+  shouldIOpenTheAtriumDoor: 0
+  shouldIStartTheTimer: 0
+  ShouldICloseTheDoorToTheSafeRoom: 0
+  shouldIOpenTheDoorToSafePassage: 0
+  shouldIOpenTheMinotaurDoor: 0
+  shouldICloseTheHiddenWall: 0
+  timer: 0
 --- !u!82 &2045698792
 AudioSource:
   m_ObjectHideFlags: 0
