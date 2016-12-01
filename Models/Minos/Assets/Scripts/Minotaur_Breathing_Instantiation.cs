@@ -79,11 +79,7 @@ public class Minotaur_Breathing_Instantiation : MonoBehaviour
             }
             if (fpc.GetComponent<Player_Controller>().shouldIStopTheTimer)
             {
-                if (minotaurBreathing_emitter.IsPlaying())
-                {
-                    print("I am stopping minotaur breath");
-                    minotaurBreathing_emitter.Stop();
-                }
+                minotaurSource.Stop();
             }
         }
     }
