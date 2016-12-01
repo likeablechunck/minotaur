@@ -102,7 +102,7 @@ public class Player_Controller : MonoBehaviour
             //it needs to destroy the normal sword
             //Then turn on the broken sword
             turnOnTheSwordLight = true;
-            Destroy(col.gameObject, 0.5f);
+            Destroy(col.gameObject, 0.1f);
             shouldITurnOnTheBrokenSword = true;
         }
         if(col.gameObject.tag == "Cane")
