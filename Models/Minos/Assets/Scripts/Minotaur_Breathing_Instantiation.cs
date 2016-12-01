@@ -4,6 +4,7 @@ using System.Collections;
 public class Minotaur_Breathing_Instantiation : MonoBehaviour
 {
     private FMODUnity.StudioEventEmitter minotaurBreathing_emitter;
+    public AudioSource minotaurSource;
     private float timeInterval;
     //private GameObject player;
     //int randomParameter;
@@ -31,10 +32,7 @@ public class Minotaur_Breathing_Instantiation : MonoBehaviour
 
         if (player.GetComponent<Old_Lady_Controller>().gameTimer < 0)
         {
-            if (minotaurBreathing_emitter.IsPlaying())
-            {
-                minotaurBreathing_emitter.Stop();
-            }
+            minotaurSource.Stop();
         }
         else
         {

@@ -16,12 +16,12 @@ public class Broken_Sword : MonoBehaviour
 	void Update ()
     {
         GameObject player = GameObject.Find("FPSController");
-        if(player.GetComponent<Player_Controller>().shouldITurnOnTheBrokenSword)
-        {
-            print("Player collided into sword and need to enable the broken one");
-            //this.gameObject.GetComponent<Renderer>().enabled = true;
-            //this.gameObject.SetActive(true);
-        }
+        //if(player.GetComponent<Player_Controller>().shouldITurnOnTheBrokenSword)
+        //{
+        //    print("Player collided into sword and need to enable the broken one");
+        //    //this.gameObject.GetComponent<Renderer>().enabled = true;
+        //    //this.gameObject.SetActive(true);
+        //}
 
     }
 }

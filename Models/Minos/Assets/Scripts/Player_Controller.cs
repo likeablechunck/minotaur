@@ -17,6 +17,8 @@ public class Player_Controller : MonoBehaviour
     public bool shouldITurnOnTheBrokenSword;
     public bool shouldIDisplayEText;
     public bool shouldIDisplayQText;
+    public bool shouldIOpenTheAtriumDoor;
+    public bool shouldIStartTheTimer;
     public float timer;
 
     // Use this for initialization
@@ -32,6 +34,8 @@ public class Player_Controller : MonoBehaviour
         shouldITurnOnTheBrokenSword = false;
         shouldIDisplayEText = false;
         shouldIDisplayQText = false;
+        shouldIOpenTheAtriumDoor = false;
+        shouldIStartTheTimer = false;
         timer = 0;
 
     }
@@ -82,6 +86,10 @@ public class Player_Controller : MonoBehaviour
         {
             shouldIDisplayQText = true;
         }
+        if(col.gameObject.tag == "Open_Atrium_Door")
+        {
+            shouldIOpenTheAtriumDoor = true;
+        }
 
         if (col.gameObject.tag == "Torch")
         {
@@ -102,7 +110,8 @@ public class Player_Controller : MonoBehaviour
             //it needs to destroy the normal sword
             //Then turn on the broken sword
             turnOnTheSwordLight = true;
-            Destroy(col.gameObject, 0.1f);
+            shouldITurnOnTheBrokenSword = true;
+            Destroy(col.gameObject, 0.2f);
             shouldITurnOnTheBrokenSword = true;
         }
         if(col.gameObject.tag == "Cane")
@@ -111,21 +120,24 @@ public class Player_Controller : MonoBehaviour
         }
         if(col.gameObject.tag == "Room1-Door")
         {
+            //close the door behind the player
+            //then timer should start
             shouldICloseTheFirstDoor = true;
+            shouldIStartTheTimer = true;
         }
         if(col.gameObject.tag == "Room1-LoadLevel")
         {
-            SceneManager.LoadScene("old_lady");
+            //SceneManager.LoadScene("old_lady");
         }
         if(col.gameObject.tag == "Cane")
         {
             shouldIOpenTheFirstHiddenDoor = true;
 
         }
-        if(col.gameObject.tag == "Load-Atrium")
-        {
-            SceneManager.LoadScene("Main");
-        }
+        //if(col.gameObject.tag == "Load-Atrium")
+        //{
+        //    SceneManager.LoadScene("Main");
+        //}
 
     }
     void OnTriggerExit(Collider col)

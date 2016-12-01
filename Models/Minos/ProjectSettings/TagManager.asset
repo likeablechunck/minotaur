@@ -19,6 +19,7 @@ TagManager:
   - Brazier
   - Timer_End
   - VO_trigger
+  - Open_Atrium_Door
   layers:
   - Default
   - TransparentFX
