@@ -8,6 +8,10 @@ public class Red_Flame_Relocation : MonoBehaviour
     public bool alreadyHasRedFlame;
     public bool lightInstantiated;
     public bool canIOpenTheDoor;
+    public GameObject dropOffLightHolder;
+    public GameObject doorToOpen;
+    public string collidedRedFlameName;
+    public string collidedEmptyFlameName;
     //public GameObject redFlame;
     public GameObject rHandSocket;
 
@@ -26,35 +30,57 @@ public class Red_Flame_Relocation : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        GameObject redFlameInBrazier = GameObject.Find("fire_octagonal1");
+        
         GameObject smallRedFlame = GameObject.Find("fire_octagonal_hand");
         if (canPickUpRedFlame)
-        {       
+        {
+            GameObject redFlameInBrazier = GameObject.Find(collidedRedFlameName);
+            
             if (Input.GetKeyUp(KeyCode.E))
             {
-                print("I pressed Q");
+                print("I pressed E");
+                GameObject fireOctagonal = GameObject.Find(collidedRedFlameName + "_fire_octagonal1");
+                
+                // pick up if redFlame.BB.forPickup is true
                 smallRedFlame.GetComponent<ParticleSystem>().enableEmission = true;
-                Destroy(redFlameInBrazier);
-
+                // we should remember who the lightholder can be
+                dropOffLightHolder = redFlameInBrazier.GetComponent<BrazierBehaviour>().lightHolder;
+                doorToOpen = redFlameInBrazier.GetComponent<BrazierBehaviour>().door;
+                redFlameInBrazier.GetComponent<BrazierBehaviour>().alreadyPickedUp = true;
                 smallRedFlame.GetComponent<RedFlame>().changeState("pickedUp");
+
+                canPickUpRedFlame = false;
+                Destroy(fireOctagonal);
             }
         }
         if (canDropOffRedFlame)
         {
             if (Input.GetKeyUp(KeyCode.Q))
             {
-                print("I pressed Z");
-
+                print("I pressed Q");
+                // if it is for drop off
+                // we need to instantiate a new fire_octagonal with some random name
                 smallRedFlame.GetComponent<RedFlame>().changeState("dropOff");
-                GameObject redFlameInEmptyBrazier = Instantiate(Resources.Load("fire_octagonal")) as GameObject;
-                GameObject currentLightHolder = GameObject.Find("Light_Holder1").gameObject;
-                redFlameInEmptyBrazier.transform.position = currentLightHolder.transform.position;
-                //redFlameInEmptyBrazier.transform.rotation = currentLightHolder.transform.rotation;
-                redFlameInEmptyBrazier.transform.parent = currentLightHolder.transform;
+                GameObject fireOctagonal = Instantiate(Resources.Load("fire_octagonal")) as GameObject;
+                fireOctagonal.name = collidedRedFlameName + "_drop_" + "fire_octagonal";
+                fireOctagonal.transform.position = dropOffLightHolder.transform.position;
+                fireOctagonal.transform.parent = dropOffLightHolder.transform;
+                GameObject emptyFlameInBrazier = GameObject.Find(collidedEmptyFlameName);
+                emptyFlameInBrazier.GetComponent<BrazierBehaviour>().alreadyDroppedOff = true;
+                canDropOffRedFlame = false;
                 canIOpenTheDoor = true;
+                dropOffLightHolder = null;
             }
 
-
+        }
+        if (canIOpenTheDoor)
+        {
+            if(doorToOpen != null)
+            {
+                doorToOpen.GetComponent<PassageDoor>().openTheDoor = true;
+                canIOpenTheDoor = false;
+                doorToOpen = null;
+            }
         }
         //if (canPickUpRedFlame && Input.GetKeyUp(KeyCode.Q))
         //{
@@ -75,7 +101,7 @@ public class Red_Flame_Relocation : MonoBehaviour
     {
         if(col.gameObject.tag == "Red_Flame_Brazier")
         {
-
+            collidedRedFlameName = col.gameObject.name;
             canPickUpRedFlame = true;
             ////GameObject redFlameInBrazier = col.transform.FindChild("fire_octagonal").gameObject;
             //GameObject redFlameInBrazier = GameObject.Find("fire_octagonal");
@@ -96,6 +122,7 @@ public class Red_Flame_Relocation : MonoBehaviour
         if (col.gameObject.tag == "Empty_Red_Brazier")
         {
             canDropOffRedFlame = true;
+            collidedEmptyFlameName = col.gameObject.name;
             //if(Input.GetKeyUp(KeyCode.Z))
             //{
             //    print("I pressed Z");
@@ -117,6 +144,7 @@ public class Red_Flame_Relocation : MonoBehaviour
         if (col.gameObject.tag == "Red_Flame_Brazier")
         {
             canPickUpRedFlame = false;
+
 
         }
         if (col.gameObject.tag == "Empty_Red_Brazier")

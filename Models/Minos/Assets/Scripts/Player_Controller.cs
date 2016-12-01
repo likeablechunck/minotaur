@@ -100,11 +100,17 @@ public class Player_Controller : MonoBehaviour
         }
         if(col.gameObject.tag == "Red_Flame_Brazier")
         {
-            shouldIDisplayEText = true;
+            if (!col.gameObject.GetComponent<BrazierBehaviour>().alreadyPickedUp)
+            {
+                shouldIDisplayEText = true;
+            }
         }
         if (col.gameObject.tag == "Empty_Red_Brazier")
         {
-            shouldIDisplayQText = true;
+            if (!col.gameObject.GetComponent<BrazierBehaviour>().alreadyDroppedOff)
+            {
+                shouldIDisplayQText = true;
+            }
         }
         if(col.gameObject.tag == "Open_Atrium_Door")
         {
@@ -193,6 +199,5 @@ public class Player_Controller : MonoBehaviour
         {
             shouldIDisplayQText = false;
         }
-
     }
 }
