@@ -14,7 +14,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
-        [SerializeField] private float m_JumpSpeed;
+        //[SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
         [SerializeField] private MouseLook m_MouseLook;
@@ -63,15 +63,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
-            {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            }
+            //if (!m_Jump)
+            //{
+            //    m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+            //}
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
-                PlayLandingSound();
+                //PlayLandingSound();
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
             }
@@ -84,12 +84,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayLandingSound()
-        {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
-        }
+        //private void PlayLandingSound()
+        //{
+        //    m_AudioSource.clip = m_LandSound;
+        //    m_AudioSource.Play();
+        //    m_NextStep = m_StepCycle + .5f;
+        //}
 
 
         private void FixedUpdate()
@@ -109,22 +109,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MoveDir.z = desiredMove.z*speed;
 
 
-            if (m_CharacterController.isGrounded)
-            {
-                m_MoveDir.y = -m_StickToGroundForce;
+            //if (m_CharacterController.isGrounded)
+            //{
+            //    m_MoveDir.y = -m_StickToGroundForce;
 
-                if (m_Jump)
-                {
-                    m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
-                    m_Jump = false;
-                    m_Jumping = true;
-                }
-            }
-            else
-            {
-                m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
-            }
+            //    if (m_Jump)
+            //    {
+            //        m_MoveDir.y = m_JumpSpeed;
+            //        //PlayJumpSound();
+            //        m_Jump = false;
+            //        m_Jumping = true;
+            //    }
+            //}
+            //else
+            //{
+            //    m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+            //}
+            m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.fixedDeltaTime;
             m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
 
             ProgressStepCycle(speed);
@@ -134,11 +135,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayJumpSound()
-        {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
-        }
+        //private void PlayJumpSound()
+        //{
+        //    m_AudioSource.clip = m_JumpSound;
+        //    m_AudioSource.Play();
+        //}
 
 
         private void ProgressStepCycle(float speed)

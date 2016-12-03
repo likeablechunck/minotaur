@@ -44004,6 +44004,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorLimit: -34.8
   speed: 0.25
+--- !u!64 &1004164795
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1004164793}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: fc59e97c7e515e643ad3080a071a56df, type: 3}
 --- !u!4 &1004724312 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012089363494, guid: d5f8eee4e9da8af49a837bab67fc108a,
@@ -68684,6 +68696,14 @@ Prefab:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1229606045}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_WalkSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_RunSpeed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114000012946570950, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
     - {fileID: 114000010432753946, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -77269,6 +77289,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorLimit: -27
   speed: 0.25
+--- !u!64 &1791157348
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1791157346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: fc59e97c7e515e643ad3080a071a56df, type: 3}
 --- !u!1 &1793580231
 GameObject:
   m_ObjectHideFlags: 0
