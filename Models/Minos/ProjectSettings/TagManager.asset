@@ -24,6 +24,7 @@ TagManager:
   - Hidden_Wall
   - Last_Doors_Trigger
   - Minotaur
+  - Sword_Cutscene
   layers:
   - Default
   - TransparentFX
