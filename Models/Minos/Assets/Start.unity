@@ -3117,6 +3117,36 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012774213244, guid: b15c456df2ccd2d4bae43e2bdec95799,
     type: 2}
   m_PrefabInternal: {fileID: 116815859}
+--- !u!1 &118650757 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
+  m_PrefabInternal: {fileID: 1019050114}
+--- !u!114 &118650758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 118650757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Fire Brazier
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 10
+--- !u!4 &118650760 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
+  m_PrefabInternal: {fileID: 1019050114}
 --- !u!1001 &125413766
 Prefab:
   m_ObjectHideFlags: 0
@@ -5807,7 +5837,7 @@ RectTransform:
   - {fileID: 1854318119}
   - {fileID: 922290135}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -15233,7 +15263,7 @@ Transform:
   - {fileID: 1330205304}
   - {fileID: 366184760}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &614619118 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5ca40085ce88adc4e8394d83d7516413, type: 3}
@@ -17432,7 +17462,7 @@ Transform:
   - {fileID: 1455334065}
   - {fileID: 1479484213}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1001 &681617393
 Prefab:
   m_ObjectHideFlags: 0
@@ -23991,14 +24021,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 907738565}
   m_LocalRotation: {x: -0.25435087, y: 0.6742347, z: 0.645468, w: 0.25314885}
-  m_LocalPosition: {x: 27.08, y: 1.06, z: -21.94}
+  m_LocalPosition: {x: 0.12000084, y: 1.0249182, z: -0.030000687}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: -86.55701, y: 0, z: 0}
   m_Children:
   - {fileID: 114364894}
   - {fileID: 1291200444}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 118650760}
+  m_RootOrder: 0
 --- !u!1 &922290134
 GameObject:
   m_ObjectHideFlags: 0
@@ -24310,7 +24340,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!4 &1007989724 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012089363494, guid: d5f8eee4e9da8af49a837bab67fc108a,
@@ -24353,7 +24383,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
@@ -25167,6 +25197,7 @@ GameObject:
   - 20: {fileID: 1123815172}
   - 81: {fileID: 1123815171}
   - 124: {fileID: 1123815170}
+  - 114: {fileID: 1123815173}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -25239,6 +25270,18 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!114 &1123815173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1123815168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 1
 --- !u!4 &1132737784 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012089363494, guid: d5f8eee4e9da8af49a837bab67fc108a,
@@ -25510,7 +25553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fc59e97c7e515e643ad3080a071a56df, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fc59e97c7e515e643ad3080a071a56df, type: 3}
       propertyPath: m_Name
@@ -26491,7 +26534,7 @@ Transform:
   - {fileID: 1182934066}
   - {fileID: 1205849994}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1330205301
 GameObject:
   m_ObjectHideFlags: 0
@@ -30888,6 +30931,7 @@ GameObject:
   - 222: {fileID: 1654425851}
   - 114: {fileID: 1654425850}
   - 114: {fileID: 1654425849}
+  - 114: {fileID: 1654425852}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -30951,7 +30995,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1654425850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1654425852}
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1654425850
@@ -30993,6 +31048,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1654425847}
+--- !u!114 &1654425852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1654425847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c05aaf67e659b459f0879e494548cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1661118134
 Prefab:
   m_ObjectHideFlags: 0
@@ -34508,7 +34574,7 @@ RectTransform:
   - {fileID: 1795075440}
   - {fileID: 711571563}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -35329,6 +35395,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brokenSword: {fileID: 0}
+  trimerTrigger: {fileID: 0}
+  camera: {fileID: 0}
+  minotaurLight: {fileID: 0}
   pressE: {fileID: 0}
   pressQ: {fileID: 0}
   turnOnTheSwordLight: 0
@@ -35345,6 +35414,11 @@ MonoBehaviour:
   shouldIOpenTheDoorToSafePassage: 0
   shouldIOpenTheMinotaurDoor: 0
   shouldICloseTheHiddenWall: 0
+  shouldIOpenTheLastDoor: 0
+  shouldIBlockTheHallway: 0
+  shouldIHideTheTimerTrigger: 0
+  shouldIFadeInTheCamera: 0
+  shouldIFadeOutTheCamera: 0
   timer: 0
 --- !u!82 &2045698792
 AudioSource:
@@ -35453,7 +35527,6 @@ MonoBehaviour:
   m_WalkSpeed: 3
   m_RunSpeed: 10
   m_RunstepLenghten: 0.7
-  m_JumpSpeed: 5
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
   m_MouseLook:
