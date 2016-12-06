@@ -17,7 +17,7 @@ public class Start_Button : MonoBehaviour
 	}
     public void onClick()
     {
-        SceneManager.LoadScene("Main_Complete");
+        SceneManager.LoadScene("Video");
 
     }
 }
