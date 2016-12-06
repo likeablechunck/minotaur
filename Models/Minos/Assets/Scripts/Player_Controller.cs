@@ -9,10 +9,14 @@ public class Player_Controller : MonoBehaviour
     public GameObject brokenSword;
     public GameObject trimerTrigger;
     public GameObject camera;
+    public GameObject normalCane;
+    public GameObject flatCane;
     public Light minotaurLight;
-    //public TextMesh pressE;
     public Image pressE;
     public Image pressQ;
+    public Image pressEToPickUpSwordCane;
+    public Camera cam;
+    public Camera cam2;
     public bool turnOnTheSwordLight;
     public bool turnOnTheCaneLight;
     public bool shouldICloseTheFirstDoor;
@@ -30,15 +34,23 @@ public class Player_Controller : MonoBehaviour
     public bool shouldIOpenTheLastDoor;
     public bool shouldIBlockTheHallway;
     public bool shouldIHideTheTimerTrigger;
-
+    public bool isItCane;
     public bool shouldIFadeInTheCamera;
     public bool shouldIFadeOutTheCamera;
     public float timer;
-
+    public bool cutSceneStart;
+    public bool neverDisplayTheEText;
+    float cutSceneTimer;
     // Use this for initialization
     void Start ()
     {
         //minotaurLight.enabled = false;
+        cam.enabled = true;
+        cam2.enabled = false;
+        isItCane = false;
+        pressEToPickUpSwordCane.enabled = false;
+        flatCane.SetActive(false);
+        normalCane.SetActive(true);
         brokenSword.SetActive(false);
         pressE.enabled = false;
         pressQ.enabled = false;
@@ -61,6 +73,7 @@ public class Player_Controller : MonoBehaviour
         shouldIHideTheTimerTrigger = false;
         shouldIFadeInTheCamera = false;
         shouldIFadeOutTheCamera = false;
+        neverDisplayTheEText = false;
         timer = 0;
 
     }
@@ -68,6 +81,36 @@ public class Player_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if( isItCane && Input.GetKeyDown(KeyCode.E))
+        {
+            flatCane.SetActive(true);
+            normalCane.SetActive(false);
+            turnOnTheCaneLight = true;
+            shouldIOpenTheDoorToSafePassage = true;
+            shouldIOpenTheMinotaurDoor = true;
+            cutSceneStart = true;
+            neverDisplayTheEText = true;
+            
+        }
+        if(neverDisplayTheEText)
+        {
+            pressEToPickUpSwordCane.enabled = false;
+        }
+        if(cutSceneStart)
+        {
+            cutSceneTimer += Time.deltaTime;
+            if(cutSceneTimer <= 5f)
+            {
+                cam2.enabled = true;
+                cam.enabled = false;
+            }
+            else
+            {
+                cutSceneStart = false;
+                cam.enabled = true;
+                cam2.enabled = false;
+            }        
+        }
         if (shouldIFadeInTheCamera)
         {
             if (camera.GetComponent<VignetteAndChromaticAberration>().intensity <= 1)
@@ -195,9 +238,11 @@ public class Player_Controller : MonoBehaviour
         }
         if(col.gameObject.tag == "Cane")
         {
-            turnOnTheCaneLight = true;
-            shouldIOpenTheDoorToSafePassage = true;
-            shouldIOpenTheMinotaurDoor = true;
+            //turnOnTheCaneLight = true;
+            //shouldIOpenTheDoorToSafePassage = true;
+            //shouldIOpenTheMinotaurDoor = true;
+            pressEToPickUpSwordCane.enabled = true;
+            isItCane = true;
           
         }
         if(col.gameObject.tag == "Hidden_Wall")
@@ -235,6 +280,10 @@ public class Player_Controller : MonoBehaviour
         if (col.gameObject.tag == "Empty_Red_Brazier")
         {
             shouldIDisplayQText = false;
+        }
+        if (col.gameObject.tag == "Cane")
+        {
+            pressEToPickUpSwordCane.enabled = false;
         }
     }
 }
