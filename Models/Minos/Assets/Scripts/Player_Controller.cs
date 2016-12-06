@@ -6,6 +6,7 @@ using UnityStandardAssets.ImageEffects;
 
 public class Player_Controller : MonoBehaviour
 {
+    public GameObject normalSword;
     public GameObject brokenSword;
     public GameObject trimerTrigger;
     public GameObject camera;
@@ -35,6 +36,7 @@ public class Player_Controller : MonoBehaviour
     public bool shouldIBlockTheHallway;
     public bool shouldIHideTheTimerTrigger;
     public bool isItCane;
+    public bool isItSword;
     public bool shouldIFadeInTheCamera;
     public bool shouldIFadeOutTheCamera;
     public float timer;
@@ -52,6 +54,8 @@ public class Player_Controller : MonoBehaviour
         flatCane.SetActive(false);
         normalCane.SetActive(true);
         brokenSword.SetActive(false);
+        isItSword = false;
+        normalSword.SetActive(true);
         pressE.enabled = false;
         pressQ.enabled = false;
         turnOnTheSwordLight = false;
@@ -91,6 +95,15 @@ public class Player_Controller : MonoBehaviour
             cutSceneStart = true;
             neverDisplayTheEText = true;
             
+        }
+        if(isItSword && Input.GetKeyDown(KeyCode.E))
+        {
+            pressEToPickUpSwordCane.enabled = false;
+            cutSceneStart = true;
+            turnOnTheSwordLight = true;
+            Destroy(normalSword, 0.2f);
+            brokenSword.SetActive(true);
+            //neverDisplayTheEText = true;
         }
         if(neverDisplayTheEText)
         {
@@ -139,10 +152,10 @@ public class Player_Controller : MonoBehaviour
         {
             trimerTrigger.SetActive(false);
         }
-        if(shouldITurnOnTheBrokenSword)
-        {
-           brokenSword.SetActive(true);
-        } 
+        //if(shouldITurnOnTheBrokenSword)
+        //{
+        //   brokenSword.SetActive(true);
+        //} 
           
         if(shouldIDisplayEText)
         {
@@ -215,15 +228,6 @@ public class Player_Controller : MonoBehaviour
 
         if (col.gameObject.tag == "Torch")
         {
-            
-            //Pickup (destroiy the torch and then instantiate the light
-            //Destroy(col.gameObject);
-
-            //Instantiate the light where the player is 
-            //Light light = Instantiate(Resources.Load("point_light", typeof(Light)),
-            //    playerPosition, Quaternion.identity) as Light;
-
-            //Instantiate the light in where the torch is
             Light light = Instantiate(Resources.Load("point_light", typeof(Light)),
                torchPosition, Quaternion.identity) as Light;
         }
@@ -231,10 +235,12 @@ public class Player_Controller : MonoBehaviour
         {
             //it needs to destroy the normal sword
             //Then turn on the broken sword
-            turnOnTheSwordLight = true;
-            shouldITurnOnTheBrokenSword = true;
-            Destroy(col.gameObject, 0.2f);
-            shouldITurnOnTheBrokenSword = true;
+            //turnOnTheSwordLight = true;
+            //shouldITurnOnTheBrokenSword = true;
+            //Destroy(col.gameObject, 0.2f);
+            //shouldITurnOnTheBrokenSword = true;
+            pressEToPickUpSwordCane.enabled = true;
+            isItSword = true;
         }
         if(col.gameObject.tag == "Cane")
         {
@@ -282,6 +288,10 @@ public class Player_Controller : MonoBehaviour
             shouldIDisplayQText = false;
         }
         if (col.gameObject.tag == "Cane")
+        {
+            pressEToPickUpSwordCane.enabled = false;
+        }
+        if (col.gameObject.tag == "Sword")
         {
             pressEToPickUpSwordCane.enabled = false;
         }
