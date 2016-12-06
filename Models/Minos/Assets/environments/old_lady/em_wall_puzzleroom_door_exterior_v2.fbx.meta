@@ -1,20 +1,17 @@
 fileFormatVersion: 2
-guid: a335efac8ed8e714aa2035a762c0316d
-timeCreated: 1480203831
+guid: 3af219acd0c442d46b7ad5bbfe619f97
+timeCreated: 1480982884
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: ramps_puzzleroom_em_puzzleroom_ramp21
+    100002: polySurface27
     400000: //RootNode
-    400002: ramps_puzzleroom_em_puzzleroom_ramp21
-    2300000: //RootNode
-    2300002: ramps_puzzleroom_em_puzzleroom_ramp21
-    3300000: //RootNode
-    3300002: ramps_puzzleroom_em_puzzleroom_ramp21
-    4300000: em_ramp_puzzleroom_ramp
-    4300002: ramps_puzzleroom_em_puzzleroom_ramp21
+    400002: polySurface27
+    2300000: polySurface27
+    3300000: polySurface27
+    4300000: polySurface27
     9500000: //RootNode
   materials:
     importMaterials: 1

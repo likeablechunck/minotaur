@@ -13,7 +13,8 @@ public class Cut_Scene : MonoBehaviour
     void Start()
     {
 
-
+        cam.enabled = true;
+        cam2.enabled = false;
     }
 
     // Update is called once per frame
@@ -26,8 +27,8 @@ public class Cut_Scene : MonoBehaviour
         if (cutscene == true)
         {
             timer += Time.deltaTime;
-            print("timer" + timer);
-            print("cutscene");
+            //print("timer" + timer);
+           // print("cutscene");
 
             if (timer < 5.0f)
             {

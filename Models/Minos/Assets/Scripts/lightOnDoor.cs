@@ -7,6 +7,9 @@ public class lightOnDoor : MonoBehaviour
     public Light swordSpotLight2;
     public Light caneSpotLight1;
     public Light caneSpotLight2;
+    float timer;
+    bool swordlight;
+    bool canelight;
 
     // Use this for initialization
     void Start ()
@@ -17,21 +20,33 @@ public class lightOnDoor : MonoBehaviour
         caneSpotLight2.enabled = false;
 
 }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
+        if ((swordlight || canelight) == true) { 
+        timer = 0.0f;
+    }
         GameObject player = GameObject.Find("FPSController");
         if (player.GetComponent<Player_Controller>().turnOnTheSwordLight)
         {
-            swordSpotLight1.enabled = true;
-            swordSpotLight2.enabled = true;
-
+            timer += Time.deltaTime;
+            if (timer > 1.0f)
+            {
+                swordSpotLight1.enabled = true;
+                swordSpotLight2.enabled = true;
+                swordlight = true;
+            }
         }
         if(player.GetComponent<Player_Controller>().turnOnTheCaneLight)
         {
-            caneSpotLight1.enabled = true;
-            caneSpotLight2.enabled = true;
+            timer += Time.deltaTime;
+            if (timer > 0.5f)
+            {
+                caneSpotLight1.enabled = true;
+                caneSpotLight2.enabled = true;
+                canelight = true;
+            }
         }
 	
 	}

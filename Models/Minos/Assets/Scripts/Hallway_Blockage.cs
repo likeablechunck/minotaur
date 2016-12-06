@@ -18,10 +18,11 @@ public class Hallway_Blockage : MonoBehaviour {
     void Update()
     {
         GameObject player = GameObject.Find("FPSController");
-        if (this.transform.position.z > doorLimit &&
+        if (this.transform.position.z >= doorLimit &&
             player.GetComponent<Player_Controller>().shouldIBlockTheHallway)
         {
-            this.transform.Translate(0, 0, -speed);
+            print("wall position is: " + this.transform.position);
+            this.transform.Translate(-speed, 0, 0);
         }
 
     }

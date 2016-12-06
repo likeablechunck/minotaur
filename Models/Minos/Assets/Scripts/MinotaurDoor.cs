@@ -6,6 +6,7 @@ public class MinotaurDoor : MonoBehaviour
     public Vector3 initialLocation;
     public float doorLimit;
     public float speed;
+    float timer;
 
 	// Use this for initialization
 	void Start ()
@@ -21,7 +22,11 @@ public class MinotaurDoor : MonoBehaviour
         if (this.transform.position.x < doorLimit &&
             player.GetComponent<Player_Controller>().shouldIOpenTheMinotaurDoor)
         {
-            this.transform.Translate(-speed, 0, 0);
+            timer += Time.deltaTime;
+            if (timer > 1.0f)
+            {
+                this.transform.Translate(-speed, 0, 0);
+            }
         }
         //if(!player.GetComponent<Player_Controller>().shouldIOpenTheMinotaurDoor)
         //{

@@ -15,16 +15,16 @@ public class sword_cutscene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        print("cutscene: "+ cutscene);
-        print("cutscenedone: " + cutscenedone);
+       // print("cutscene: "+ cutscene);
+        //print("cutscenedone: " + cutscenedone);
 
 
         if (cutscene == true) {
             timer += Time.deltaTime;
-            print("timer" + timer);
-            print("cutscene");
+           // print("timer" + timer);
+           // print("cutscene");
 
-            if (timer < 5.0f)
+            if (timer < 2.0f)
             {
                 // print("cutscene");
 
@@ -35,7 +35,7 @@ public class sword_cutscene : MonoBehaviour {
                 //cam2.gameObject.active = true;
             }
 
-            if (timer > 5.0f)
+            if (timer > 2.0f)
             {
                 print("time is up");
                 cutscene = false;

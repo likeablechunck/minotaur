@@ -38,7 +38,7 @@ public class Player_Controller : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        minotaurLight.enabled = false;
+        //minotaurLight.enabled = false;
         brokenSword.SetActive(false);
         pressE.enabled = false;
         pressQ.enabled = false;
@@ -87,7 +87,7 @@ public class Player_Controller : MonoBehaviour
                 camera.GetComponent<VignetteAndChromaticAberration>().intensity -= Time.deltaTime;
             } else
             {
-                minotaurLight.enabled = true;
+               // minotaurLight.enabled = true;
                 shouldIFadeInTheCamera = false;
                 shouldIFadeOutTheCamera = false;
             }
@@ -127,10 +127,10 @@ public class Player_Controller : MonoBehaviour
         Vector3 torchPosition = col.transform.position;
         Vector3 playerPosition = this.transform.position;
         //When player gets to the end of the Old Lady's room, timer should stop
-        if(col.gameObject.tag == "Minotaur")
+        /*if(col.gameObject.tag == "Minotaur")
         {
-            shouldIFadeInTheCamera = true;
-        }
+           // shouldIFadeInTheCamera = true;
+        }*/
         if(col.gameObject.tag == "Timer_End")
         {
             shouldIStopTheTimer = true;
