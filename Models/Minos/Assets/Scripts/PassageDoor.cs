@@ -27,7 +27,7 @@ public class PassageDoor : MonoBehaviour
             print("I changed the GameMusic state");
             if (this.transform.position.y < doorLimit)
             {
-                //door_emitter.SetParameter("Play", 1);
+                
                 transform.Translate(0, speed, 0);
                     
             }

@@ -68,6 +68,7 @@ public class GameMusic : MonoBehaviour
     }
     public void normal()
     {
+        doorOpenPlayedOnce = false;
 
     }
     public void minotaur1()
@@ -149,5 +150,6 @@ public class GameMusic : MonoBehaviour
             source.clip = doorOpen;
             doorOpenPlayedOnce = false;
         }
+        changeState("normal");
     }
 }
