@@ -164,11 +164,7 @@ public class Player_Controller : MonoBehaviour
         {
             trimerTrigger.SetActive(false);
         }
-        //if(shouldITurnOnTheBrokenSword)
-        //{
-        //   brokenSword.SetActive(true);
-        //} 
-          
+        
         if(shouldIDisplayEText)
         {
             print("I want to display the text");
