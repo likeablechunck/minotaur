@@ -46,10 +46,13 @@ public class Red_Flame_Relocation : MonoBehaviour
                 // we should remember who the lightholder can be
                 dropOffLightHolder = redFlameInBrazier.GetComponent<BrazierBehaviour>().lightHolder;
                 doorToOpen = redFlameInBrazier.GetComponent<BrazierBehaviour>().door;
+                //for reset, next line should be put back to false
                 redFlameInBrazier.GetComponent<BrazierBehaviour>().alreadyPickedUp = true;
+                //for reset,RedFlame state should be "normal"
                 smallRedFlame.GetComponent<RedFlame>().changeState("pickedUp");
-
+                //for reset, canPickUpRedFlame = true;
                 canPickUpRedFlame = false;
+                //for reset, instead of destroying maybe we can enable and then disable
                 Destroy(fireOctagonal);
             }
         }

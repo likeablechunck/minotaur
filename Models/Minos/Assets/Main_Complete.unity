@@ -2833,12 +2833,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 64471968}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff9d7075dbf053044b0f88b7e8086146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightHolder: {fileID: 64471967}
+  associatedRedBrazier: {fileID: 851880269}
   canDropOff: 0
 --- !u!114 &64471974
 MonoBehaviour:
@@ -4469,12 +4469,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 108048125}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff9d7075dbf053044b0f88b7e8086146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightHolder: {fileID: 108048124}
+  associatedRedBrazier: {fileID: 1910470259}
   canDropOff: 0
 --- !u!4 &108761436 stripped
 Transform:
@@ -18691,12 +18691,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 242294581}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff9d7075dbf053044b0f88b7e8086146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightHolder: {fileID: 242294582}
+  associatedRedBrazier: {fileID: 431040976}
   canDropOff: 0
 --- !u!4 &242294584 stripped
 Transform:
@@ -26397,23 +26397,6 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 0
   OverrideMaxDistance: 20
---- !u!114 &431040979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 431040976}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5708cd62468d3464c91d62c2311beb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canPickUp: 0
-  canDropOff: 0
-  alreadyHasLight: 0
-  lightInstantiated: 0
-  flame: {fileID: 0}
-  rHandSocket: {fileID: 0}
 --- !u!136 &431040980
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -93503,15 +93486,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 140.1
+      value: -27.8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -12.3
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -19.6
+      value: 62.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -93594,7 +93577,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 8100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000011173642542, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 2}
@@ -93785,15 +93768,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 
-  source: {fileID: 462882763}
+  source: {fileID: 1436402820}
   minotaurOne: {fileID: 8300000, guid: ba243706938bca14f9e8984441e514f3, type: 3}
   minotaurTwo: {fileID: 8300000, guid: 18ffba5ae36e13a4dadb9f91c37a82d6, type: 3}
   minotaurThree: {fileID: 8300000, guid: f13f2d9b2a041db43914efa7b4a7c3b4, type: 3}
   minotaurFour: {fileID: 8300000, guid: ed79a860f64cadd4984220dea6852c42, type: 3}
+  doorOpen: {fileID: 8300000, guid: 6dc0a251c6b124945bfef7a2183c3d8d, type: 3}
   firstBreathPlayedOnce: 0
   secondBreathPlayedOnce: 0
   thirdBreathPlayedOnce: 0
   fourthBreathPlayedOnce: 0
+  doorOpenPlayedOnce: 0
 --- !u!114 &1436402815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93889,6 +93874,80 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1436402810}
   m_Enabled: 1
+--- !u!82 &1436402820
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436402808}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 700
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.525
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!20 &1436402824 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -114435,12 +114494,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1643022445}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff9d7075dbf053044b0f88b7e8086146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightHolder: {fileID: 1049421686}
+  associatedRedBrazier: {fileID: 2029486359}
   canDropOff: 0
 --- !u!114 &1643022448
 MonoBehaviour:
@@ -118020,7 +118079,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.60664
+      value: 31.44
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -118028,7 +118087,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 139.41008
+      value: 139.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -118052,11 +118111,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
       propertyPath: m_Name
-      value: Red_Flame_Brazier_3 (1)
+      value: Red_Flame_Brazier_Opening_Old Lady Room
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
       propertyPath: m_TagString
-      value: Red_Flame_Brazier
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
       propertyPath: m_IsActive
@@ -118073,21 +118132,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
   m_PrefabInternal: {fileID: 1681130093}
---- !u!114 &1681130096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1681130095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b2dc6ecd871e134db30654447114362, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightHolder: {fileID: 0}
-  door: {fileID: 0}
-  alreadyPickedUp: 0
-  alreadyDroppedOff: 0
 --- !u!114 &1681130097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118112,23 +118156,6 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 0
   OverrideMaxDistance: 20
---- !u!114 &1681130098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1681130095}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5708cd62468d3464c91d62c2311beb83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canPickUp: 0
-  canDropOff: 0
-  alreadyHasLight: 0
-  lightInstantiated: 0
-  flame: {fileID: 0}
-  rHandSocket: {fileID: 0}
 --- !u!136 &1681130099
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -118136,9 +118163,9 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1681130095}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2.5908513
+  m_Radius: 0.8386811
   m_Height: 3.0515487
   m_Direction: 1
   m_Center: {x: 0, y: 0.5644661, z: -0.000000834465}
@@ -137627,12 +137654,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062942186}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff9d7075dbf053044b0f88b7e8086146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightHolder: {fileID: 2062942187}
+  associatedRedBrazier: {fileID: 1318289502}
   canDropOff: 0
 --- !u!4 &2062942189 stripped
 Transform:

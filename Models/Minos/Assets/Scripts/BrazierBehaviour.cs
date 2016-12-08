@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BrazierBehaviour : MonoBehaviour {
+public class BrazierBehaviour : MonoBehaviour
+{
 
     public GameObject lightHolder;
     public GameObject door;
@@ -9,13 +10,15 @@ public class BrazierBehaviour : MonoBehaviour {
     public bool alreadyDroppedOff;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         alreadyPickedUp = false;
         alreadyDroppedOff = false;
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 	
 	}
 

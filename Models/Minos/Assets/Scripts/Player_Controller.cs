@@ -210,13 +210,13 @@ public class Player_Controller : MonoBehaviour
                 shouldIDisplayEText = true;
             }
         }
-        if (col.gameObject.tag == "Empty_Red_Brazier")
-        {
-            if (!col.gameObject.GetComponent<BrazierBehaviour>().alreadyDroppedOff)
-            {
-                shouldIDisplayQText = true;
-            }
-        }
+        //if (col.gameObject.tag == "Empty_Red_Brazier")
+        //{
+        //    if (!col.gameObject.GetComponent<BrazierBehaviour>().alreadyDroppedOff)
+        //    {
+        //        shouldIDisplayQText = true;
+        //    }
+        //}
         if(col.gameObject.tag == "Open_Atrium_Door")
         {
             shouldIOpenTheAtriumDoor = true;

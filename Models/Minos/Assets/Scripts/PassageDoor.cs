@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PassageDoor : MonoBehaviour
 {
-    //private FMODUnity.StudioEventEmitter door_emitter;
+  
     public float doorLimit;
     public float speed;
     public bool openTheDoor;
@@ -11,7 +11,7 @@ public class PassageDoor : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        //door_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
+        
         openTheDoor = false;
 
     }
@@ -20,14 +20,18 @@ public class PassageDoor : MonoBehaviour
 	void Update ()
     {
         GameObject player = GameObject.Find("FPSController");
-        if(openTheDoor)
+        GameObject gameMusicController = GameObject.Find("FirstPersonCharacter");
+        if (openTheDoor)
         {
+            gameMusicController.GetComponent<GameMusic>().changeState("OpenDoor");
+            print("I changed the GameMusic state");
             if (this.transform.position.y < doorLimit)
             {
                 //door_emitter.SetParameter("Play", 1);
                 transform.Translate(0, speed, 0);
                     
-            } else
+            }
+            else
                 {
                     openTheDoor = false;
                 }

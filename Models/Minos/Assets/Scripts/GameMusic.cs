@@ -10,28 +10,35 @@ public class GameMusic : MonoBehaviour
     public AudioClip minotaurTwo;
     public AudioClip minotaurThree;
     public AudioClip minotaurFour;
+    public AudioClip doorOpen;
     //public bool stopPlaying;
     public bool firstBreathPlayedOnce;
     public bool secondBreathPlayedOnce;
     public bool thirdBreathPlayedOnce;
     public bool fourthBreathPlayedOnce;
+    public bool doorOpenPlayedOnce;
 
     // Use this for initialization
     void Start ()
     {
-        state = "minotaur1";
+        state = "normal";
         //playedOnce = false;
         //stopPlaying = false;
         firstBreathPlayedOnce = false;
         secondBreathPlayedOnce = false;
         thirdBreathPlayedOnce = false;
         fourthBreathPlayedOnce = false;
+        doorOpenPlayedOnce = false;
 
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (state == "normal")
+        {
+            normal();
+        }
         if (state == "minotaur1")
         {
             minotaur1();
@@ -48,12 +55,20 @@ public class GameMusic : MonoBehaviour
         {
             minotaur4();
         }
+        if(state == "OpenDoor")
+        {
+            OpenDoor();
+        }
 
     }
     public void changeState(string stateName)
     {
         state = stateName;
         print("current Music state for Minotaur breath is :" + stateName);
+    }
+    public void normal()
+    {
+
     }
     public void minotaur1()
     {
@@ -119,5 +134,20 @@ public class GameMusic : MonoBehaviour
             fourthBreathPlayedOnce = false;
         }
     }
-
+    public void OpenDoor()
+    {
+        if(source.clip == doorOpen)
+        {
+            if(!doorOpenPlayedOnce)
+            {
+                source.Play();
+                doorOpenPlayedOnce = true;
+            }
+        }
+        else
+        {
+            source.clip = doorOpen;
+            doorOpenPlayedOnce = false;
+        }
+    }
 }

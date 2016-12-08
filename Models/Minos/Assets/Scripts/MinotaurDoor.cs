@@ -19,9 +19,11 @@ public class MinotaurDoor : MonoBehaviour
 	void Update ()
     {
         GameObject player = GameObject.Find("FPSController");
+        GameObject gameMusicController = GameObject.Find("FirstPersonCharacter");
         if (this.transform.position.x < doorLimit &&
             player.GetComponent<Player_Controller>().shouldIOpenTheMinotaurDoor)
         {
+            gameMusicController.GetComponent<GameMusic>().changeState("OpenDoor");
             timer += Time.deltaTime;
             if (timer > 1.0f)
             {
