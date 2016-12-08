@@ -37589,6 +37589,7 @@ MonoBehaviour:
   doorLimit: 9
   speed: 0.08
   openTheDoor: 0
+  initialLocation: {x: 0, y: 0, z: 0}
 --- !u!23 &626348673
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60122,6 +60123,7 @@ MonoBehaviour:
   doorLimit: 9
   speed: 0.08
   openTheDoor: 0
+  initialLocation: {x: 0, y: 0, z: 0}
 --- !u!23 &945113865
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -67261,6 +67263,7 @@ MonoBehaviour:
   doorLimit: 9
   speed: 0.08
   openTheDoor: 0
+  initialLocation: {x: 0, y: 0, z: 0}
 --- !u!23 &1039918343
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -72835,6 +72838,7 @@ MonoBehaviour:
   doorLimit: 9
   speed: 0.08
   openTheDoor: 0
+  initialLocation: {x: 0, y: 0, z: 0}
 --- !u!23 &1157451947
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -89092,6 +89096,7 @@ MonoBehaviour:
   doorLimit: 9
   speed: 0.08
   openTheDoor: 0
+  initialLocation: {x: 0, y: 0, z: 0}
 --- !u!1001 &1363359621
 Prefab:
   m_ObjectHideFlags: 0
@@ -93486,15 +93491,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -28.2
+      value: 5.6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.92
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 82.3
+      value: -2.9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -93774,11 +93779,13 @@ MonoBehaviour:
   minotaurThree: {fileID: 8300000, guid: f13f2d9b2a041db43914efa7b4a7c3b4, type: 3}
   minotaurFour: {fileID: 8300000, guid: ed79a860f64cadd4984220dea6852c42, type: 3}
   doorOpen: {fileID: 8300000, guid: 6dc0a251c6b124945bfef7a2183c3d8d, type: 3}
+  closeDoor: {fileID: 8300000, guid: d2555a69d8a35e344a28061f447e488c, type: 3}
   firstBreathPlayedOnce: 0
   secondBreathPlayedOnce: 0
   thirdBreathPlayedOnce: 0
   fourthBreathPlayedOnce: 0
   doorOpenPlayedOnce: 0
+  doorClosePlayedOnce: 0
 --- !u!114 &1436402815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93948,6 +93955,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1436402821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436402810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e260a825d89824b9393cd2fdfeceb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redFlameBrazier1: {fileID: 431040976}
+  redFlameBrazier2: {fileID: 1318289502}
+  redFlameBrazier3: {fileID: 1910470259}
+  emptyBrazier1: {fileID: 242294581}
+  emptyBrazier2: {fileID: 2062942186}
+  emptyBrazier3: {fileID: 108048125}
+  door1: {fileID: 1039918341}
+  door2: {fileID: 1793580231}
+  door3: {fileID: 1157451944}
+  redFlame1: {fileID: 215856437}
+  redFlame2: {fileID: 1837687137}
+  redFlame3: {fileID: 196625895}
 --- !u!20 &1436402824 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -110468,7 +110498,7 @@ GameObject:
   - 198: {fileID: 1627143618}
   - 199: {fileID: 1627143617}
   m_Layer: 0
-  m_Name: Red_Flame_Brazier_3_fire_octagonal1
+  m_Name: fire_octagonal_opening old lady passage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123891,6 +123921,7 @@ MonoBehaviour:
   doorLimit: 9
   speed: 0.08
   openTheDoor: 0
+  initialLocation: {x: 0, y: 0, z: 0}
 --- !u!23 &1793580233
 MeshRenderer:
   m_ObjectHideFlags: 0

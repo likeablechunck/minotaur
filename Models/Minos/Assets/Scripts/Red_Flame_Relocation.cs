@@ -53,7 +53,8 @@ public class Red_Flame_Relocation : MonoBehaviour
                 //for reset, canPickUpRedFlame = true;
                 canPickUpRedFlame = false;
                 //for reset, instead of destroying maybe we can enable and then disable
-                Destroy(fireOctagonal);
+                fireOctagonal.SetActive(false);
+                //Destroy(fireOctagonal);
             }
         }
         if (canDropOffRedFlame)

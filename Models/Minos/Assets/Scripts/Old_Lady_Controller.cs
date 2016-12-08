@@ -108,6 +108,8 @@ public class Old_Lady_Controller : MonoBehaviour
     {
         //this function should technically do same as what Start() function does
         //it also tells the Player_Controller to reset the door's position and doesn't start the timer
+
+        //It must call the Reset() function inside the Reset_Braziers script
         this.GetComponent<VignetteAndChromaticAberration>().intensity = 0.036f;
         GameObject player = GameObject.Find("FPSController");
         player.transform.position = playerInitialPositionInOldLadyRoom;
@@ -120,6 +122,7 @@ public class Old_Lady_Controller : MonoBehaviour
         emitterInitialValue = 0.5f;
         heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
         emitterValueOverTime = emitterInitialValue;
+        player.GetComponent<Reset_Braziers>().Reset();
 
     }
     //private FMOD.Studio.EventInstance musicEvent;

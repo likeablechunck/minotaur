@@ -16,8 +16,10 @@ public class First_Room_Door : MonoBehaviour
 	void Update ()
     {
         GameObject player = GameObject.Find("FPSController");
+        GameObject gameMusicController = GameObject.Find("FirstPersonCharacter");
         if (player.GetComponent<Player_Controller>().shouldICloseTheFirstDoor)
         {
+            gameMusicController.GetComponent<GameMusic>().changeState("CloseDoor");
             if (this.transform.position.y > doorLimit)
             {
                 transform.Translate(0, -speed, 0);

@@ -7,11 +7,12 @@ public class PassageDoor : MonoBehaviour
     public float doorLimit;
     public float speed;
     public bool openTheDoor;
+    public Vector3 initialLocation;
 
     // Use this for initialization
     void Start ()
     {
-        
+        initialLocation = this.transform.position;
         openTheDoor = false;
 
     }
