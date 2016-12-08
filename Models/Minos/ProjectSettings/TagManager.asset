@@ -25,6 +25,8 @@ TagManager:
   - Last_Doors_Trigger
   - Minotaur
   - Sword_Cutscene
+  - Sword_Music
+  - Cane_Pickup_Sound
   layers:
   - Default
   - TransparentFX

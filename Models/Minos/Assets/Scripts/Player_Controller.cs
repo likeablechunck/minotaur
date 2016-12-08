@@ -42,7 +42,7 @@ public class Player_Controller : MonoBehaviour
     public float timer;
     public bool cutSceneStart;
     public bool neverDisplayTheEText;
-    float cutSceneTimer;
+    public float cutSceneTimer;
     // Use this for initialization
     void Start ()
     {
@@ -79,6 +79,7 @@ public class Player_Controller : MonoBehaviour
         shouldIFadeOutTheCamera = false;
         neverDisplayTheEText = false;
         timer = 0;
+        cutSceneTimer = 0;
 
     }
 	
@@ -87,21 +88,31 @@ public class Player_Controller : MonoBehaviour
     {
         if( isItCane && Input.GetKeyDown(KeyCode.E))
         {
+            isItCane = false;
+            cutSceneTimer = 0;
+            cutSceneStart = true;
             flatCane.SetActive(true);
-            normalCane.SetActive(false);
+            //normalCane.SetActive(false);
+            Destroy(normalCane, 0.2f);
             turnOnTheCaneLight = true;
             shouldIOpenTheDoorToSafePassage = true;
             shouldIOpenTheMinotaurDoor = true;
-            cutSceneStart = true;
+            //cutSceneStart = true;
             neverDisplayTheEText = true;
             
         }
         if(isItSword && Input.GetKeyDown(KeyCode.E))
         {
+            print("sword detected and I pressed E");
+            isItSword = false;
+            GameObject swrodTrigger= GameObject.Find("Sword-Music-Trigger");
+            Destroy(swrodTrigger, 0.2f);
+            cutSceneTimer = 0;
             pressEToPickUpSwordCane.enabled = false;
             cutSceneStart = true;
             turnOnTheSwordLight = true;
-            Destroy(normalSword, 0.2f);
+            normalSword.SetActive(false);
+            //Destroy(normalSword, 0.2f);
             brokenSword.SetActive(true);
             //neverDisplayTheEText = true;
         }
@@ -122,6 +133,7 @@ public class Player_Controller : MonoBehaviour
                 cutSceneStart = false;
                 cam.enabled = true;
                 cam2.enabled = false;
+                //cutSceneTimer = 0;
             }        
         }
         if (shouldIFadeInTheCamera)
@@ -231,6 +243,10 @@ public class Player_Controller : MonoBehaviour
             Light light = Instantiate(Resources.Load("point_light", typeof(Light)),
                torchPosition, Quaternion.identity) as Light;
         }
+        //if(col.gameObject.tag == "Sword_Music")
+        //{
+        //    Destroy(col.gameObject, 0.2f);
+        //}
         if(col.gameObject.tag == "Sword")
         {
             //it needs to destroy the normal sword
@@ -244,9 +260,8 @@ public class Player_Controller : MonoBehaviour
         }
         if(col.gameObject.tag == "Cane")
         {
-            //turnOnTheCaneLight = true;
-            //shouldIOpenTheDoorToSafePassage = true;
-            //shouldIOpenTheMinotaurDoor = true;
+            print("I collided into Cane");
+            shouldIOpenTheFirstHiddenDoor = true;
             pressEToPickUpSwordCane.enabled = true;
             isItCane = true;
           
@@ -266,15 +281,6 @@ public class Player_Controller : MonoBehaviour
         {
             //SceneManager.LoadScene("old_lady");
         }
-        if(col.gameObject.tag == "Cane")
-        {
-            shouldIOpenTheFirstHiddenDoor = true;
-
-        }
-        //if(col.gameObject.tag == "Load-Atrium")
-        //{
-        //    SceneManager.LoadScene("Main");
-        //}
 
     }
     void OnTriggerExit(Collider col)
@@ -289,11 +295,14 @@ public class Player_Controller : MonoBehaviour
         }
         if (col.gameObject.tag == "Cane")
         {
+            shouldIOpenTheFirstHiddenDoor = false;
             pressEToPickUpSwordCane.enabled = false;
+            isItCane = false;
         }
         if (col.gameObject.tag == "Sword")
         {
             pressEToPickUpSwordCane.enabled = false;
+            isItSword = false;
         }
     }
 }
