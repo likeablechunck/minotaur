@@ -42,6 +42,7 @@ public class Player_Controller : MonoBehaviour
     public float timer;
     public bool cutSceneStart;
     public bool neverDisplayTheEText;
+    public bool shouldIPlayTheMusic;
     public float cutSceneTimer;
     // Use this for initialization
     void Start ()
@@ -78,6 +79,7 @@ public class Player_Controller : MonoBehaviour
         shouldIFadeInTheCamera = false;
         shouldIFadeOutTheCamera = false;
         neverDisplayTheEText = false;
+        shouldIPlayTheMusic = false;
         timer = 0;
         cutSceneTimer = 0;
 
@@ -86,7 +88,15 @@ public class Player_Controller : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if( isItCane && Input.GetKeyDown(KeyCode.E))
+        GameObject fpc = GameObject.Find("FirstPersonCharacter");
+        if (shouldIPlayTheMusic)
+        {
+            print("I am about to change the play the OLD LADY music");
+            fpc.GetComponent<GameMusic>().changeState("safeRoom");
+            //shouldIPlayTheMusic = false;
+
+        }
+        if ( isItCane && Input.GetKeyDown(KeyCode.E))
         {
             isItCane = false;
             cutSceneTimer = 0;
@@ -220,6 +230,7 @@ public class Player_Controller : MonoBehaviour
         if(col.gameObject.tag == "Enterance_To_Saferoom")
         {
             ShouldICloseTheDoorToTheSafeRoom = true;
+            //shouldIPlayTheMusic = true;
         }
         if(col.gameObject.tag == "Last_Doors_Trigger")
         {

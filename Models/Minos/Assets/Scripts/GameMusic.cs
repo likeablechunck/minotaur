@@ -6,12 +6,14 @@ public class GameMusic : MonoBehaviour
     public string state;
    // bool playedOnce;
     public AudioSource source;
+    public AudioSource oldLadyAudioSource;
     public AudioClip minotaurOne;
     public AudioClip minotaurTwo;
     public AudioClip minotaurThree;
     public AudioClip minotaurFour;
     public AudioClip doorOpen;
     public AudioClip closeDoor;
+    public AudioClip saferoomMusicClip;
     //public bool stopPlaying;
     public bool firstBreathPlayedOnce;
     public bool secondBreathPlayedOnce;
@@ -19,6 +21,7 @@ public class GameMusic : MonoBehaviour
     public bool fourthBreathPlayedOnce;
     public bool doorOpenPlayedOnce;
     public bool doorClosePlayedOnce;
+    public bool safeRoomPlayedOnce;
 
     // Use this for initialization
     void Start ()
@@ -32,6 +35,7 @@ public class GameMusic : MonoBehaviour
         fourthBreathPlayedOnce = false;
         doorOpenPlayedOnce = false;
         doorClosePlayedOnce = false;
+        safeRoomPlayedOnce = false;
 
     }
 	
@@ -65,6 +69,10 @@ public class GameMusic : MonoBehaviour
         if (state == "CloseDoor")
         {
             CloseDoor();
+        }
+        if(state == "safeRoom")
+        {
+            safeRoom();
         }
 
     }
@@ -176,5 +184,22 @@ public class GameMusic : MonoBehaviour
             doorClosePlayedOnce = false;
         }
         changeState("normal");
+    }
+    public void safeRoom()
+    {
+        oldLadyAudioSource.Play();
+        //if(oldLadyAudioSource.clip == saferoomMusicClip)
+        //{
+        //    if(!safeRoomPlayedOnce)
+        //    {
+        //        oldLadyAudioSource.Play();
+        //        safeRoomPlayedOnce = false;
+        //    }
+        //    else
+        //    {
+        //        oldLadyAudioSource.clip = saferoomMusicClip;
+        //        safeRoomPlayedOnce = false;
+        //    }
+        //}
     }
 }
