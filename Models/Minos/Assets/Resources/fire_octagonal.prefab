@@ -82,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013886469604}
   m_LocalRotation: {x: -0.25435087, y: 0.6742347, z: 0.645468, w: 0.25314885}
-  m_LocalPosition: {x: -8.34, y: -15.825884, z: 24.03}
+  m_LocalPosition: {x: 0.02, y: 1.298, z: 0.059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: -86.55701, y: 0, z: 0}
   m_Children:
@@ -112,8 +112,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 2
-  m_Color: {r: 1, g: 0.5992406, b: 0.27405927, a: 1}
-  m_Intensity: 2
+  m_Color: {r: 1, g: 0.720194, b: 0.46929067, a: 1}
+  m_Intensity: 2.5
   m_Range: 8
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -350,7 +350,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.52156866, b: 0.52156866, a: 1}
+      maxColor: {r: 0.5921569, g: 0.25882354, b: 0.7137255, a: 1}
       minMaxState: 0
     startSize:
       scalar: 0.25

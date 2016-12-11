@@ -22,10 +22,13 @@ GameObject:
   - 33: {fileID: 33000013179956802}
   - 23: {fileID: 23000011095820612}
   - 135: {fileID: 135000012948693090}
-  - 114: {fileID: 114000010705101160}
+  - 114: {fileID: 114000010743427218}
+  - 114: {fileID: 114000010398295198}
+  - 114: {fileID: 114000010783396590}
+  - 114: {fileID: 114000010686936620}
   m_Layer: 0
   m_Name: Empty_Brazier
-  m_TagString: Brazier
+  m_TagString: Empty_Red_Brazier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +42,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012165043720}
   m_Layer: 0
-  m_Name: Light_Holder
+  m_Name: Light_Holder_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010968388408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.36174, y: 0.038432743, z: 7.167645}
+  m_LocalPosition: {x: -10.76, y: -7.0073633, z: 52.080254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -66,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013164764492}
   m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.017000198, y: 1.5700002, z: 0.036003113}
+  m_LocalPosition: {x: 0.017000198, y: 1.34, z: 0.036003113}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -85,7 +88,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 621e901dcf5ebaf46bce29d18f67194c, type: 2}
+  - {fileID: 2100000, guid: 5f8d6c69aa7a26144ab7bc1c3299a8b3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -108,17 +111,61 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010968388408}
   m_Mesh: {fileID: 4300000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
---- !u!114 &114000010705101160
+--- !u!114 &114000010398295198
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010968388408}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b97538e2e87c7ed459120330e7c39f56, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b2dc6ecd871e134db30654447114362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightHolder: {fileID: 0}
+  door: {fileID: 0}
+  alreadyPickedUp: 0
+  alreadyDroppedOff: 0
+--- !u!114 &114000010686936620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010968388408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b2dc6ecd871e134db30654447114362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightHolder: {fileID: 0}
+  door: {fileID: 0}
+  alreadyPickedUp: 0
+  alreadyDroppedOff: 0
+--- !u!114 &114000010743427218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010968388408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9d7075dbf053044b0f88b7e8086146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  associatedRedBrazier: {fileID: 0}
+  canDropOff: 0
+--- !u!114 &114000010783396590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010968388408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9d7075dbf053044b0f88b7e8086146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  associatedRedBrazier: {fileID: 0}
   canDropOff: 0
 --- !u!135 &135000012948693090
 SphereCollider:
@@ -130,5 +177,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.45
+  m_Radius: 4.3605614
   m_Center: {x: 0, y: 0.5644661, z: -0.000000834465}
