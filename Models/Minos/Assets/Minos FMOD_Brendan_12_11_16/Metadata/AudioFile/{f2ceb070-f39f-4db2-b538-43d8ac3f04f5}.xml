@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{f2ceb070-f39f-4db2-b538-43d8ac3f04f5}">
+        <property name="assetPath">
+            <value>Ambiance_Beach.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>26.238548752834468</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{455efdda-2e20-426d-aa52-02d3b9cfcb28}</destination>
+        </relationship>
+    </object>
+</objects>

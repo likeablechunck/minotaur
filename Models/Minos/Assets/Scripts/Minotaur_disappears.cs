@@ -4,82 +4,55 @@ using UnityStandardAssets.ImageEffects;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Minotaur_disappears : MonoBehaviour {
+public class Minotaur_disappears : MonoBehaviour
+{
     public GameObject minotaur;
-    public Image pressEText;
-    public bool shouldIDisplayPickupText;
+    //public Image pressEText;
+   // public bool shouldIDisplayPickupText;
     float timer;
     public bool approach;
     public GameObject spotlight;
     public GameObject shadow;
     public GameObject cam;
-    public bool vignette=false;
+    public bool vignette;
    
    
 
 	// Use this for initialization
 	void Start ()
     {
-        shouldIDisplayPickupText = false;
-        pressEText.enabled = false;
+        //shouldIDisplayPickupText = false;
+        //pressEText.enabled = false;
         approach = false;
+        vignette = false;
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
     {
-        if(shouldIDisplayPickupText)
-        {
-            pressEText.enabled = true;
-        }
 
-        if ((approach == true) && Input.GetKeyDown(KeyCode.E))
-                // if player collided and vignetting hasn't started and pressed E
+        if ((approach == true) && (vignette == false)) // if player collided and vignetting hasn't started
         {
-            cam.GetComponent<VignetteAndChromaticAberration>().intensity += Time.deltaTime;
 
+            cam.GetComponent<VignetteAndChromaticAberration>().intensity += Time.deltaTime;   //increase vignetting effect         
             if (cam.GetComponent<VignetteAndChromaticAberration>().intensity >= 1)
             { // if screen is black
-                cam.GetComponent<VignetteAndChromaticAberration>().intensity -= Time.deltaTime;
-                minotaur.gameObject.SetActive(false); //disable minotaur
-                spotlight.gameObject.SetActive(false); // disable spotlight
-                shadow.gameObject.SetActive(true); // enable shadow
-                StartCoroutine(loadScene());
 
 
-                //vignette = true; //   
+                vignette = true; //   
             }
-
-            //if (Input.GetKeyDown(KeyCode.E))
-            //{
-            //    cam.GetComponent<VignetteAndChromaticAberration>().intensity += Time.deltaTime;
-            //    if (cam.GetComponent<VignetteAndChromaticAberration>().intensity >= 1)
-            //    { // if screen is black
-            //        cam.GetComponent<VignetteAndChromaticAberration>().intensity -= Time.deltaTime;
-            //        minotaur.gameObject.SetActive(false); //disable minotaur
-            //        spotlight.gameObject.SetActive(false); // disable spotlight
-            //        shadow.gameObject.SetActive(true); // enable shadow
-            //        StartCoroutine(loadScene());
-
-
-            //        //vignette = true; //   
-            //    }
-            //}
-                            
-              //increase vignetting effect         
-            //if (cam.GetComponent<VignetteAndChromaticAberration>().intensity >= 1) { // if screen is black
-
-                
-            //    vignette = true; //   
-            //}
         }
-        //if (vignette==true){
-        //    cam.GetComponent<VignetteAndChromaticAberration>().intensity -= Time.deltaTime;
-        //    minotaur.gameObject.SetActive(false); //disable minotaur
-        //    spotlight.gameObject.SetActive(false); // disable spotlight
-        //    shadow.gameObject.SetActive(true); // enable shadow
-        //    StartCoroutine(loadScene());
-        //}
+        if (vignette == true)
+        {
+            cam.GetComponent<VignetteAndChromaticAberration>().intensity -= Time.deltaTime;
+            minotaur.gameObject.SetActive(false); //disable minotaur
+            spotlight.gameObject.SetActive(false); // disable spotlight
+            shadow.gameObject.SetActive(true); // enable shadow
+            StartCoroutine(loadScene());
+            
+        }
+
+
     }
     private IEnumerator loadScene()
     {
@@ -89,20 +62,23 @@ public class Minotaur_disappears : MonoBehaviour {
     }
     void OnTriggerEnter(Collider col)
     {
-       // print("");
+        // print("");
 
-        if (col.gameObject.tag == "Player") 
-        {
-            approach = true;
-            shouldIDisplayPickupText = true;
-        }
-    }
-    void OnTriggerExit(Collider col)
-    {
         if (col.gameObject.tag == "Player")
         {
-            approach = false;
-            shouldIDisplayPickupText = false;
+            approach = true;
+
+
         }
     }
+   
 }
+        //if (vignette==true){
+        //    cam.GetComponent<VignetteAndChromaticAberration>().intensity -= Time.deltaTime;
+        //    minotaur.gameObject.SetActive(false); //disable minotaur
+        //    spotlight.gameObject.SetActive(false); // disable spotlight
+        //    shadow.gameObject.SetActive(true); // enable shadow
+        //    StartCoroutine(loadScene());
+        //}
+    
+  

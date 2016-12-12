@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{2318a3c4-0ba4-4dcd-ab81-7ac3cfe2bebb}">
+        <property name="assetPath">
+            <value>Ambiance_Crickets.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>8.6204081632653065</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{455efdda-2e20-426d-aa52-02d3b9cfcb28}</destination>
+        </relationship>
+    </object>
+</objects>

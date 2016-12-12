@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{6f63fabf-8b9a-4305-bdfe-2d1fa11cd084}">
+        <property name="assetPath">
+            <value>Sword_dialogue_Soundscape.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>8.6295918367346935</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{455efdda-2e20-426d-aa52-02d3b9cfcb28}</destination>
+        </relationship>
+    </object>
+</objects>

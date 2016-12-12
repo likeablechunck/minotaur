@@ -27,6 +27,8 @@ TagManager:
   - Sword_Cutscene
   - Sword_Music
   - Cane_Pickup_Sound
+  - Ambiance Music Trigger
+  - Minotaur Room Trigger
   layers:
   - Default
   - TransparentFX

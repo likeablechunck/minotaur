@@ -113,10 +113,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013067252460}
-  m_LocalRotation: {x: -0.014082019, y: 0.98833656, z: 0.017848495, w: 0.150579}
-  m_LocalPosition: {x: 12.341, y: -8.104, z: -5.927}
-  m_LocalScale: {x: 1.0000007, y: 1, z: 1.0000007}
-  m_LocalEulerAnglesHint: {x: -2.265, y: 162.7, z: -1.2880001}
+  m_LocalRotation: {x: 0.010203155, y: 0.818522, z: -0.014544583, w: 0.57420045}
+  m_LocalPosition: {x: 10.217, y: -10.092, z: -19.453}
+  m_LocalScale: {x: 1.0000091, y: 1.000005, z: 1.0000085}
+  m_LocalEulerAnglesHint: {x: 2.036, y: 109.9, z: 0}
   m_Children:
   - {fileID: 4000014283330686}
   - {fileID: 4000010254312500}
@@ -142,10 +142,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012418263920}
-  m_LocalRotation: {x: -0.10247079, y: 0.87211925, z: -0.45838004, w: -0.13709694}
-  m_LocalPosition: {x: -0.121253565, y: 0.31427518, z: -0.25362155}
+  m_LocalRotation: {x: -0.12247333, y: 0.79057485, z: -0.58795893, w: -0.11956641}
+  m_LocalPosition: {x: -0.12125327, y: 0.3142749, z: -0.25362176}
   m_LocalScale: {x: 1.775984, y: 1.7759904, z: 1.7759905}
-  m_LocalEulerAnglesHint: {x: 58.833004, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 73.5, y: -171.102, z: -10.5130005}
   m_Children:
   - {fileID: 4000013019546472}
   m_Father: {fileID: 4000011080407910}
@@ -209,7 +209,7 @@ Light:
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 1, g: 0.6592292, b: 0.22794116, a: 1}
-  m_Intensity: 8
+  m_Intensity: 3.48
   m_Range: 2.8304157
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -239,12 +239,12 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012418263920}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 7
   m_Type: 0
   m_Color: {r: 1, g: 0.72413796, b: 0, a: 1}
-  m_Intensity: 0.5
-  m_Range: 4.03
+  m_Intensity: 2.42
+  m_Range: 5.23
   m_SpotAngle: 89
   m_CookieSize: 10
   m_Shadows:
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/SFX/Torch
+  Event: event:/SFX/Torch or fire inhand
   PlayEvent: 1
   StopEvent: 0
   CollisionTag: 
