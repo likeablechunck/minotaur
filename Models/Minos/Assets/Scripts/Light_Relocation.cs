@@ -9,6 +9,8 @@ public class Light_Relocation : MonoBehaviour {
     public bool lightInstantiated;
     public GameObject flame;
     public GameObject rHandSocket;
+    public AudioSource source;
+    public AudioClip pickUpFireClip;
 
     // Use this for initialization
     void Start()
@@ -29,6 +31,8 @@ public class Light_Relocation : MonoBehaviour {
         {
             if (canPickUp && Input.GetKeyUp(KeyCode.Q))
             {
+                source.clip = pickUpFireClip;
+                source.Play();
                 flame.GetComponent<RedFlame>().changeState("pickedUp");
                 //PickUp();
             }

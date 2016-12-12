@@ -4,6 +4,7 @@ using System.Collections;
 public class Quit_Button : MonoBehaviour
 {
 
+
 	// Use this for initialization
 	void Start ()
     {

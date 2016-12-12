@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Red_Flame_Relocation : MonoBehaviour
 {
+    public AudioSource source;
+    public AudioClip pickUpFireClip;
+    public AudioClip firePlaceClip;
     public bool canPickUpRedFlame;
     public bool canDropOffRedFlame;
     public bool alreadyHasRedFlame;
@@ -38,6 +41,8 @@ public class Red_Flame_Relocation : MonoBehaviour
             
             if (Input.GetKeyUp(KeyCode.E))
             {
+                source.clip = pickUpFireClip;
+                source.Play();
                 print("I pressed E");
                 GameObject fireOctagonal = GameObject.Find(collidedRedFlameName + "_fire_octagonal1");
                 
@@ -61,6 +66,8 @@ public class Red_Flame_Relocation : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.Q))
             {
+                source.clip = firePlaceClip;
+                source.Play();
                 print("I pressed Q");
                 // if it is for drop off
                 // we need to instantiate a new fire_octagonal with some random name

@@ -4,20 +4,20 @@ using UnityEngine.SceneManagement;
 
 public class Start_Button : MonoBehaviour
 {
+    public AudioSource source;
+    public AudioClip clickClip;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-	
-	}
     public void onClick()
     {
-        SceneManager.LoadScene("Video");
+        source.clip = clickClip;
+        source.Play();
+        StartCoroutine(loadScene());
+        //SceneManager.LoadScene("Video");
 
+    }
+    private IEnumerator loadScene()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("Video");
     }
 }
