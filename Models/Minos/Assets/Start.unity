@@ -2268,17 +2268,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/SFX/Fire Brazier
+  Event: event:/SFX/Brazier
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 15
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &118650760 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
@@ -12438,6 +12438,32 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &681617394 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
+  m_PrefabInternal: {fileID: 681617393}
+--- !u!114 &681617395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 681617394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Brazier
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &696527278 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
@@ -19798,6 +19824,32 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1539352577 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: cbc4a0dce9cdc5d469597854468421c8, type: 3}
+  m_PrefabInternal: {fileID: 1539352576}
+--- !u!114 &1539352578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539352577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Brazier
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1555608749
 GameObject:
   m_ObjectHideFlags: 0
@@ -22725,6 +22777,7 @@ MonoBehaviour:
   timer: 0
   cutSceneStart: 0
   neverDisplayTheEText: 0
+  shouldIPlayTheMusic: 0
   cutSceneTimer: 0
 --- !u!82 &2045698792
 AudioSource:

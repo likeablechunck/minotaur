@@ -15,6 +15,7 @@ public class TheEnd_Video : MonoBehaviour
         imageComp = GetComponent<RawImage>();
         source = this.GetComponent<AudioSource>();
         PlayVideo();
+        StartCoroutine(loadScene());
 
     }
     void PlayVideo()
@@ -23,5 +24,10 @@ public class TheEnd_Video : MonoBehaviour
         movieText.Play();
         source.clip = movieText.audioClip;
         source.Play();
+    }
+    private IEnumerator loadScene()
+    {
+        yield return new WaitForSeconds(25f);
+        SceneManager.LoadScene("Start");
     }
 }
