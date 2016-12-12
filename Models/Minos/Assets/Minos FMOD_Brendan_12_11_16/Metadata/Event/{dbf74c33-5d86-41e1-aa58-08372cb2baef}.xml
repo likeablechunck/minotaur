@@ -5,7 +5,7 @@
             <value>Sword Soundscape</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixer">
             <destination>{35588e84-2f78-466a-b888-cd9d293fd053}</destination>
@@ -100,6 +100,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{3fb054d4-de21-411c-b55f-f54745bc5da1}">
+        <property name="volume">
+            <value>-9</value>
+        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
@@ -116,7 +119,6 @@
     <object class="MixerBusEffectChain" id="{1040d293-af67-4820-9474-9dfd94f1f0d4}">
         <relationship name="effects">
             <destination>{fbd72b44-ae0b-4034-958e-196888776828}</destination>
-            <destination>{18531bbd-0682-41a9-a8df-ba58a85cf4cf}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{e4f0c5c5-2499-4ce9-80c0-6a061a283a44}"/>
@@ -128,6 +130,5 @@
     </object>
     <object class="MixerBusPanner" id="{a28542c2-8102-436b-a731-e0af6e09aa8c}"/>
     <object class="MixerBusFader" id="{fbd72b44-ae0b-4034-958e-196888776828}"/>
-    <object class="SpatialiserEffect" id="{18531bbd-0682-41a9-a8df-ba58a85cf4cf}"/>
     <object class="MixerBusFader" id="{8522eae7-0f75-4916-a13a-cb9b6fecc900}"/>
 </objects>

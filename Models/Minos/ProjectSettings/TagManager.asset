@@ -29,6 +29,7 @@ TagManager:
   - Cane_Pickup_Sound
   - Ambiance Music Trigger
   - Minotaur Room Trigger
+  - Heart beat Trigger
   layers:
   - Default
   - TransparentFX

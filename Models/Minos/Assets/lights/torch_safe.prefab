@@ -85,10 +85,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011340647968}
-  m_LocalRotation: {x: -0.37675938, y: 0.70040965, z: -0.53751904, w: -0.28027135}
-  m_LocalPosition: {x: -0.06, y: 0.89, z: -0.36}
+  m_LocalRotation: {x: -0.37300912, y: 0.7803663, z: -0.2870128, w: 0.41172364}
+  m_LocalPosition: {x: -0.27999973, y: 0.30999994, z: -0.3199997}
   m_LocalScale: {x: 1.775984, y: 1.7759904, z: 1.7759905}
-  m_LocalEulerAnglesHint: {x: 74.589005, y: -182.605, z: -58.523003}
+  m_LocalEulerAnglesHint: {x: 8.041, y: -239.901, z: -55.581}
   m_Children: []
   m_Father: {fileID: 4000012774213244}
   m_RootOrder: 0
@@ -111,10 +111,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011671865728}
-  m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -22.381561, y: -15.33375, z: 12.369453}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.580994, y: 3.4069998, z: 6.3600006}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010303565284}
   - {fileID: 4000010335201840}
@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012884813342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: 0.27, z: -0.77}
+  m_LocalPosition: {x: 0.031, y: 0.27, z: -0.65}
   m_LocalScale: {x: 1.7759854, y: 1.775991, z: 1.7759917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -180,8 +180,8 @@ Light:
   serializedVersion: 7
   m_Type: 0
   m_Color: {r: 1, g: 0.72413796, b: 0, a: 1}
-  m_Intensity: 3.6
-  m_Range: 8.03
+  m_Intensity: 1.18
+  m_Range: 10.5
   m_SpotAngle: 87.47
   m_CookieSize: 10
   m_Shadows:
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/SFX/Torch or fire inhand
+  Event: event:/SFX/Torch
   PlayEvent: 1
   StopEvent: 0
   CollisionTag: 
@@ -268,9 +268,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 25
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1.8000001
+  OverrideMaxDistance: 13
 --- !u!198 &198000014242638628
 ParticleSystem:
   m_ObjectHideFlags: 1

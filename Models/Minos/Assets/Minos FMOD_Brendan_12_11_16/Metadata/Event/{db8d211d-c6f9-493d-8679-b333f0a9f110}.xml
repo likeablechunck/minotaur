@@ -139,6 +139,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{e14b4292-657c-41c6-9d78-ba517eeb7eab}">
+        <property name="volume">
+            <value>-13</value>
+        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
@@ -167,6 +170,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{50a5ba44-e8e4-4dc8-98a1-5d883a2bea7c}">
+        <property name="volume">
+            <value>-14.5</value>
+        </property>
         <property name="name">
             <value>Audio 2</value>
         </property>
@@ -264,7 +270,7 @@
             <value>2.9043940125543215</value>
         </property>
         <property name="value">
-            <value>0</value>
+            <value>-11.4443493</value>
         </property>
     </object>
     <object class="LowpassEffect" id="{95ca5988-f835-4ebc-bcb4-f75788485118}">

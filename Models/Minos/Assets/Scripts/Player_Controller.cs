@@ -133,7 +133,7 @@ public class Player_Controller : MonoBehaviour
         if(cutSceneStart)
         {
             cutSceneTimer += Time.deltaTime;
-            if(cutSceneTimer <= 5f)
+            if(cutSceneTimer <= 8.63f)
             {
                 cam2.enabled = true;
                 cam.enabled = false;

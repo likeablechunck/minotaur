@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.08.00">
     <object class="Event" id="{69403e14-f84e-4ae9-b86b-c402e0850c9a}">
         <property name="name">
-            <value>Fire Loop</value>
+            <value>Brazier</value>
         </property>
         <property name="outputFormat">
             <value>2</value>
@@ -98,9 +98,12 @@
         <property name="length">
             <value>5</value>
         </property>
-        <property name="looping">
-            <value>true</value>
+        <property name="startOffset">
+            <value>48</value>
         </property>
+        <relationship name="modulators">
+            <destination>{8bdb1493-7292-4ace-a0b0-3e4cc900c629}</destination>
+        </relationship>
         <relationship name="audioFile">
             <destination>{e3a2bf0c-e090-40c1-9a0d-82524f698ce0}</destination>
         </relationship>
@@ -148,13 +151,27 @@
         </property>
     </object>
     <object class="MixerBusFader" id="{0401dd72-3ca8-4832-9dcb-95836aefe3ca}"/>
+    <object class="RandomizerModulator" id="{8bdb1493-7292-4ace-a0b0-3e4cc900c629}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>startOffset</value>
+        </property>
+        <property name="amount">
+            <value>54</value>
+        </property>
+    </object>
     <object class="MixerBusEffectChain" id="{77a66a81-85fd-4604-9dca-bc1d6c464f66}">
         <relationship name="effects">
             <destination>{43f08d2c-6fcd-48d0-b3d8-a41e442996c2}</destination>
+            <destination>{9d742d95-1e6f-4557-a8a2-7c53292f5d81}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{da5f12a1-7877-4cb0-9ad7-3bbc4de10628}"/>
     <object class="MixerBusFader" id="{7d211a0f-8c3a-4286-8d88-9bc76ecdbeff}"/>
     <object class="SpatialiserEffect" id="{b1b09136-cfa5-479f-a2f9-c748c278983f}"/>
     <object class="MixerBusFader" id="{43f08d2c-6fcd-48d0-b3d8-a41e442996c2}"/>
+    <object class="CompressorEffect" id="{9d742d95-1e6f-4557-a8a2-7c53292f5d81}">
+        <property name="gain">
+            <value>7</value>
+        </property>
+    </object>
 </objects>
