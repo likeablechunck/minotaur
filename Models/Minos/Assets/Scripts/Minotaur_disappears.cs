@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Minotaur_disappears : MonoBehaviour
 {
+    public AudioSource source;
+    public AudioClip minotarRoarClip;
     public GameObject minotaur;
     //public Image pressEText;
    // public bool shouldIDisplayPickupText;
@@ -33,7 +35,8 @@ public class Minotaur_disappears : MonoBehaviour
 
         if ((approach == true) && (vignette == false)) // if player collided and vignetting hasn't started
         {
-
+            source.clip = minotarRoarClip;
+            source.Play();
             cam.GetComponent<VignetteAndChromaticAberration>().intensity += Time.deltaTime;   //increase vignetting effect         
             if (cam.GetComponent<VignetteAndChromaticAberration>().intensity >= 1)
             { // if screen is black

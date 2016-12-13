@@ -1,0 +1,175 @@
+Initialize engine version: 5.4.0f3 (a6d8d714de6f)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 970M (ID=0x13d8)
+    Vendor:   NVIDIA
+    VRAM:     3040 MB
+Default GameObject Tag: Cane already registered
+ 
+(Filename:  Line: 88)
+
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\MoonSharp.Interpreter.dll (this message is harmless)
+Loading C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\MoonSharp.Interpreter.dll into Unity Child Domain
+Platform assembly: C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\MoonSharp.RemoteDebugger.dll (this message is harmless)
+Loading C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\MoonSharp.RemoteDebugger.dll into Unity Child Domain
+- Completed reload, in  0.171 seconds
+Platform assembly: C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Faranak\Desktop\Minos\Models\fog_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1536x864 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.096946 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: da44 -> priority: 1 
+  Thread -> id: ae44 -> priority: 1 
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.070184 ms
+FMOD Studio: Creating runtime system instance
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 979.
+Total: 1.442835 ms (FindLiveObjects: 0.123953 ms CreateObjectMapping: 0.105794 ms MarkObjects: 0.924914 ms  DeleteObjects: 0.286198 ms)
+
+FMOD Studio Integration: Please add an 'FMOD Studio Listener' component to your a camera in the scene for correct 3D positioning of sounds
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 20.396675 ms
+
+Unloading 71 unused Assets to reduce memory usage. Loaded Objects now: 539.
+Total: 1.588895 ms (FindLiveObjects: 0.087241 ms CreateObjectMapping: 0.109347 ms MarkObjects: 0.617793 ms  DeleteObjects: 0.772143 ms)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'Light') is missing!
+ 
+(Filename:  Line: 1656)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.900044 ms
+Default clip could not be found in attached animations list.
+ 
+(Filename:  Line: 402)
+
+Default clip could not be found in attached animations list.
+ 
+(Filename:  Line: 402)
+
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 7830.
+Total: 3.998094 ms (FindLiveObjects: 0.610688 ms CreateObjectMapping: 0.420415 ms MarkObjects: 2.616841 ms  DeleteObjects: 0.348570 ms)
+
+I collided into sword XD
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+I collided into sword XD
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+I collided into sword XD
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Door's Y transform position is at : 14.1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Vignetting intensity : 0.036
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+FMOD Studio: Destroying runtime system instance
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+

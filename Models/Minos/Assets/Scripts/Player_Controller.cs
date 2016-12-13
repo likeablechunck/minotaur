@@ -6,6 +6,8 @@ using UnityStandardAssets.ImageEffects;
 
 public class Player_Controller : MonoBehaviour
 {
+    //public AudioSource source;
+    //public AudioClip minotarRoarClip;
     public GameObject normalSword;
     public GameObject brokenSword;
     public GameObject trimerTrigger;
