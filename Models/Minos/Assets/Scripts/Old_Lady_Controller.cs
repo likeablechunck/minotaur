@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Old_Lady_Controller : MonoBehaviour
 {
-    //public FMODUnity.StudioEventEmitter heartBeat_emitter;
+   
     public AudioSource source;
     public AudioClip heartBeatClip1;
     public AudioClip heartBeatClip2;
@@ -18,26 +18,29 @@ public class Old_Lady_Controller : MonoBehaviour
     public float gameTimer;
     public float initialGameTimer;
     public float timeInterval;
+    public float minVignetterIntensity;
+    public float maxVignetteIntensity;
+    public float vingetteSlope;
     //public bool emitterIsResetToInitial;
     public Vector3 playerInitialPositionInOldLadyRoom;
-    
-    //public float cameraVignetteIntensity;
+    public float currentIntensity;
 
     // Use this for initialization
     void Start()
     {
         //Make sure to set the Game Timer in the inspector
-        //heartBeat_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
         playedOnce = false;
         counter = 1;
         playerInitialPositionInOldLadyRoom = new Vector3(17, 1.5f, 1.6f);
-        emitterInitialValue = 0.5f;
-       // heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
+        emitterInitialValue = 0.5f;     
         emitterValueOverTime = emitterInitialValue;
         gameTimer = testingValue;
         initialGameTimer = gameTimer;
         timeInterval = gameTimer / 3;
-        //emitterIsResetToInitial = false;
+        minVignetterIntensity = 0.036f;
+        maxVignetteIntensity = 1f;
+        vingetteSlope = (maxVignetteIntensity - minVignetterIntensity) / (0- testingValue); //calculating the slope for the function to find the correct intensity over time (slope = intensity/time)
+
     }
 
     // Update is called once per frame
@@ -50,12 +53,21 @@ public class Old_Lady_Controller : MonoBehaviour
 
         if (player.GetComponent<Player_Controller>().shouldIStartTheTimer)
         {
+            //1)set the heart beat to start playing from the lowest 
             if(!playedOnce)
             {
                 source.clip = heartBeatClip1;
                 source.Play();
                 playedOnce = true;
 
+            }
+            //2)Vignette effect
+            if (this.GetComponent<VignetteAndChromaticAberration>().intensity < maxVignetteIntensity)
+            {
+                print("camera vignette intensity is at : " + this.GetComponent<VignetteAndChromaticAberration>().intensity);
+                currentIntensity = (vingetteSlope * gameTimer) - (vingetteSlope * testingValue) + minVignetterIntensity;
+                this.GetComponent<VignetteAndChromaticAberration>().intensity = currentIntensity;
+                //this.GetComponent<VignetteAndChromaticAberration>().intensity += vingetteSlope;
             }
             print("Game time is at : " + gameTimer);
             if (gameTimer < 0)
@@ -66,14 +78,9 @@ public class Old_Lady_Controller : MonoBehaviour
                 {
                     source.Stop();
                 }
-                //FMOD codes that didn't work for resetting
-                //if (heartBeat_emitter.IsPlaying())
-                //{
-                //    heartBeat_emitter.Stop();
-                //}
 
-                //2)Vignette effect
-                this.GetComponent<VignetteAndChromaticAberration>().intensity += Time.deltaTime;
+                
+                //this.GetComponent<VignetteAndChromaticAberration>().intensity += Time.deltaTime;
                 //when camera completely faded
                 //3)load the scene again
                 if (this.GetComponent<VignetteAndChromaticAberration>().intensity >= 1)
@@ -111,36 +118,15 @@ public class Old_Lady_Controller : MonoBehaviour
                         //counter++;
                     }
                 }
-                //if (emitterValueOverTime <= 2 && !player.GetComponent<Player_Controller>().shouldIStopTheTimer)
-                //{
-                //    print("emittervalu is : " + emitterValueOverTime);
-                //    print("!player.GetComponent<Player_Controller>().shouldIStopTheTimer " + !player.GetComponent<Player_Controller>().shouldIStopTheTimer);
-                //    //gameTimer -= Time.deltaTime;
-                //    // for every 5 seconds we should increment emiiterValuOverTime
-                //    // and decrement initialGameTimer by timeInterval
-                //    if (initialGameTimer - gameTimer >= timeInterval)
-                //    {
-                //        // increment the emiiterValuOverTime
-                //        // decrement initialGameTimer by timeIn terval
-                //        emitterValueOverTime++;
-                //        heartBeat_emitter.SetParameter("Heart Beat", emitterValueOverTime);
-                //        initialGameTimer -= timeInterval;
-                //    }
-                //}
+             
                 if (player.GetComponent<Player_Controller>().shouldIStopTheTimer)
                 {
-                    if(source.isPlaying)
+                    this.GetComponent<VignetteAndChromaticAberration>().intensity = minVignetterIntensity;
+                    if (source.isPlaying)
                     {
                         source.Stop();
                     }
-                    //  reset the emitterValueOverTime back to initial value only once
-                    // so we need a variable
-                    
-                    //if (!emitterIsResetToInitial)
-                    //{
-                    //    heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
-                    //    emitterIsResetToInitial = true;
-                    //}
+                
                 }
                 else
                 {
@@ -157,24 +143,26 @@ public class Old_Lady_Controller : MonoBehaviour
         //it also tells the Player_Controller to reset the door's position and doesn't start the timer
 
         //It must call the Reset() function inside the Reset_Braziers script
-        this.GetComponent<VignetteAndChromaticAberration>().intensity = 0.036f;
+        
         GameObject player = GameObject.Find("FPSController");
         player.transform.position = playerInitialPositionInOldLadyRoom;
         player.GetComponent<Player_Controller>().shouldIStartTheTimer = false;
         player.GetComponent<Player_Controller>().shouldICloseTheFirstDoor = false;
+        //resetting the heartbeat music variables
         playedOnce = false;
         counter = 1;
-        //heartBeat_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
-        //this.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Heart Beat", 0.5f);
-        //heartBeat_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
+        //resetting the timer to all initial values
         gameTimer = testingValue;
         initialGameTimer = gameTimer;
         timeInterval = gameTimer / 3;
-        //emitterIsResetToInitial = false;// 
-        //emitterInitialValue = 0.5f;
-        //heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
-        //emitterValueOverTime = emitterInitialValue;
+        //resetting the vignette intensity values to the original vals
+        minVignetterIntensity = 0.036f;
+        maxVignetteIntensity = 1f;
+        vingetteSlope = (maxVignetteIntensity - minVignetterIntensity) / (0 - testingValue);
+        this.GetComponent<VignetteAndChromaticAberration>().intensity = minVignetterIntensity;
+        //resetting the behaviours for all braziers
         player.GetComponent<Reset_Braziers>().Reset();
+        //call the Minotaur Breathing function to reset
         GameObject minotaurBreathing = GameObject.Find("Minotaur_Breath_Controller");
         minotaurBreathing.GetComponent<Minotaur_Breathing_Instantiation>().minotaurReset();
 
