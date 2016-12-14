@@ -32,6 +32,8 @@ public class Player_Controller : MonoBehaviour
     public float alphaTimer;
     public float shorterMusicTimer;
     public bool shouldIChangeTheAlpha;
+    public float slopeForIncreaseAlpha;
+    public float slopeForDecreaseAlpha;
     public bool turnOnTheSwordLight;
     public bool turnOnTheCaneLight;
     public bool shouldICloseTheFirstDoor;
@@ -122,6 +124,7 @@ public class Player_Controller : MonoBehaviour
     {
         GameObject fpc = GameObject.Find("FirstPersonCharacter");
         GameObject minotaurCamera = GameObject.Find("Minotaur_Door_Camera");
+        GameObject fade = GameObject.Find("Fade");
         if (shouldIPlayTheMusic)
         {
             print("I am about to change the play the OLD LADY music");
@@ -146,7 +149,7 @@ public class Player_Controller : MonoBehaviour
         if (isItSword && Input.GetKeyDown(KeyCode.E))
         {
             shouldIChangeBloomIntensity = true;
-            GameObject fade = GameObject.Find("Fade");
+            shouldIChangeTheAlpha = true;
             print("sword detected and I pressed E");
             isItSword = false;
             GameObject swrodTrigger = GameObject.Find("Sword-Music-Trigger");
@@ -159,6 +162,25 @@ public class Player_Controller : MonoBehaviour
             //Destroy(normalSword, 0.2f);
             brokenSword.SetActive(true);
             //neverDisplayTheEText = true;
+        }
+        if(shouldIChangeTheAlpha)
+        {
+            if(alphaTimer < shorterMusicTimer)
+            {
+                alphaTimer += Time.deltaTime;
+                if(alphaTimer >=0 && alphaTimer < shorterMusicTimer /2 )
+                {
+                    alphaIncreaseIntensity();
+                }
+                else if (alphaTimer >= shorterMusicTimer/2 && alphaTimer < shorterMusicTimer)
+                {
+                    alphaDecreaseIntensity();
+                }
+            }
+            else
+            {
+                fade.GetComponent<Image>().color = new Color(1, 1, 1, minAlpha);
+            }
         }
         if (shouldIChangeBloomIntensity)
         {
@@ -267,38 +289,49 @@ public class Player_Controller : MonoBehaviour
         fpc.GetComponent<Bloom>().bloomIntensity = (slopeForIncreaseBloom * timerForBloom) - (slopeForIncreaseBloom * 0) + minBloomIntensity;
         minotaurCamera.GetComponent<Bloom>().bloomIntensity = (slopeForIncreaseBloom * timerForBloom) - (slopeForIncreaseBloom * 0) + minBloomIntensity;
     }
-    private IEnumerator bloomDecreaseIntensity()
-    {
-        GameObject fpc = GameObject.Find("FirstPersonCharacter");
-        fpc.GetComponent<Bloom>().bloomIntensity = maxBloomIntensity;
-        print("I am calling the coroutine");
-        print("Timer during decreasing is : " + timerForBloom);
-        float waitTime = 2f;
-        yield return new WaitForSeconds(waitTime);
-        slopeForDecreaseBloom = (minBloomIntensity - maxBloomIntensity) / ( musicTimer - ((musicTimer / 2) + waitTime));
-        //fpc.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom - ((musicTimer / 2) + waitTime)) + maxBloomIntensity;
-        fpc.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom) - slopeForDecreaseBloom *((musicTimer / 2) + waitTime) +maxBloomIntensity;
-        //fpc.GetComponent<Bloom>().bloomIntensity = (slopeForDecreaseBloom * timerForBloom) - (slopeForDecreaseBloom *maxBloomIntensity) + ((musicTimer / 2) +waitTime);
-        print("I calculated the decrease bloom formula");
-        if(fpc.GetComponent<Bloom>().bloomIntensity <= minBloomIntensity)
-        {
-            fpc.GetComponent<Bloom>().enabled = false;
-        }      
-    }
+   
     public void bloomDecrease()
     {
         GameObject fpc = GameObject.Find("FirstPersonCharacter");
         GameObject minotaurCamera = GameObject.Find("Minotaur_Door_Camera");
-        //fpc.GetComponent<Bloom>().bloomIntensity = maxBloomIntensity;
-        float waitTime = 0f;
-        new WaitForSeconds(waitTime);
-        slopeForDecreaseBloom = (minBloomIntensity - maxBloomIntensity) / (musicTimer - ((musicTimer / 2) + waitTime));
-        //fpc.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom - ((musicTimer / 2) + waitTime)) + maxBloomIntensity;
-        fpc.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom) - slopeForDecreaseBloom * ((musicTimer / 2) + waitTime) + maxBloomIntensity;
-        minotaurCamera.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom) - slopeForDecreaseBloom * ((musicTimer / 2) + waitTime) + maxBloomIntensity;
-        //fpc.GetComponent<Bloom>().bloomIntensity = (slopeForDecreaseBloom * timerForBloom) - (slopeForDecreaseBloom *maxBloomIntensity) + ((musicTimer / 2) +waitTime);
+        slopeForDecreaseBloom = (minBloomIntensity - maxBloomIntensity) / (musicTimer - ((musicTimer / 2)));
+        fpc.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom) - slopeForDecreaseBloom * ((musicTimer / 2)) + maxBloomIntensity;
+        minotaurCamera.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom) - slopeForDecreaseBloom * ((musicTimer / 2)) + maxBloomIntensity;
         print("I calculated the decrease bloom formula");
     }
+
+    //Functions for changing alpha after player picks up the sword
+
+    public void alphaIncreaseIntensity()
+    {
+        GameObject fade = GameObject.Find("Fade");
+        //float increasedAlphaLevel;
+        slopeForIncreaseAlpha = ((maxAlpha - minAlpha) / (shorterMusicTimer / 2));
+        //increasedAlphaLevel = slopeForIncreaseAlpha * (alphaTimer - 0) + minAlpha;
+        //fade.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, increasedAlphaLevel);
+        fade.GetComponent<Image>().color = new Color(1, 1, 1,(slopeForIncreaseAlpha * (alphaTimer - 0) + minAlpha));
+
+    }
+    public void alphaDecreaseIntensity()
+    {
+        GameObject fade = GameObject.Find("Fade");
+        //float decreasedAlphaLevel;
+        slopeForDecreaseAlpha = (minAlpha - maxAlpha) / (shorterMusicTimer - (shorterMusicTimer / 2));
+        //decreasedAlphaLevel = slopeForDecreaseAlpha * (alphaTimer - (shorterMusicTimer / 2)) + maxAlpha;
+        //fade.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, decreasedAlphaLevel);
+        fade.GetComponent<Image>().color = new Color(1, 1, 1, (slopeForDecreaseAlpha * (alphaTimer - (shorterMusicTimer / 2)) + maxAlpha));
+        if (fade.GetComponent<Image>().color == new Color(1, 1, 1, 0))
+        {
+            fade.GetComponent<Image>().color = new Color(1, 1, 1, minAlpha);
+            shouldIChangeTheAlpha = false;
+        }
+        //if (decreasedAlphaLevel <= minAlpha)
+        //{
+        //    fade.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, minAlpha);
+        //    shouldIChangeTheAlpha = false;
+        //}
+    }
+
     void OnTriggerEnter(Collider col)
     {
         print("Name of the item I collide : " + col.gameObject);
