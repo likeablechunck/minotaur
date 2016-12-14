@@ -141,11 +141,12 @@ public class Player_Controller : MonoBehaviour
             Destroy(normalCane, 0.2f);
             turnOnTheCaneLight = true;
             shouldIOpenTheDoorToSafePassage = true;
-            shouldIOpenTheMinotaurDoor = true;
+            //shouldIOpenTheMinotaurDoor = true;
             //cutSceneStart = true;
             neverDisplayTheEText = true;
             
         }
+        
         if (isItSword && Input.GetKeyDown(KeyCode.E))
         {
             shouldIChangeBloomIntensity = true;
@@ -162,6 +163,10 @@ public class Player_Controller : MonoBehaviour
             //Destroy(normalSword, 0.2f);
             brokenSword.SetActive(true);
             //neverDisplayTheEText = true;
+        }
+        if(isItCane && isItSword)
+        {
+            shouldIOpenTheMinotaurDoor = true;
         }
         if(shouldIChangeTheAlpha)
         {
