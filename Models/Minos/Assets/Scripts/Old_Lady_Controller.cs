@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Old_Lady_Controller : MonoBehaviour
 {
-    private FMODUnity.StudioEventEmitter heartBeat_emitter;
+    public FMODUnity.StudioEventEmitter heartBeat_emitter;
     public float emitterInitialValue;
     public float emitterValueOverTime;
     public float testingValue;
@@ -115,12 +115,15 @@ public class Old_Lady_Controller : MonoBehaviour
         player.transform.position = playerInitialPositionInOldLadyRoom;
         player.GetComponent<Player_Controller>().shouldIStartTheTimer = false;
         player.GetComponent<Player_Controller>().shouldICloseTheFirstDoor = false;
+        //heartBeat_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
+        this.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Heart Beat", 0.5f);
+        heartBeat_emitter = this.GetComponent<FMODUnity.StudioEventEmitter>();
         gameTimer = testingValue;
         initialGameTimer = gameTimer;
         timeInterval = gameTimer / 3;
-        emitterIsResetToInitial = false;
+        emitterIsResetToInitial = false;// 
         emitterInitialValue = 0.5f;
-        heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
+        //heartBeat_emitter.SetParameter("Heart Beat", emitterInitialValue);
         emitterValueOverTime = emitterInitialValue;
         player.GetComponent<Reset_Braziers>().Reset();
 

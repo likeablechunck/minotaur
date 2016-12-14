@@ -21,7 +21,7 @@ public class Minotaur_Breathing_Instantiation : MonoBehaviour
         initialGameTimer = player.GetComponent<Old_Lady_Controller>().gameTimer;
         minotaurBreathing_emitter = this.gameObject.GetComponent<FMODUnity.StudioEventEmitter>();
         minotaurEmitterValueOverTime = 1;
-        timeInterval = player.GetComponent<Old_Lady_Controller>().gameTimer / 4;
+        timeInterval = player.GetComponent<Old_Lady_Controller>().gameTimer / 4; //changed to 3 so it will be same as heartbeat
 	}
 	
 	// Update is called once per frame

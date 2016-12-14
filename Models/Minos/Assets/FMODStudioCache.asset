@@ -36,7 +36,7 @@ MonoBehaviour:
   - {fileID: 114000010310133752}
   MasterBankRef: {fileID: 114000010118221662}
   StringsBankRef: {fileID: 114000010899953610}
-  stringsBankWriteTime: 636171415056375051
+  stringsBankWriteTime: 636172237871299863
   cacheVersion: 2
 --- !u!114 &114000010000877888
 MonoBehaviour:
@@ -212,7 +212,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114000013052804274}
+  - {fileID: 114000010273678724}
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &114000010097843566
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\Faranak\Desktop\Minos\Models\Minos\Assets\Minos FMOD_Brendan_12_11_16\Build\Desktop\Master
     Bank.bank
-  lastModified: 636171415056240159
+  lastModified: 636172237871234767
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -635,6 +635,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114000010273678724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Value
+  Min: 0
+  Max: 3
+  Default: 0
 --- !u!114 &114000010275274232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +885,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114000012152857860}
+  - {fileID: 114000011144734182}
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &114000010353038508
@@ -1401,7 +1416,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Name: Value
   Min: 0
@@ -1531,7 +1546,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114000013085894942}
+  - {fileID: 114000011374834802}
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &114000010689399344
@@ -1972,7 +1987,7 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Path: Assets\Minos FMOD_Brendan_12_11_16\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636171415056375051
+  lastModified: 636172237871299863
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2479,6 +2494,21 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
+--- !u!114 &114000011144734182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Value
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114000011147300144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2618,7 +2648,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114000010214437008}
+  - {fileID: 114000013605283932}
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &114000011245676220
@@ -2635,6 +2665,21 @@ MonoBehaviour:
   Name: Voiceover
   Min: 0
   Max: 4
+  Default: 0
+--- !u!114 &114000011253777206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114000011257478380
 MonoBehaviour:
@@ -2838,6 +2883,21 @@ MonoBehaviour:
   - {fileID: 114000013670101098}
   MinDistance: 0
   MaxDistance: 0
+--- !u!114 &114000011374834802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Heart Beat
+  Min: 0
+  Max: 3
+  Default: 0
 --- !u!114 &114000011377862552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,6 +3089,21 @@ MonoBehaviour:
   Name: Value
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114000011477346712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  Name: Voiceover
+  Min: 0
+  Max: 4
   Default: 0
 --- !u!114 &114000011490506454
 MonoBehaviour:
@@ -4140,7 +4215,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Name: Value
   Min: 0
@@ -5232,6 +5307,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114000012745754804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 4
+  Default: 0
 --- !u!114 &114000012746838262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6060,7 +6150,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Name: Heart Beat
   Min: 0
@@ -6310,7 +6400,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114000012428015286}
+  - {fileID: 114000011253777206}
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &114000013201819864
@@ -6622,7 +6712,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Path: event:/SFX/Brazier
   guid: 143e40694ef8e94ab86bc402e0850c9a
@@ -7163,6 +7253,21 @@ MonoBehaviour:
   Min: 0
   Max: 4
   Default: 0
+--- !u!114 &114000013605283932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Value
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114000013623000366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7328,7 +7433,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114000013721044754}
+  - {fileID: 114000011477346712}
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &114000013687558364
@@ -7863,7 +7968,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 114000013483153118}
+  - {fileID: 114000012745754804}
   MinDistance: 1
   MaxDistance: 20
 --- !u!114 &114000013920049516
@@ -8115,7 +8220,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Name: Value
   Min: 0

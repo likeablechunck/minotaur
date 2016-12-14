@@ -30,6 +30,7 @@ TagManager:
   - Ambiance Music Trigger
   - Minotaur Room Trigger
   - Heart beat Trigger
+  - Minotaur Roar Once
   layers:
   - Default
   - TransparentFX
