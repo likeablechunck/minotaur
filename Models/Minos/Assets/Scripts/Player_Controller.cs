@@ -26,8 +26,12 @@ public class Player_Controller : MonoBehaviour
     public float timerForBloom;
     public float slopeForIncreaseBloom;
     public float slopeForDecreaseBloom;
-    public bool shouldIIncreaseBloomIntensity;
-    public bool shouldIDecreaseBloomIntensity;
+    public bool shouldIChangeBloomIntensity;
+    public float minAlpha;
+    public float maxAlpha;
+    public float alphaTimer;
+    public float shorterMusicTimer;
+    public bool shouldIChangeTheAlpha;
     public bool turnOnTheSwordLight;
     public bool turnOnTheCaneLight;
     public bool shouldICloseTheFirstDoor;
@@ -59,17 +63,26 @@ public class Player_Controller : MonoBehaviour
     {
         //minotaurLight.enabled = false;
         GameObject fpc = GameObject.Find("FirstPersonCharacter");
-        musicTimer = 8.63f;
+        GameObject minotaurCamera = GameObject.Find("Minotaur_Door_Camera");
+        //Alpha Variables
+        minAlpha = 0;
+        maxAlpha = 1;
+        alphaTimer = 0;
+        shorterMusicTimer = 8.63f;
+        shouldIChangeTheAlpha = false;
+        //Bloom variables
+        musicTimer = 10.63f;
         minBloomIntensity = 0.71f;
         maxBloomIntensity = 2.76f;
         timerForBloom = 0;
         fpc.GetComponent<Bloom>().enabled = false;
-        shouldIIncreaseBloomIntensity = false;
-        shouldIDecreaseBloomIntensity = false;
+        minotaurCamera.GetComponent<Bloom>().enabled = false;
+        shouldIChangeBloomIntensity = false;
         cam.enabled = true;
         cam2.enabled = false;
         isItCane = false;
         fpc.GetComponent<Bloom>().bloomIntensity = minBloomIntensity;
+        minotaurCamera.GetComponent<Bloom>().bloomIntensity = minBloomIntensity;
         pressEToPickUpSwordCane.enabled = false;
         flatCane.SetActive(false);
         normalCane.SetActive(true);
@@ -108,11 +121,11 @@ public class Player_Controller : MonoBehaviour
 	void Update ()
     {
         GameObject fpc = GameObject.Find("FirstPersonCharacter");
+        GameObject minotaurCamera = GameObject.Find("Minotaur_Door_Camera");
         if (shouldIPlayTheMusic)
         {
             print("I am about to change the play the OLD LADY music");
             fpc.GetComponent<GameMusic>().changeState("safeRoom");
-            //shouldIPlayTheMusic = false;
 
         }
         if ( isItCane && Input.GetKeyDown(KeyCode.E))
@@ -130,73 +143,13 @@ public class Player_Controller : MonoBehaviour
             neverDisplayTheEText = true;
             
         }
-        if (shouldIIncreaseBloomIntensity)
-        {
-            //fpc.GetComponent<Bloom>().bloomIntensity = minBloomIntensity;
-            print("Bloom intensity is at : " + fpc.GetComponent<Bloom>().bloomIntensity);
-            timerForBloom += Time.deltaTime;
-            if (timerForBloom >= 0 && timerForBloom < musicTimer / 2)
-            {
-                bloomIncreaseIntensity();
-                if(fpc.GetComponent<Bloom>().bloomIntensity >= maxBloomIntensity)
-                {
-                    shouldIDecreaseBloomIntensity = true;
-                    shouldIIncreaseBloomIntensity = false;
-                }
-            }
-            if(shouldIDecreaseBloomIntensity)
-            {
-                timerForBloom = musicTimer / 2;
-                timerForBloom += Time.deltaTime;
-
-                if(timerForBloom < musicTimer)
-                {
-                    bloomDecrease();
-                    if(fpc.GetComponent<Bloom>().bloomIntensity <= minBloomIntensity)
-                    {
-                        shouldIDecreaseBloomIntensity = false;
-                    }
-                }
-            }
-            //else if (timerForBloom >= musicTimer/2 && timerForBloom <= musicTimer)
-            //{
-            //    //StartCoroutine(bloomDecreaseIntensity());
-            //    bloomDecrease();
-            //    shouldIIncreaseBloomIntensity = false;
-            //}
-            //shouldIIncreaseBloomIntensity = false;
-        }
         if (isItSword && Input.GetKeyDown(KeyCode.E))
         {
-            shouldIIncreaseBloomIntensity = true;
-            //if(shouldIIncreaseBloomIntensity)
-            //{
-            //    //fpc.GetComponent<Bloom>().bloomIntensity = minBloomIntensity;
-            //    print("Bloom intensity is at : " + fpc.GetComponent<Bloom>().bloomIntensity);
-            //    timerForBloom += Time.deltaTime;
-            //    if (timerForBloom >= 0 && timerForBloom < musicTimer / 2)
-            //    {
-            //        bloomIncreaseIntensity();
-            //    }
-            //    if (timerForBloom >= musicTimer / 2 && timerForBloom <= musicTimer)
-            //    {
-            //        StartCoroutine(bloomDecreaseIntensity());
-            //    }
-            //    //shouldIIncreaseBloomIntensity = false;
-            //}
-            //timerForBloom += Time.deltaTime;
-            //if( timerForBloom >=0 && timerForBloom < musicTimer/2)
-            //{
-            //    bloomIncreaseIntensity();
-            //}
-            //if(timerForBloom >= musicTimer / 2 && timerForBloom <= musicTimer)
-            //{
-            //    StartCoroutine(bloomDecreaseIntensity());
-            //}
+            shouldIChangeBloomIntensity = true;
             GameObject fade = GameObject.Find("Fade");
             print("sword detected and I pressed E");
             isItSword = false;
-            GameObject swrodTrigger= GameObject.Find("Sword-Music-Trigger");
+            GameObject swrodTrigger = GameObject.Find("Sword-Music-Trigger");
             Destroy(swrodTrigger, 0.2f);
             cutSceneTimer = 0;
             pressEToPickUpSwordCane.enabled = false;
@@ -207,6 +160,34 @@ public class Player_Controller : MonoBehaviour
             brokenSword.SetActive(true);
             //neverDisplayTheEText = true;
         }
+        if (shouldIChangeBloomIntensity)
+        {
+            //fpc.GetComponent<Bloom>().bloomIntensity = minBloomIntensity;
+            print("Bloom intensity is at : " + fpc.GetComponent<Bloom>().bloomIntensity);
+            if (timerForBloom <= musicTimer)
+            {
+                timerForBloom += Time.deltaTime;
+                if (timerForBloom >= 0 && timerForBloom < (musicTimer / 2))
+                {
+                    bloomIncreaseIntensity();
+                }
+
+                else if (timerForBloom >= (musicTimer / 2) && timerForBloom <= musicTimer)
+                {
+                    bloomDecrease();
+                    if (fpc.GetComponent<Bloom>().bloomIntensity <= minBloomIntensity)
+                    {
+                        shouldIChangeBloomIntensity = false;
+                    }
+                }
+            }
+            else
+            {
+                fpc.GetComponent<Bloom>().enabled = false;
+                minotaurCamera.GetComponent<Bloom>().enabled = false;
+            }
+        }       
+       
         if(neverDisplayTheEText)
         {
             pressEToPickUpSwordCane.enabled = false;
@@ -279,9 +260,12 @@ public class Player_Controller : MonoBehaviour
     public void bloomIncreaseIntensity()
     {
         GameObject fpc = GameObject.Find("FirstPersonCharacter");
+        GameObject minotaurCamera = GameObject.Find("Minotaur_Door_Camera");
         fpc.GetComponent<Bloom>().enabled = true;
+        minotaurCamera.GetComponent<Bloom>().enabled = true;
         slopeForIncreaseBloom = (maxBloomIntensity - minBloomIntensity) / ((musicTimer/2)- 0);
         fpc.GetComponent<Bloom>().bloomIntensity = (slopeForIncreaseBloom * timerForBloom) - (slopeForIncreaseBloom * 0) + minBloomIntensity;
+        minotaurCamera.GetComponent<Bloom>().bloomIntensity = (slopeForIncreaseBloom * timerForBloom) - (slopeForIncreaseBloom * 0) + minBloomIntensity;
     }
     private IEnumerator bloomDecreaseIntensity()
     {
@@ -304,18 +288,16 @@ public class Player_Controller : MonoBehaviour
     public void bloomDecrease()
     {
         GameObject fpc = GameObject.Find("FirstPersonCharacter");
+        GameObject minotaurCamera = GameObject.Find("Minotaur_Door_Camera");
         //fpc.GetComponent<Bloom>().bloomIntensity = maxBloomIntensity;
-        float waitTime = 2f;
+        float waitTime = 0f;
         new WaitForSeconds(waitTime);
         slopeForDecreaseBloom = (minBloomIntensity - maxBloomIntensity) / (musicTimer - ((musicTimer / 2) + waitTime));
         //fpc.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom - ((musicTimer / 2) + waitTime)) + maxBloomIntensity;
         fpc.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom) - slopeForDecreaseBloom * ((musicTimer / 2) + waitTime) + maxBloomIntensity;
+        minotaurCamera.GetComponent<Bloom>().bloomIntensity = slopeForDecreaseBloom * (timerForBloom) - slopeForDecreaseBloom * ((musicTimer / 2) + waitTime) + maxBloomIntensity;
         //fpc.GetComponent<Bloom>().bloomIntensity = (slopeForDecreaseBloom * timerForBloom) - (slopeForDecreaseBloom *maxBloomIntensity) + ((musicTimer / 2) +waitTime);
         print("I calculated the decrease bloom formula");
-        if (fpc.GetComponent<Bloom>().bloomIntensity <= minBloomIntensity)
-        {
-            fpc.GetComponent<Bloom>().enabled = false;
-        }
     }
     void OnTriggerEnter(Collider col)
     {
