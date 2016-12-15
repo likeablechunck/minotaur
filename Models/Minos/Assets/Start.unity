@@ -4531,7 +4531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event: event:/SFX/Ambiance
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0
@@ -22974,6 +22974,20 @@ MonoBehaviour:
   pressEToPickUpSwordCane: {fileID: 0}
   cam: {fileID: 0}
   cam2: {fileID: 0}
+  musicTimer: 0
+  minBloomIntensity: 0
+  maxBloomIntensity: 0
+  timerForBloom: 0
+  slopeForIncreaseBloom: 0
+  slopeForDecreaseBloom: 0
+  shouldIChangeBloomIntensity: 0
+  minAlpha: 0
+  maxAlpha: 0
+  alphaTimer: 0
+  shorterMusicTimer: 0
+  shouldIChangeTheAlpha: 0
+  slopeForIncreaseAlpha: 0
+  slopeForDecreaseAlpha: 0
   turnOnTheSwordLight: 0
   turnOnTheCaneLight: 0
   shouldICloseTheFirstDoor: 0
@@ -22996,10 +23010,13 @@ MonoBehaviour:
   shouldIFadeInTheCamera: 0
   shouldIFadeOutTheCamera: 0
   timer: 0
-  cutSceneStart: 0
+  cutSceneStartForSword: 0
+  cutSceneStartForCane: 0
   neverDisplayTheEText: 0
   shouldIPlayTheMusic: 0
   cutSceneTimer: 0
+  cutsceneOnDidOnce: 0
+  cutSceneOffDidOnce: 0
 --- !u!82 &2045698792
 AudioSource:
   m_ObjectHideFlags: 0

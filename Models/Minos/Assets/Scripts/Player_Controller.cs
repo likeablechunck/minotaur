@@ -63,6 +63,7 @@ public class Player_Controller : MonoBehaviour
     public float cutSceneTimer;
     public bool cutsceneOnDidOnce;
     public bool cutSceneOffDidOnce;
+    public bool iPickedUpTheSword;
     // Use this for initialization
     void Start ()
     {
@@ -123,6 +124,7 @@ public class Player_Controller : MonoBehaviour
         cutSceneStartForSword = false;
         cutsceneOnDidOnce = false;
         cutSceneOffDidOnce = false;
+        iPickedUpTheSword = false;
     }
 	
 	// Update is called once per frame
@@ -168,9 +170,10 @@ public class Player_Controller : MonoBehaviour
             normalSword.SetActive(false);
             //Destroy(normalSword, 0.2f);
             brokenSword.SetActive(true);
+            iPickedUpTheSword = true;
             //neverDisplayTheEText = true;
         }
-        if(isItCane && isItSword)
+        if(isItCane && iPickedUpTheSword)
         {
             shouldIOpenTheMinotaurDoor = true;
         }
@@ -228,7 +231,7 @@ public class Player_Controller : MonoBehaviour
         if (cutSceneStartForCane)
         {
             cutSceneTimer += Time.deltaTime;
-            if (cutSceneTimer <= 4)
+            if (cutSceneTimer <= 6)
             {
                 cam2.enabled = true;
                 cam.enabled = false;
