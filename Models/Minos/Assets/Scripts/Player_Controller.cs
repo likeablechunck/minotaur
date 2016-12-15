@@ -56,10 +56,13 @@ public class Player_Controller : MonoBehaviour
     public bool shouldIFadeInTheCamera;
     public bool shouldIFadeOutTheCamera;
     public float timer;
-    public bool cutSceneStart;
+    public bool cutSceneStartForSword;
+    public bool cutSceneStartForCane;
     public bool neverDisplayTheEText;
     public bool shouldIPlayTheMusic;
     public float cutSceneTimer;
+    public bool cutsceneOnDidOnce;
+    public bool cutSceneOffDidOnce;
     // Use this for initialization
     void Start ()
     {
@@ -116,7 +119,10 @@ public class Player_Controller : MonoBehaviour
         shouldIPlayTheMusic = false;
         timer = 0;
         cutSceneTimer = 0;
-
+        cutSceneStartForCane = false;
+        cutSceneStartForSword = false;
+        cutsceneOnDidOnce = false;
+        cutSceneOffDidOnce = false;
     }
 	
 	// Update is called once per frame
@@ -135,7 +141,7 @@ public class Player_Controller : MonoBehaviour
         {
             isItCane = false;
             cutSceneTimer = 0;
-            cutSceneStart = true;
+            cutSceneStartForCane = true;
             flatCane.SetActive(true);
             //normalCane.SetActive(false);
             Destroy(normalCane, 0.2f);
@@ -157,7 +163,7 @@ public class Player_Controller : MonoBehaviour
             Destroy(swrodTrigger, 0.2f);
             cutSceneTimer = 0;
             pressEToPickUpSwordCane.enabled = false;
-            cutSceneStart = true;
+            cutSceneStartForSword = true;
             turnOnTheSwordLight = true;
             normalSword.SetActive(false);
             //Destroy(normalSword, 0.2f);
@@ -219,22 +225,56 @@ public class Player_Controller : MonoBehaviour
         {
             pressEToPickUpSwordCane.enabled = false;
         }
-        if(cutSceneStart)
+        if (cutSceneStartForCane)
         {
             cutSceneTimer += Time.deltaTime;
-            if(cutSceneTimer <= 8.63f)
+            if (cutSceneTimer <= 4)
             {
                 cam2.enabled = true;
                 cam.enabled = false;
             }
             else
             {
-                cutSceneStart = false;
+                cutSceneStartForCane = false;
                 cam.enabled = true;
                 cam2.enabled = false;
-                //cutSceneTimer = 0;
-            }        
+            }
         }
+
+
+        if (cutSceneStartForSword)
+        {
+            print("cutscene timer is at: " + cutSceneTimer);
+            cutSceneTimer += Time.deltaTime;
+            if(cutSceneTimer >=0 && cutSceneTimer < 10f && !cutsceneOnDidOnce)
+            {
+                StartCoroutine(cutSceneOn(4.70f));
+                cutsceneOnDidOnce = true;
+                //cam2.enabled = true;
+                //cam.enabled = false;
+            }
+            else if( cutSceneTimer >= 10f && !cutSceneOffDidOnce)
+            {
+                print("cutscene ended");
+                cutSceneOffDidOnce = true;
+                //cutSceneOff();
+                //cutSceneStart = false;
+                StartCoroutine(cutSceneOff(0.93f));
+                //if (!cutSceneStartForSword)
+                //{
+                //    StopCoroutine(cutSceneOff(0.01f));
+                //}
+
+                //cutSceneStartForSword = false;
+                //cam.enabled = true;
+                //cam2.enabled = false;
+            }           
+        }
+        else
+        {
+            StopAllCoroutines();
+        }
+       
         if (shouldIFadeInTheCamera)
         {
             if (camera.GetComponent<VignetteAndChromaticAberration>().intensity <= 1)
@@ -293,6 +333,21 @@ public class Player_Controller : MonoBehaviour
         slopeForIncreaseBloom = (maxBloomIntensity - minBloomIntensity) / ((musicTimer/2)- 0);
         fpc.GetComponent<Bloom>().bloomIntensity = (slopeForIncreaseBloom * timerForBloom) - (slopeForIncreaseBloom * 0) + minBloomIntensity;
         minotaurCamera.GetComponent<Bloom>().bloomIntensity = (slopeForIncreaseBloom * timerForBloom) - (slopeForIncreaseBloom * 0) + minBloomIntensity;
+    }
+    public IEnumerator cutSceneOn(float timerForCutScene)
+    {
+        yield return new WaitForSeconds(timerForCutScene);
+        cam2.enabled = true;
+        cam.enabled = false;
+        
+
+    }
+    public IEnumerator cutSceneOff(float timerForCutSceneOff)
+    {
+        yield return new WaitForSeconds(timerForCutSceneOff);
+        cam.enabled = true;
+        cam2.enabled = false;
+        cutSceneStartForSword = false;
     }
    
     public void bloomDecrease()

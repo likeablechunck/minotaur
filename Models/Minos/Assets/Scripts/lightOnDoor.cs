@@ -33,9 +33,11 @@ public class lightOnDoor : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > 1.0f)
             {
-                swordSpotLight1.enabled = true;
-                swordSpotLight2.enabled = true;
-                swordlight = true;
+                //how much delay to turn on the light is same as the one in Player Controller for cutscene
+                StartCoroutine(swordLight(8f));
+                //swordSpotLight1.enabled = true;
+                //swordSpotLight2.enabled = true;
+                //swordlight = true;
             }
         }
         if(player.GetComponent<Player_Controller>().turnOnTheCaneLight)
@@ -50,4 +52,11 @@ public class lightOnDoor : MonoBehaviour
         }
 	
 	}
+    private IEnumerator swordLight(float lightTimer)
+    {
+        yield return new WaitForSeconds(lightTimer);
+        swordSpotLight1.enabled = true;
+        swordSpotLight2.enabled = true;
+        swordlight = true;
+    }
 }
