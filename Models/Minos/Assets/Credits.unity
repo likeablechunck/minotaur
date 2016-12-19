@@ -14057,8 +14057,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 99246519}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0.874, y: 0}
-  m_AnchorMax: {x: 1, y: 0.07}
+  m_AnchorMin: {x: 0.39800003, y: 0.07457447}
+  m_AnchorMax: {x: 0.606, y: 0.19500001}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14159,7 +14159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: '"Return"'
+  m_Text: Return
 --- !u!222 &1279322190
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16592,14 +16592,14 @@ RectTransform:
   m_GameObject: {fileID: 1624702418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6799971, y: 0.67999756, z: 0.67999756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 99246519}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 7}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1624702420

@@ -14,14 +14,14 @@ PluginImporter:
       settings:
         CPU: AnyCPU
     Any:
-      enabled: 0
+      enabled: 1
       settings: {}
     Editor:
       enabled: 1
       settings:
-        CPU: AnyCPU
+        CPU: x86
         DefaultValueInitialized: true
-        OS: OSX
+        OS: AnyOS
     Linux:
       enabled: 1
       settings:
@@ -50,6 +50,9 @@ PluginImporter:
       enabled: 0
       settings:
         STV_MODEL: STANDARD_13
+    WebGL:
+      enabled: 1
+      settings: {}
     Win:
       enabled: 1
       settings:
