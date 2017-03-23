@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  SourceProjectPath: Assets\Minos FMOD_Brendan_12_11_16\Minos FMOD_Brendan_12_11_16.fspro
-  SourceBankPath: Assets\Minos FMOD_Brendan_12_11_16\Build
+  SourceProjectPath: Assets/Minos FMOD_Brendan_12_11_16/Minos FMOD_Brendan_12_11_16.fspro
+  SourceBankPath: Assets/Minos FMOD_Brendan_12_11_16/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -54,5 +54,5 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBank: Master Bank
+  MasterBank: 
   Banks: []

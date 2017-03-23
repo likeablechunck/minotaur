@@ -133,6 +133,15 @@ public class Player_Controller : MonoBehaviour
         GameObject fpc = GameObject.Find("FirstPersonCharacter");
         GameObject minotaurCamera = GameObject.Find("Minotaur_Door_Camera");
         GameObject fade = GameObject.Find("Fade");
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+        // if(Input.GetKeyDown(KeyCode.Escape))
+        // {
+        //     SceneManager.Application.quit();
+        //     //Application.quit();
+        // }
         if (shouldIPlayTheMusic)
         {
             print("I am about to change the play the OLD LADY music");

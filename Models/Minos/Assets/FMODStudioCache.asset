@@ -11,32 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 114000010899953610}
-  - {fileID: 114000010118221662}
-  EditorEvents:
-  - {fileID: 114000014117180132}
-  - {fileID: 114000010679537012}
-  - {fileID: 114000012489965456}
-  - {fileID: 114000013112525632}
-  - {fileID: 114000013170214038}
-  - {fileID: 114000011131731962}
-  - {fileID: 114000011377862552}
-  - {fileID: 114000013920044298}
-  - {fileID: 114000013815188546}
-  - {fileID: 114000012801364264}
-  - {fileID: 114000013196689790}
-  - {fileID: 114000010095196482}
-  - {fileID: 114000011244387334}
-  - {fileID: 114000010345416664}
-  - {fileID: 114000011508975652}
-  - {fileID: 114000011386121706}
-  - {fileID: 114000013684662168}
-  - {fileID: 114000013353259272}
-  - {fileID: 114000010310133752}
-  MasterBankRef: {fileID: 114000010118221662}
-  StringsBankRef: {fileID: 114000010899953610}
-  stringsBankWriteTime: 636172237871299863
+  EditorBanks: []
+  EditorEvents: []
+  MasterBankRef: {fileID: 0}
+  StringsBankRef: {fileID: 0}
+  stringsBankWriteTime: 0
   cacheVersion: 2
 --- !u!114 &114000010000877888
 MonoBehaviour:
@@ -2840,7 +2819,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Name: Heart Beat
   Min: 0
@@ -2892,7 +2871,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Name: Heart Beat
   Min: 0
@@ -2928,7 +2907,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Path: event:/VO/I am the King
   guid: 143dbcc29cb4824bb465355951a8ad18
@@ -7082,7 +7061,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Name: Intensity
   Min: 0
@@ -7142,7 +7121,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Name: Heart Beat
   Min: 0
@@ -7157,7 +7136,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   Name: Intensity
   Min: 0
